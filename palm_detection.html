@@ -1,0 +1,3430 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>C:\Users\yyyyy\Documents\git\unclassified\mediapipe\mediapipe\modules\palm_detection\palm_detection.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[107, 101, 114, 97, 115, 50, 116, 102, 108, 105, 116, 101, 95, 112, 97, 108, 109, 100, 101, 116, 101, 99, 116, 111, 114, 95, 50, 48, 50, 48, 95, 48, 57, 95, 49, 53, 95, 118, 48, 46, 116, 102, 108, 105, 116, 101, 46, 103, 101, 110, 101, 114, 97, 116, 101, 100]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 input FLOAT32 [1, 128, 128, 3]None<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>256 regressors FLOAT32 [1, 896, 18]None<br>255 classificators FLOAT32 [1, 896, 1]None<br></span>[256, 255]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>input</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 3]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td><td>conv2d/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 5, 5, 3]</td>
+<td>None</td>
+<td>1</td>
+<td>None</td>
+</tr>
+<tr>
+<td>2</td><td>conv2d/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>2</td>
+<td>None</td>
+</tr>
+<tr>
+<td>3</td><td>conv2d</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>4</td><td>p_re_lu/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>3</td>
+<td>None</td>
+</tr>
+<tr>
+<td>5</td><td>p_re_lu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>6</td><td>depthwise_conv2d/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 32]</td>
+<td>None</td>
+<td>4</td>
+<td>None</td>
+</tr>
+<tr>
+<td>7</td><td>depthwise_conv2d/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>5</td>
+<td>None</td>
+</tr>
+<tr>
+<td>8</td><td>depthwise_conv2d</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>9</td><td>conv2d_1/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 32]</td>
+<td>None</td>
+<td>6</td>
+<td>None</td>
+</tr>
+<tr>
+<td>10</td><td>conv2d_1/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>7</td>
+<td>None</td>
+</tr>
+<tr>
+<td>11</td><td>conv2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>12</td><td>add__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>13</td><td>p_re_lu_1/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>8</td>
+<td>None</td>
+</tr>
+<tr>
+<td>14</td><td>p_re_lu_1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>15</td><td>depthwise_conv2d_1/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 32]</td>
+<td>None</td>
+<td>9</td>
+<td>None</td>
+</tr>
+<tr>
+<td>16</td><td>depthwise_conv2d_1/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>10</td>
+<td>None</td>
+</tr>
+<tr>
+<td>17</td><td>depthwise_conv2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>18</td><td>conv2d_2/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 32]</td>
+<td>None</td>
+<td>11</td>
+<td>None</td>
+</tr>
+<tr>
+<td>19</td><td>conv2d_2/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>12</td>
+<td>None</td>
+</tr>
+<tr>
+<td>20</td><td>conv2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>21</td><td>add_1__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>22</td><td>p_re_lu_2/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>13</td>
+<td>None</td>
+</tr>
+<tr>
+<td>23</td><td>p_re_lu_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>24</td><td>depthwise_conv2d_2/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 32]</td>
+<td>None</td>
+<td>14</td>
+<td>None</td>
+</tr>
+<tr>
+<td>25</td><td>depthwise_conv2d_2/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>15</td>
+<td>None</td>
+</tr>
+<tr>
+<td>26</td><td>depthwise_conv2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>27</td><td>conv2d_3/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 32]</td>
+<td>None</td>
+<td>16</td>
+<td>None</td>
+</tr>
+<tr>
+<td>28</td><td>conv2d_3/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>17</td>
+<td>None</td>
+</tr>
+<tr>
+<td>29</td><td>conv2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>30</td><td>add_2__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>31</td><td>p_re_lu_3/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>18</td>
+<td>None</td>
+</tr>
+<tr>
+<td>32</td><td>p_re_lu_3</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>33</td><td>depthwise_conv2d_3/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 32]</td>
+<td>None</td>
+<td>19</td>
+<td>None</td>
+</tr>
+<tr>
+<td>34</td><td>depthwise_conv2d_3/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>20</td>
+<td>None</td>
+</tr>
+<tr>
+<td>35</td><td>depthwise_conv2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>36</td><td>max_pooling2d</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>37</td><td>conv2d_4/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 32]</td>
+<td>None</td>
+<td>21</td>
+<td>None</td>
+</tr>
+<tr>
+<td>38</td><td>conv2d_4/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>22</td>
+<td>None</td>
+</tr>
+<tr>
+<td>39</td><td>conv2d_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>40</td><td>channel_padding/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>23</td>
+<td>None</td>
+</tr>
+<tr>
+<td>41</td><td>channel_padding</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>42</td><td>add_3__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>43</td><td>p_re_lu_4/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>24</td>
+<td>None</td>
+</tr>
+<tr>
+<td>44</td><td>p_re_lu_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>45</td><td>depthwise_conv2d_4/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 64]</td>
+<td>None</td>
+<td>25</td>
+<td>None</td>
+</tr>
+<tr>
+<td>46</td><td>depthwise_conv2d_4/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>26</td>
+<td>None</td>
+</tr>
+<tr>
+<td>47</td><td>depthwise_conv2d_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>48</td><td>conv2d_5/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 64]</td>
+<td>None</td>
+<td>27</td>
+<td>None</td>
+</tr>
+<tr>
+<td>49</td><td>conv2d_5/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>28</td>
+<td>None</td>
+</tr>
+<tr>
+<td>50</td><td>conv2d_5</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>51</td><td>add_4__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>52</td><td>p_re_lu_5/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>29</td>
+<td>None</td>
+</tr>
+<tr>
+<td>53</td><td>p_re_lu_5</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>54</td><td>depthwise_conv2d_5/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 64]</td>
+<td>None</td>
+<td>30</td>
+<td>None</td>
+</tr>
+<tr>
+<td>55</td><td>depthwise_conv2d_5/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>31</td>
+<td>None</td>
+</tr>
+<tr>
+<td>56</td><td>depthwise_conv2d_5</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>57</td><td>conv2d_6/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 64]</td>
+<td>None</td>
+<td>32</td>
+<td>None</td>
+</tr>
+<tr>
+<td>58</td><td>conv2d_6/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>33</td>
+<td>None</td>
+</tr>
+<tr>
+<td>59</td><td>conv2d_6</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>60</td><td>add_5__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>61</td><td>p_re_lu_6/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>34</td>
+<td>None</td>
+</tr>
+<tr>
+<td>62</td><td>p_re_lu_6</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>63</td><td>depthwise_conv2d_6/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 64]</td>
+<td>None</td>
+<td>35</td>
+<td>None</td>
+</tr>
+<tr>
+<td>64</td><td>depthwise_conv2d_6/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>36</td>
+<td>None</td>
+</tr>
+<tr>
+<td>65</td><td>depthwise_conv2d_6</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>66</td><td>conv2d_7/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 64]</td>
+<td>None</td>
+<td>37</td>
+<td>None</td>
+</tr>
+<tr>
+<td>67</td><td>conv2d_7/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>38</td>
+<td>None</td>
+</tr>
+<tr>
+<td>68</td><td>conv2d_7</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>69</td><td>add_6__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>70</td><td>p_re_lu_7/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>39</td>
+<td>None</td>
+</tr>
+<tr>
+<td>71</td><td>p_re_lu_7</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>72</td><td>depthwise_conv2d_7/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 64]</td>
+<td>None</td>
+<td>40</td>
+<td>None</td>
+</tr>
+<tr>
+<td>73</td><td>depthwise_conv2d_7/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>41</td>
+<td>None</td>
+</tr>
+<tr>
+<td>74</td><td>depthwise_conv2d_7</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>75</td><td>max_pooling2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>76</td><td>conv2d_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 64]</td>
+<td>None</td>
+<td>42</td>
+<td>None</td>
+</tr>
+<tr>
+<td>77</td><td>conv2d_8/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>43</td>
+<td>None</td>
+</tr>
+<tr>
+<td>78</td><td>conv2d_8</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>79</td><td>channel_padding_1/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>44</td>
+<td>None</td>
+</tr>
+<tr>
+<td>80</td><td>channel_padding_1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>81</td><td>add_7__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>82</td><td>p_re_lu_8/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>45</td>
+<td>None</td>
+</tr>
+<tr>
+<td>83</td><td>p_re_lu_8</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>84</td><td>depthwise_conv2d_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>46</td>
+<td>None</td>
+</tr>
+<tr>
+<td>85</td><td>depthwise_conv2d_8/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>47</td>
+<td>None</td>
+</tr>
+<tr>
+<td>86</td><td>depthwise_conv2d_8</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>87</td><td>conv2d_9/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 128]</td>
+<td>None</td>
+<td>48</td>
+<td>None</td>
+</tr>
+<tr>
+<td>88</td><td>conv2d_9/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>49</td>
+<td>None</td>
+</tr>
+<tr>
+<td>89</td><td>conv2d_9</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>90</td><td>add_8__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>91</td><td>p_re_lu_9/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>50</td>
+<td>None</td>
+</tr>
+<tr>
+<td>92</td><td>p_re_lu_9</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>93</td><td>depthwise_conv2d_9/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>51</td>
+<td>None</td>
+</tr>
+<tr>
+<td>94</td><td>depthwise_conv2d_9/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>52</td>
+<td>None</td>
+</tr>
+<tr>
+<td>95</td><td>depthwise_conv2d_9</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>96</td><td>conv2d_10/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 128]</td>
+<td>None</td>
+<td>53</td>
+<td>None</td>
+</tr>
+<tr>
+<td>97</td><td>conv2d_10/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>54</td>
+<td>None</td>
+</tr>
+<tr>
+<td>98</td><td>conv2d_10</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>99</td><td>add_9__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>100</td><td>p_re_lu_10/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>55</td>
+<td>None</td>
+</tr>
+<tr>
+<td>101</td><td>p_re_lu_10</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>102</td><td>depthwise_conv2d_10/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>56</td>
+<td>None</td>
+</tr>
+<tr>
+<td>103</td><td>depthwise_conv2d_10/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>57</td>
+<td>None</td>
+</tr>
+<tr>
+<td>104</td><td>depthwise_conv2d_10</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>105</td><td>conv2d_11/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 128]</td>
+<td>None</td>
+<td>58</td>
+<td>None</td>
+</tr>
+<tr>
+<td>106</td><td>conv2d_11/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>59</td>
+<td>None</td>
+</tr>
+<tr>
+<td>107</td><td>conv2d_11</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>108</td><td>add_10__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>109</td><td>p_re_lu_11/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>60</td>
+<td>None</td>
+</tr>
+<tr>
+<td>110</td><td>p_re_lu_11</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>111</td><td>depthwise_conv2d_11/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>61</td>
+<td>None</td>
+</tr>
+<tr>
+<td>112</td><td>depthwise_conv2d_11/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>62</td>
+<td>None</td>
+</tr>
+<tr>
+<td>113</td><td>depthwise_conv2d_11</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>114</td><td>max_pooling2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>115</td><td>conv2d_12/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 128]</td>
+<td>None</td>
+<td>63</td>
+<td>None</td>
+</tr>
+<tr>
+<td>116</td><td>conv2d_12/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>64</td>
+<td>None</td>
+</tr>
+<tr>
+<td>117</td><td>conv2d_12</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>118</td><td>channel_padding_2/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>65</td>
+<td>None</td>
+</tr>
+<tr>
+<td>119</td><td>channel_padding_2</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>120</td><td>add_11__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>121</td><td>p_re_lu_12/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>66</td>
+<td>None</td>
+</tr>
+<tr>
+<td>122</td><td>p_re_lu_12</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>123</td><td>depthwise_conv2d_12/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>67</td>
+<td>None</td>
+</tr>
+<tr>
+<td>124</td><td>depthwise_conv2d_12/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>68</td>
+<td>None</td>
+</tr>
+<tr>
+<td>125</td><td>depthwise_conv2d_12</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>126</td><td>conv2d_13/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>69</td>
+<td>None</td>
+</tr>
+<tr>
+<td>127</td><td>conv2d_13/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>70</td>
+<td>None</td>
+</tr>
+<tr>
+<td>128</td><td>conv2d_13</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>129</td><td>add_12__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>130</td><td>p_re_lu_13/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>71</td>
+<td>None</td>
+</tr>
+<tr>
+<td>131</td><td>p_re_lu_13</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>132</td><td>depthwise_conv2d_13/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>72</td>
+<td>None</td>
+</tr>
+<tr>
+<td>133</td><td>depthwise_conv2d_13/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>73</td>
+<td>None</td>
+</tr>
+<tr>
+<td>134</td><td>depthwise_conv2d_13</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>135</td><td>conv2d_14/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>74</td>
+<td>None</td>
+</tr>
+<tr>
+<td>136</td><td>conv2d_14/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>75</td>
+<td>None</td>
+</tr>
+<tr>
+<td>137</td><td>conv2d_14</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>138</td><td>add_13__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>139</td><td>p_re_lu_14/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>76</td>
+<td>None</td>
+</tr>
+<tr>
+<td>140</td><td>p_re_lu_14</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>141</td><td>depthwise_conv2d_14/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>77</td>
+<td>None</td>
+</tr>
+<tr>
+<td>142</td><td>depthwise_conv2d_14/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>78</td>
+<td>None</td>
+</tr>
+<tr>
+<td>143</td><td>depthwise_conv2d_14</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>144</td><td>conv2d_15/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>79</td>
+<td>None</td>
+</tr>
+<tr>
+<td>145</td><td>conv2d_15/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>80</td>
+<td>None</td>
+</tr>
+<tr>
+<td>146</td><td>conv2d_15</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>147</td><td>add_14__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>148</td><td>p_re_lu_15/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>81</td>
+<td>None</td>
+</tr>
+<tr>
+<td>149</td><td>p_re_lu_15</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>150</td><td>depthwise_conv2d_15/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>82</td>
+<td>None</td>
+</tr>
+<tr>
+<td>151</td><td>depthwise_conv2d_15/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>83</td>
+<td>None</td>
+</tr>
+<tr>
+<td>152</td><td>depthwise_conv2d_15</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>153</td><td>conv2d_16/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>84</td>
+<td>None</td>
+</tr>
+<tr>
+<td>154</td><td>conv2d_16/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>85</td>
+<td>None</td>
+</tr>
+<tr>
+<td>155</td><td>conv2d_16</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>156</td><td>max_pooling2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>157</td><td>add_15__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>158</td><td>p_re_lu_16/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>86</td>
+<td>None</td>
+</tr>
+<tr>
+<td>159</td><td>p_re_lu_16</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>160</td><td>depthwise_conv2d_16/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>87</td>
+<td>None</td>
+</tr>
+<tr>
+<td>161</td><td>depthwise_conv2d_16/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>88</td>
+<td>None</td>
+</tr>
+<tr>
+<td>162</td><td>depthwise_conv2d_16</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>163</td><td>conv2d_17/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>89</td>
+<td>None</td>
+</tr>
+<tr>
+<td>164</td><td>conv2d_17/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>90</td>
+<td>None</td>
+</tr>
+<tr>
+<td>165</td><td>conv2d_17</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>166</td><td>add_16__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>167</td><td>p_re_lu_17/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>91</td>
+<td>None</td>
+</tr>
+<tr>
+<td>168</td><td>p_re_lu_17</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>169</td><td>depthwise_conv2d_17/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>92</td>
+<td>None</td>
+</tr>
+<tr>
+<td>170</td><td>depthwise_conv2d_17/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>93</td>
+<td>None</td>
+</tr>
+<tr>
+<td>171</td><td>depthwise_conv2d_17</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>172</td><td>conv2d_18/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>94</td>
+<td>None</td>
+</tr>
+<tr>
+<td>173</td><td>conv2d_18/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>95</td>
+<td>None</td>
+</tr>
+<tr>
+<td>174</td><td>conv2d_18</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>175</td><td>add_17__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>176</td><td>p_re_lu_18/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>96</td>
+<td>None</td>
+</tr>
+<tr>
+<td>177</td><td>p_re_lu_18</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>178</td><td>depthwise_conv2d_18/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>97</td>
+<td>None</td>
+</tr>
+<tr>
+<td>179</td><td>depthwise_conv2d_18/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>98</td>
+<td>None</td>
+</tr>
+<tr>
+<td>180</td><td>depthwise_conv2d_18</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>181</td><td>conv2d_19/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>99</td>
+<td>None</td>
+</tr>
+<tr>
+<td>182</td><td>conv2d_19/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>100</td>
+<td>None</td>
+</tr>
+<tr>
+<td>183</td><td>conv2d_19</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>184</td><td>add_18__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>185</td><td>p_re_lu_19/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>101</td>
+<td>None</td>
+</tr>
+<tr>
+<td>186</td><td>p_re_lu_19</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>187</td><td>up_sampling2d/Size</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>102</td>
+<td>None</td>
+</tr>
+<tr>
+<td>188</td><td>up_sampling2d</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>189</td><td>conv2d_20/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>103</td>
+<td>None</td>
+</tr>
+<tr>
+<td>190</td><td>conv2d_20/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>104</td>
+<td>None</td>
+</tr>
+<tr>
+<td>191</td><td>conv2d_20</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>192</td><td>p_re_lu_20/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>105</td>
+<td>None</td>
+</tr>
+<tr>
+<td>193</td><td>p_re_lu_20</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>194</td><td>add_19__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>195</td><td>depthwise_conv2d_19/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>106</td>
+<td>None</td>
+</tr>
+<tr>
+<td>196</td><td>depthwise_conv2d_19/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>107</td>
+<td>None</td>
+</tr>
+<tr>
+<td>197</td><td>depthwise_conv2d_19</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>198</td><td>conv2d_21/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>108</td>
+<td>None</td>
+</tr>
+<tr>
+<td>199</td><td>conv2d_21/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>109</td>
+<td>None</td>
+</tr>
+<tr>
+<td>200</td><td>conv2d_21</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>201</td><td>add_20__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>202</td><td>p_re_lu_21/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>110</td>
+<td>None</td>
+</tr>
+<tr>
+<td>203</td><td>p_re_lu_21</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>204</td><td>depthwise_conv2d_20/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 256]</td>
+<td>None</td>
+<td>111</td>
+<td>None</td>
+</tr>
+<tr>
+<td>205</td><td>depthwise_conv2d_20/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>112</td>
+<td>None</td>
+</tr>
+<tr>
+<td>206</td><td>depthwise_conv2d_20</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>207</td><td>conv2d_22/Kernel</td>
+<td>FLOAT32</td>
+<td>[256, 1, 1, 256]</td>
+<td>None</td>
+<td>113</td>
+<td>None</td>
+</tr>
+<tr>
+<td>208</td><td>conv2d_22/Bias</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>114</td>
+<td>None</td>
+</tr>
+<tr>
+<td>209</td><td>conv2d_22</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>210</td><td>add_21__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>211</td><td>p_re_lu_22/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 256]</td>
+<td>None</td>
+<td>115</td>
+<td>None</td>
+</tr>
+<tr>
+<td>212</td><td>p_re_lu_22</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>213</td><td>up_sampling2d_1/Size</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>116</td>
+<td>None</td>
+</tr>
+<tr>
+<td>214</td><td>up_sampling2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 256]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>215</td><td>conv2d_23/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 256]</td>
+<td>None</td>
+<td>117</td>
+<td>None</td>
+</tr>
+<tr>
+<td>216</td><td>conv2d_23/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>118</td>
+<td>None</td>
+</tr>
+<tr>
+<td>217</td><td>conv2d_23</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>218</td><td>p_re_lu_23/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>119</td>
+<td>None</td>
+</tr>
+<tr>
+<td>219</td><td>p_re_lu_23</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>220</td><td>add_22__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>221</td><td>depthwise_conv2d_21/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>120</td>
+<td>None</td>
+</tr>
+<tr>
+<td>222</td><td>depthwise_conv2d_21/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>121</td>
+<td>None</td>
+</tr>
+<tr>
+<td>223</td><td>depthwise_conv2d_21</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>224</td><td>conv2d_24/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 128]</td>
+<td>None</td>
+<td>122</td>
+<td>None</td>
+</tr>
+<tr>
+<td>225</td><td>conv2d_24/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>123</td>
+<td>None</td>
+</tr>
+<tr>
+<td>226</td><td>conv2d_24</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>227</td><td>add_23__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>228</td><td>p_re_lu_24/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>124</td>
+<td>None</td>
+</tr>
+<tr>
+<td>229</td><td>p_re_lu_24</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>230</td><td>depthwise_conv2d_22/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 128]</td>
+<td>None</td>
+<td>125</td>
+<td>None</td>
+</tr>
+<tr>
+<td>231</td><td>depthwise_conv2d_22/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>126</td>
+<td>None</td>
+</tr>
+<tr>
+<td>232</td><td>depthwise_conv2d_22</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>233</td><td>conv2d_25/Kernel</td>
+<td>FLOAT32</td>
+<td>[128, 1, 1, 128]</td>
+<td>None</td>
+<td>127</td>
+<td>None</td>
+</tr>
+<tr>
+<td>234</td><td>conv2d_25/Bias</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>128</td>
+<td>None</td>
+</tr>
+<tr>
+<td>235</td><td>conv2d_25</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>236</td><td>add_24__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>237</td><td>p_re_lu_25/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 128]</td>
+<td>None</td>
+<td>129</td>
+<td>None</td>
+</tr>
+<tr>
+<td>238</td><td>p_re_lu_25</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>239</td><td>classificator_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[2, 1, 1, 128]</td>
+<td>None</td>
+<td>130</td>
+<td>None</td>
+</tr>
+<tr>
+<td>240</td><td>classificator_8/Bias</td>
+<td>FLOAT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>131</td>
+<td>None</td>
+</tr>
+<tr>
+<td>241</td><td>classificator_8</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 2]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>242</td><td>classificator_16/Kernel</td>
+<td>FLOAT32</td>
+<td>[6, 1, 1, 256]</td>
+<td>None</td>
+<td>132</td>
+<td>None</td>
+</tr>
+<tr>
+<td>243</td><td>classificator_16/Bias</td>
+<td>FLOAT32</td>
+<td>[6]</td>
+<td>None</td>
+<td>133</td>
+<td>None</td>
+</tr>
+<tr>
+<td>244</td><td>classificator_16</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 6]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>245</td><td>regressor_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[36, 1, 1, 128]</td>
+<td>None</td>
+<td>134</td>
+<td>None</td>
+</tr>
+<tr>
+<td>246</td><td>regressor_8/Bias</td>
+<td>FLOAT32</td>
+<td>[36]</td>
+<td>None</td>
+<td>135</td>
+<td>None</td>
+</tr>
+<tr>
+<td>247</td><td>regressor_8</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 36]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>248</td><td>regressor_16/Kernel</td>
+<td>FLOAT32</td>
+<td>[108, 1, 1, 256]</td>
+<td>None</td>
+<td>136</td>
+<td>None</td>
+</tr>
+<tr>
+<td>249</td><td>regressor_16/Bias</td>
+<td>FLOAT32</td>
+<td>[108]</td>
+<td>None</td>
+<td>137</td>
+<td>None</td>
+</tr>
+<tr>
+<td>250</td><td>regressor_16</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 108]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>251</td><td>reshape</td>
+<td>FLOAT32</td>
+<td>[1, 512, 1]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>252</td><td>reshape_2</td>
+<td>FLOAT32</td>
+<td>[1, 384, 1]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>253</td><td>reshape_1</td>
+<td>FLOAT32</td>
+<td>[1, 512, 18]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>254</td><td>reshape_3</td>
+<td>FLOAT32</td>
+<td>[1, 384, 18]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>255</td><td>classificators</td>
+<td>FLOAT32</td>
+<td>[1, 896, 1]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>256</td><td>regressors</td>
+<td>FLOAT32</td>
+<td>[1, 896, 18]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 input FLOAT32 [1, 128, 128, 3]None<br>1 conv2d/Kernel FLOAT32 [32, 5, 5, 3]None<br>2 conv2d/Bias FLOAT32 [32]None<br></span>[0, 1, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>3 conv2d FLOAT32 [1, 64, 64, 32]None<br></span>[3]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>3 conv2d FLOAT32 [1, 64, 64, 32]None<br>4 p_re_lu/Alpha FLOAT32 [1, 1, 32]None<br></span>[3, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>5 p_re_lu FLOAT32 [1, 64, 64, 32]None<br></span>[5]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>5 p_re_lu FLOAT32 [1, 64, 64, 32]None<br>6 depthwise_conv2d/Kernel FLOAT32 [1, 5, 5, 32]None<br>7 depthwise_conv2d/Bias FLOAT32 [32]None<br></span>[5, 6, 7]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>8 depthwise_conv2d FLOAT32 [1, 64, 64, 32]None<br></span>[8]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>8 depthwise_conv2d FLOAT32 [1, 64, 64, 32]None<br>9 conv2d_1/Kernel FLOAT32 [32, 1, 1, 32]None<br>10 conv2d_1/Bias FLOAT32 [32]None<br></span>[8, 9, 10]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>11 conv2d_1 FLOAT32 [1, 64, 64, 32]None<br></span>[11]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>5 p_re_lu FLOAT32 [1, 64, 64, 32]None<br>11 conv2d_1 FLOAT32 [1, 64, 64, 32]None<br></span>[5, 11]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>12 add__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br></span>[12]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>12 add__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br>13 p_re_lu_1/Alpha FLOAT32 [1, 1, 32]None<br></span>[12, 13]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>14 p_re_lu_1 FLOAT32 [1, 64, 64, 32]None<br></span>[14]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>14 p_re_lu_1 FLOAT32 [1, 64, 64, 32]None<br>15 depthwise_conv2d_1/Kernel FLOAT32 [1, 5, 5, 32]None<br>16 depthwise_conv2d_1/Bias FLOAT32 [32]None<br></span>[14, 15, 16]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>17 depthwise_conv2d_1 FLOAT32 [1, 64, 64, 32]None<br></span>[17]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>17 depthwise_conv2d_1 FLOAT32 [1, 64, 64, 32]None<br>18 conv2d_2/Kernel FLOAT32 [32, 1, 1, 32]None<br>19 conv2d_2/Bias FLOAT32 [32]None<br></span>[17, 18, 19]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>20 conv2d_2 FLOAT32 [1, 64, 64, 32]None<br></span>[20]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>14 p_re_lu_1 FLOAT32 [1, 64, 64, 32]None<br>20 conv2d_2 FLOAT32 [1, 64, 64, 32]None<br></span>[14, 20]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>21 add_1__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br></span>[21]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>21 add_1__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br>22 p_re_lu_2/Alpha FLOAT32 [1, 1, 32]None<br></span>[21, 22]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>23 p_re_lu_2 FLOAT32 [1, 64, 64, 32]None<br></span>[23]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>10</td><td><span class='tooltip'><span class='tooltipcontent'>23 p_re_lu_2 FLOAT32 [1, 64, 64, 32]None<br>24 depthwise_conv2d_2/Kernel FLOAT32 [1, 5, 5, 32]None<br>25 depthwise_conv2d_2/Bias FLOAT32 [32]None<br></span>[23, 24, 25]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>26 depthwise_conv2d_2 FLOAT32 [1, 64, 64, 32]None<br></span>[26]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>11</td><td><span class='tooltip'><span class='tooltipcontent'>26 depthwise_conv2d_2 FLOAT32 [1, 64, 64, 32]None<br>27 conv2d_3/Kernel FLOAT32 [32, 1, 1, 32]None<br>28 conv2d_3/Bias FLOAT32 [32]None<br></span>[26, 27, 28]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>29 conv2d_3 FLOAT32 [1, 64, 64, 32]None<br></span>[29]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>12</td><td><span class='tooltip'><span class='tooltipcontent'>23 p_re_lu_2 FLOAT32 [1, 64, 64, 32]None<br>29 conv2d_3 FLOAT32 [1, 64, 64, 32]None<br></span>[23, 29]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>30 add_2__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br></span>[30]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>13</td><td><span class='tooltip'><span class='tooltipcontent'>30 add_2__xeno_compat__1 FLOAT32 [1, 64, 64, 32]None<br>31 p_re_lu_3/Alpha FLOAT32 [1, 1, 32]None<br></span>[30, 31]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>32 p_re_lu_3 FLOAT32 [1, 64, 64, 32]None<br></span>[32]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>14</td><td><span class='tooltip'><span class='tooltipcontent'>32 p_re_lu_3 FLOAT32 [1, 64, 64, 32]None<br>33 depthwise_conv2d_3/Kernel FLOAT32 [1, 5, 5, 32]None<br>34 depthwise_conv2d_3/Bias FLOAT32 [32]None<br></span>[32, 33, 34]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>35 depthwise_conv2d_3 FLOAT32 [1, 32, 32, 32]None<br></span>[35]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>15</td><td><span class='tooltip'><span class='tooltipcontent'>32 p_re_lu_3 FLOAT32 [1, 64, 64, 32]None<br></span>[32]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>36 max_pooling2d FLOAT32 [1, 32, 32, 32]None<br></span>[36]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (4)</td>
+</tr>
+<tr>
+<td>16</td><td><span class='tooltip'><span class='tooltipcontent'>35 depthwise_conv2d_3 FLOAT32 [1, 32, 32, 32]None<br>37 conv2d_4/Kernel FLOAT32 [64, 1, 1, 32]None<br>38 conv2d_4/Bias FLOAT32 [64]None<br></span>[35, 37, 38]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>39 conv2d_4 FLOAT32 [1, 32, 32, 64]None<br></span>[39]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>17</td><td><span class='tooltip'><span class='tooltipcontent'>36 max_pooling2d FLOAT32 [1, 32, 32, 32]None<br>40 channel_padding/Paddings INT32 [4, 2]None<br></span>[36, 40]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>41 channel_padding FLOAT32 [1, 32, 32, 64]None<br></span>[41]</span></td>
+<td>None</td>
+<td>PAD (5)</td>
+</tr>
+<tr>
+<td>18</td><td><span class='tooltip'><span class='tooltipcontent'>41 channel_padding FLOAT32 [1, 32, 32, 64]None<br>39 conv2d_4 FLOAT32 [1, 32, 32, 64]None<br></span>[41, 39]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>42 add_3__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br></span>[42]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>19</td><td><span class='tooltip'><span class='tooltipcontent'>42 add_3__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br>43 p_re_lu_4/Alpha FLOAT32 [1, 1, 64]None<br></span>[42, 43]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>44 p_re_lu_4 FLOAT32 [1, 32, 32, 64]None<br></span>[44]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>20</td><td><span class='tooltip'><span class='tooltipcontent'>44 p_re_lu_4 FLOAT32 [1, 32, 32, 64]None<br>45 depthwise_conv2d_4/Kernel FLOAT32 [1, 5, 5, 64]None<br>46 depthwise_conv2d_4/Bias FLOAT32 [64]None<br></span>[44, 45, 46]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>47 depthwise_conv2d_4 FLOAT32 [1, 32, 32, 64]None<br></span>[47]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>21</td><td><span class='tooltip'><span class='tooltipcontent'>47 depthwise_conv2d_4 FLOAT32 [1, 32, 32, 64]None<br>48 conv2d_5/Kernel FLOAT32 [64, 1, 1, 64]None<br>49 conv2d_5/Bias FLOAT32 [64]None<br></span>[47, 48, 49]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>50 conv2d_5 FLOAT32 [1, 32, 32, 64]None<br></span>[50]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>22</td><td><span class='tooltip'><span class='tooltipcontent'>44 p_re_lu_4 FLOAT32 [1, 32, 32, 64]None<br>50 conv2d_5 FLOAT32 [1, 32, 32, 64]None<br></span>[44, 50]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>51 add_4__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br></span>[51]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>23</td><td><span class='tooltip'><span class='tooltipcontent'>51 add_4__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br>52 p_re_lu_5/Alpha FLOAT32 [1, 1, 64]None<br></span>[51, 52]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>53 p_re_lu_5 FLOAT32 [1, 32, 32, 64]None<br></span>[53]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>24</td><td><span class='tooltip'><span class='tooltipcontent'>53 p_re_lu_5 FLOAT32 [1, 32, 32, 64]None<br>54 depthwise_conv2d_5/Kernel FLOAT32 [1, 5, 5, 64]None<br>55 depthwise_conv2d_5/Bias FLOAT32 [64]None<br></span>[53, 54, 55]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>56 depthwise_conv2d_5 FLOAT32 [1, 32, 32, 64]None<br></span>[56]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>25</td><td><span class='tooltip'><span class='tooltipcontent'>56 depthwise_conv2d_5 FLOAT32 [1, 32, 32, 64]None<br>57 conv2d_6/Kernel FLOAT32 [64, 1, 1, 64]None<br>58 conv2d_6/Bias FLOAT32 [64]None<br></span>[56, 57, 58]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>59 conv2d_6 FLOAT32 [1, 32, 32, 64]None<br></span>[59]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>26</td><td><span class='tooltip'><span class='tooltipcontent'>53 p_re_lu_5 FLOAT32 [1, 32, 32, 64]None<br>59 conv2d_6 FLOAT32 [1, 32, 32, 64]None<br></span>[53, 59]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>60 add_5__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br></span>[60]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>27</td><td><span class='tooltip'><span class='tooltipcontent'>60 add_5__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br>61 p_re_lu_6/Alpha FLOAT32 [1, 1, 64]None<br></span>[60, 61]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>62 p_re_lu_6 FLOAT32 [1, 32, 32, 64]None<br></span>[62]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>28</td><td><span class='tooltip'><span class='tooltipcontent'>62 p_re_lu_6 FLOAT32 [1, 32, 32, 64]None<br>63 depthwise_conv2d_6/Kernel FLOAT32 [1, 5, 5, 64]None<br>64 depthwise_conv2d_6/Bias FLOAT32 [64]None<br></span>[62, 63, 64]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>65 depthwise_conv2d_6 FLOAT32 [1, 32, 32, 64]None<br></span>[65]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>29</td><td><span class='tooltip'><span class='tooltipcontent'>65 depthwise_conv2d_6 FLOAT32 [1, 32, 32, 64]None<br>66 conv2d_7/Kernel FLOAT32 [64, 1, 1, 64]None<br>67 conv2d_7/Bias FLOAT32 [64]None<br></span>[65, 66, 67]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>68 conv2d_7 FLOAT32 [1, 32, 32, 64]None<br></span>[68]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>30</td><td><span class='tooltip'><span class='tooltipcontent'>62 p_re_lu_6 FLOAT32 [1, 32, 32, 64]None<br>68 conv2d_7 FLOAT32 [1, 32, 32, 64]None<br></span>[62, 68]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>69 add_6__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br></span>[69]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>31</td><td><span class='tooltip'><span class='tooltipcontent'>69 add_6__xeno_compat__1 FLOAT32 [1, 32, 32, 64]None<br>70 p_re_lu_7/Alpha FLOAT32 [1, 1, 64]None<br></span>[69, 70]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>71 p_re_lu_7 FLOAT32 [1, 32, 32, 64]None<br></span>[71]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>32</td><td><span class='tooltip'><span class='tooltipcontent'>71 p_re_lu_7 FLOAT32 [1, 32, 32, 64]None<br>72 depthwise_conv2d_7/Kernel FLOAT32 [1, 5, 5, 64]None<br>73 depthwise_conv2d_7/Bias FLOAT32 [64]None<br></span>[71, 72, 73]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>74 depthwise_conv2d_7 FLOAT32 [1, 16, 16, 64]None<br></span>[74]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>33</td><td><span class='tooltip'><span class='tooltipcontent'>71 p_re_lu_7 FLOAT32 [1, 32, 32, 64]None<br></span>[71]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>75 max_pooling2d_1 FLOAT32 [1, 16, 16, 64]None<br></span>[75]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (4)</td>
+</tr>
+<tr>
+<td>34</td><td><span class='tooltip'><span class='tooltipcontent'>74 depthwise_conv2d_7 FLOAT32 [1, 16, 16, 64]None<br>76 conv2d_8/Kernel FLOAT32 [128, 1, 1, 64]None<br>77 conv2d_8/Bias FLOAT32 [128]None<br></span>[74, 76, 77]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>78 conv2d_8 FLOAT32 [1, 16, 16, 128]None<br></span>[78]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>35</td><td><span class='tooltip'><span class='tooltipcontent'>75 max_pooling2d_1 FLOAT32 [1, 16, 16, 64]None<br>79 channel_padding_1/Paddings INT32 [4, 2]None<br></span>[75, 79]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>80 channel_padding_1 FLOAT32 [1, 16, 16, 128]None<br></span>[80]</span></td>
+<td>None</td>
+<td>PAD (5)</td>
+</tr>
+<tr>
+<td>36</td><td><span class='tooltip'><span class='tooltipcontent'>80 channel_padding_1 FLOAT32 [1, 16, 16, 128]None<br>78 conv2d_8 FLOAT32 [1, 16, 16, 128]None<br></span>[80, 78]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>81 add_7__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[81]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>37</td><td><span class='tooltip'><span class='tooltipcontent'>81 add_7__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>82 p_re_lu_8/Alpha FLOAT32 [1, 1, 128]None<br></span>[81, 82]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>83 p_re_lu_8 FLOAT32 [1, 16, 16, 128]None<br></span>[83]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>38</td><td><span class='tooltip'><span class='tooltipcontent'>83 p_re_lu_8 FLOAT32 [1, 16, 16, 128]None<br>84 depthwise_conv2d_8/Kernel FLOAT32 [1, 5, 5, 128]None<br>85 depthwise_conv2d_8/Bias FLOAT32 [128]None<br></span>[83, 84, 85]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>86 depthwise_conv2d_8 FLOAT32 [1, 16, 16, 128]None<br></span>[86]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>39</td><td><span class='tooltip'><span class='tooltipcontent'>86 depthwise_conv2d_8 FLOAT32 [1, 16, 16, 128]None<br>87 conv2d_9/Kernel FLOAT32 [128, 1, 1, 128]None<br>88 conv2d_9/Bias FLOAT32 [128]None<br></span>[86, 87, 88]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>89 conv2d_9 FLOAT32 [1, 16, 16, 128]None<br></span>[89]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>40</td><td><span class='tooltip'><span class='tooltipcontent'>83 p_re_lu_8 FLOAT32 [1, 16, 16, 128]None<br>89 conv2d_9 FLOAT32 [1, 16, 16, 128]None<br></span>[83, 89]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>90 add_8__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[90]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>41</td><td><span class='tooltip'><span class='tooltipcontent'>90 add_8__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>91 p_re_lu_9/Alpha FLOAT32 [1, 1, 128]None<br></span>[90, 91]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>92 p_re_lu_9 FLOAT32 [1, 16, 16, 128]None<br></span>[92]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>42</td><td><span class='tooltip'><span class='tooltipcontent'>92 p_re_lu_9 FLOAT32 [1, 16, 16, 128]None<br>93 depthwise_conv2d_9/Kernel FLOAT32 [1, 5, 5, 128]None<br>94 depthwise_conv2d_9/Bias FLOAT32 [128]None<br></span>[92, 93, 94]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>95 depthwise_conv2d_9 FLOAT32 [1, 16, 16, 128]None<br></span>[95]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>43</td><td><span class='tooltip'><span class='tooltipcontent'>95 depthwise_conv2d_9 FLOAT32 [1, 16, 16, 128]None<br>96 conv2d_10/Kernel FLOAT32 [128, 1, 1, 128]None<br>97 conv2d_10/Bias FLOAT32 [128]None<br></span>[95, 96, 97]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>98 conv2d_10 FLOAT32 [1, 16, 16, 128]None<br></span>[98]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>44</td><td><span class='tooltip'><span class='tooltipcontent'>92 p_re_lu_9 FLOAT32 [1, 16, 16, 128]None<br>98 conv2d_10 FLOAT32 [1, 16, 16, 128]None<br></span>[92, 98]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>99 add_9__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[99]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>45</td><td><span class='tooltip'><span class='tooltipcontent'>99 add_9__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>100 p_re_lu_10/Alpha FLOAT32 [1, 1, 128]None<br></span>[99, 100]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>101 p_re_lu_10 FLOAT32 [1, 16, 16, 128]None<br></span>[101]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>46</td><td><span class='tooltip'><span class='tooltipcontent'>101 p_re_lu_10 FLOAT32 [1, 16, 16, 128]None<br>102 depthwise_conv2d_10/Kernel FLOAT32 [1, 5, 5, 128]None<br>103 depthwise_conv2d_10/Bias FLOAT32 [128]None<br></span>[101, 102, 103]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>104 depthwise_conv2d_10 FLOAT32 [1, 16, 16, 128]None<br></span>[104]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>47</td><td><span class='tooltip'><span class='tooltipcontent'>104 depthwise_conv2d_10 FLOAT32 [1, 16, 16, 128]None<br>105 conv2d_11/Kernel FLOAT32 [128, 1, 1, 128]None<br>106 conv2d_11/Bias FLOAT32 [128]None<br></span>[104, 105, 106]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>107 conv2d_11 FLOAT32 [1, 16, 16, 128]None<br></span>[107]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>48</td><td><span class='tooltip'><span class='tooltipcontent'>101 p_re_lu_10 FLOAT32 [1, 16, 16, 128]None<br>107 conv2d_11 FLOAT32 [1, 16, 16, 128]None<br></span>[101, 107]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>108 add_10__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[108]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>49</td><td><span class='tooltip'><span class='tooltipcontent'>108 add_10__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>109 p_re_lu_11/Alpha FLOAT32 [1, 1, 128]None<br></span>[108, 109]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>110 p_re_lu_11 FLOAT32 [1, 16, 16, 128]None<br></span>[110]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>50</td><td><span class='tooltip'><span class='tooltipcontent'>110 p_re_lu_11 FLOAT32 [1, 16, 16, 128]None<br>111 depthwise_conv2d_11/Kernel FLOAT32 [1, 5, 5, 128]None<br>112 depthwise_conv2d_11/Bias FLOAT32 [128]None<br></span>[110, 111, 112]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>113 depthwise_conv2d_11 FLOAT32 [1, 8, 8, 128]None<br></span>[113]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>51</td><td><span class='tooltip'><span class='tooltipcontent'>110 p_re_lu_11 FLOAT32 [1, 16, 16, 128]None<br></span>[110]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>114 max_pooling2d_2 FLOAT32 [1, 8, 8, 128]None<br></span>[114]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (4)</td>
+</tr>
+<tr>
+<td>52</td><td><span class='tooltip'><span class='tooltipcontent'>113 depthwise_conv2d_11 FLOAT32 [1, 8, 8, 128]None<br>115 conv2d_12/Kernel FLOAT32 [256, 1, 1, 128]None<br>116 conv2d_12/Bias FLOAT32 [256]None<br></span>[113, 115, 116]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>117 conv2d_12 FLOAT32 [1, 8, 8, 256]None<br></span>[117]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>53</td><td><span class='tooltip'><span class='tooltipcontent'>114 max_pooling2d_2 FLOAT32 [1, 8, 8, 128]None<br>118 channel_padding_2/Paddings INT32 [4, 2]None<br></span>[114, 118]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>119 channel_padding_2 FLOAT32 [1, 8, 8, 256]None<br></span>[119]</span></td>
+<td>None</td>
+<td>PAD (5)</td>
+</tr>
+<tr>
+<td>54</td><td><span class='tooltip'><span class='tooltipcontent'>119 channel_padding_2 FLOAT32 [1, 8, 8, 256]None<br>117 conv2d_12 FLOAT32 [1, 8, 8, 256]None<br></span>[119, 117]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>120 add_11__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[120]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>55</td><td><span class='tooltip'><span class='tooltipcontent'>120 add_11__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>121 p_re_lu_12/Alpha FLOAT32 [1, 1, 256]None<br></span>[120, 121]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>122 p_re_lu_12 FLOAT32 [1, 8, 8, 256]None<br></span>[122]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>56</td><td><span class='tooltip'><span class='tooltipcontent'>122 p_re_lu_12 FLOAT32 [1, 8, 8, 256]None<br>123 depthwise_conv2d_12/Kernel FLOAT32 [1, 5, 5, 256]None<br>124 depthwise_conv2d_12/Bias FLOAT32 [256]None<br></span>[122, 123, 124]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>125 depthwise_conv2d_12 FLOAT32 [1, 8, 8, 256]None<br></span>[125]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>57</td><td><span class='tooltip'><span class='tooltipcontent'>125 depthwise_conv2d_12 FLOAT32 [1, 8, 8, 256]None<br>126 conv2d_13/Kernel FLOAT32 [256, 1, 1, 256]None<br>127 conv2d_13/Bias FLOAT32 [256]None<br></span>[125, 126, 127]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>128 conv2d_13 FLOAT32 [1, 8, 8, 256]None<br></span>[128]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>58</td><td><span class='tooltip'><span class='tooltipcontent'>122 p_re_lu_12 FLOAT32 [1, 8, 8, 256]None<br>128 conv2d_13 FLOAT32 [1, 8, 8, 256]None<br></span>[122, 128]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>129 add_12__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[129]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>59</td><td><span class='tooltip'><span class='tooltipcontent'>129 add_12__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>130 p_re_lu_13/Alpha FLOAT32 [1, 1, 256]None<br></span>[129, 130]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>131 p_re_lu_13 FLOAT32 [1, 8, 8, 256]None<br></span>[131]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>60</td><td><span class='tooltip'><span class='tooltipcontent'>131 p_re_lu_13 FLOAT32 [1, 8, 8, 256]None<br>132 depthwise_conv2d_13/Kernel FLOAT32 [1, 5, 5, 256]None<br>133 depthwise_conv2d_13/Bias FLOAT32 [256]None<br></span>[131, 132, 133]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>134 depthwise_conv2d_13 FLOAT32 [1, 8, 8, 256]None<br></span>[134]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>61</td><td><span class='tooltip'><span class='tooltipcontent'>134 depthwise_conv2d_13 FLOAT32 [1, 8, 8, 256]None<br>135 conv2d_14/Kernel FLOAT32 [256, 1, 1, 256]None<br>136 conv2d_14/Bias FLOAT32 [256]None<br></span>[134, 135, 136]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>137 conv2d_14 FLOAT32 [1, 8, 8, 256]None<br></span>[137]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>62</td><td><span class='tooltip'><span class='tooltipcontent'>131 p_re_lu_13 FLOAT32 [1, 8, 8, 256]None<br>137 conv2d_14 FLOAT32 [1, 8, 8, 256]None<br></span>[131, 137]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>138 add_13__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[138]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>63</td><td><span class='tooltip'><span class='tooltipcontent'>138 add_13__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>139 p_re_lu_14/Alpha FLOAT32 [1, 1, 256]None<br></span>[138, 139]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>140 p_re_lu_14 FLOAT32 [1, 8, 8, 256]None<br></span>[140]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>64</td><td><span class='tooltip'><span class='tooltipcontent'>140 p_re_lu_14 FLOAT32 [1, 8, 8, 256]None<br>141 depthwise_conv2d_14/Kernel FLOAT32 [1, 5, 5, 256]None<br>142 depthwise_conv2d_14/Bias FLOAT32 [256]None<br></span>[140, 141, 142]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>143 depthwise_conv2d_14 FLOAT32 [1, 8, 8, 256]None<br></span>[143]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>65</td><td><span class='tooltip'><span class='tooltipcontent'>143 depthwise_conv2d_14 FLOAT32 [1, 8, 8, 256]None<br>144 conv2d_15/Kernel FLOAT32 [256, 1, 1, 256]None<br>145 conv2d_15/Bias FLOAT32 [256]None<br></span>[143, 144, 145]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>146 conv2d_15 FLOAT32 [1, 8, 8, 256]None<br></span>[146]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>66</td><td><span class='tooltip'><span class='tooltipcontent'>140 p_re_lu_14 FLOAT32 [1, 8, 8, 256]None<br>146 conv2d_15 FLOAT32 [1, 8, 8, 256]None<br></span>[140, 146]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>147 add_14__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[147]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>67</td><td><span class='tooltip'><span class='tooltipcontent'>147 add_14__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>148 p_re_lu_15/Alpha FLOAT32 [1, 1, 256]None<br></span>[147, 148]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>149 p_re_lu_15 FLOAT32 [1, 8, 8, 256]None<br></span>[149]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>68</td><td><span class='tooltip'><span class='tooltipcontent'>149 p_re_lu_15 FLOAT32 [1, 8, 8, 256]None<br>150 depthwise_conv2d_15/Kernel FLOAT32 [1, 5, 5, 256]None<br>151 depthwise_conv2d_15/Bias FLOAT32 [256]None<br></span>[149, 150, 151]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>152 depthwise_conv2d_15 FLOAT32 [1, 4, 4, 256]None<br></span>[152]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>69</td><td><span class='tooltip'><span class='tooltipcontent'>152 depthwise_conv2d_15 FLOAT32 [1, 4, 4, 256]None<br>153 conv2d_16/Kernel FLOAT32 [256, 1, 1, 256]None<br>154 conv2d_16/Bias FLOAT32 [256]None<br></span>[152, 153, 154]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>155 conv2d_16 FLOAT32 [1, 4, 4, 256]None<br></span>[155]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>70</td><td><span class='tooltip'><span class='tooltipcontent'>149 p_re_lu_15 FLOAT32 [1, 8, 8, 256]None<br></span>[149]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>156 max_pooling2d_3 FLOAT32 [1, 4, 4, 256]None<br></span>[156]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (4)</td>
+</tr>
+<tr>
+<td>71</td><td><span class='tooltip'><span class='tooltipcontent'>156 max_pooling2d_3 FLOAT32 [1, 4, 4, 256]None<br>155 conv2d_16 FLOAT32 [1, 4, 4, 256]None<br></span>[156, 155]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>157 add_15__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br></span>[157]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>72</td><td><span class='tooltip'><span class='tooltipcontent'>157 add_15__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br>158 p_re_lu_16/Alpha FLOAT32 [1, 1, 256]None<br></span>[157, 158]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>159 p_re_lu_16 FLOAT32 [1, 4, 4, 256]None<br></span>[159]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>73</td><td><span class='tooltip'><span class='tooltipcontent'>159 p_re_lu_16 FLOAT32 [1, 4, 4, 256]None<br>160 depthwise_conv2d_16/Kernel FLOAT32 [1, 5, 5, 256]None<br>161 depthwise_conv2d_16/Bias FLOAT32 [256]None<br></span>[159, 160, 161]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>162 depthwise_conv2d_16 FLOAT32 [1, 4, 4, 256]None<br></span>[162]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>74</td><td><span class='tooltip'><span class='tooltipcontent'>162 depthwise_conv2d_16 FLOAT32 [1, 4, 4, 256]None<br>163 conv2d_17/Kernel FLOAT32 [256, 1, 1, 256]None<br>164 conv2d_17/Bias FLOAT32 [256]None<br></span>[162, 163, 164]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>165 conv2d_17 FLOAT32 [1, 4, 4, 256]None<br></span>[165]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>75</td><td><span class='tooltip'><span class='tooltipcontent'>159 p_re_lu_16 FLOAT32 [1, 4, 4, 256]None<br>165 conv2d_17 FLOAT32 [1, 4, 4, 256]None<br></span>[159, 165]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>166 add_16__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br></span>[166]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>76</td><td><span class='tooltip'><span class='tooltipcontent'>166 add_16__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br>167 p_re_lu_17/Alpha FLOAT32 [1, 1, 256]None<br></span>[166, 167]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>168 p_re_lu_17 FLOAT32 [1, 4, 4, 256]None<br></span>[168]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>77</td><td><span class='tooltip'><span class='tooltipcontent'>168 p_re_lu_17 FLOAT32 [1, 4, 4, 256]None<br>169 depthwise_conv2d_17/Kernel FLOAT32 [1, 5, 5, 256]None<br>170 depthwise_conv2d_17/Bias FLOAT32 [256]None<br></span>[168, 169, 170]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>171 depthwise_conv2d_17 FLOAT32 [1, 4, 4, 256]None<br></span>[171]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>78</td><td><span class='tooltip'><span class='tooltipcontent'>171 depthwise_conv2d_17 FLOAT32 [1, 4, 4, 256]None<br>172 conv2d_18/Kernel FLOAT32 [256, 1, 1, 256]None<br>173 conv2d_18/Bias FLOAT32 [256]None<br></span>[171, 172, 173]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>174 conv2d_18 FLOAT32 [1, 4, 4, 256]None<br></span>[174]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>79</td><td><span class='tooltip'><span class='tooltipcontent'>168 p_re_lu_17 FLOAT32 [1, 4, 4, 256]None<br>174 conv2d_18 FLOAT32 [1, 4, 4, 256]None<br></span>[168, 174]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>175 add_17__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br></span>[175]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>80</td><td><span class='tooltip'><span class='tooltipcontent'>175 add_17__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br>176 p_re_lu_18/Alpha FLOAT32 [1, 1, 256]None<br></span>[175, 176]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>177 p_re_lu_18 FLOAT32 [1, 4, 4, 256]None<br></span>[177]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>81</td><td><span class='tooltip'><span class='tooltipcontent'>177 p_re_lu_18 FLOAT32 [1, 4, 4, 256]None<br>178 depthwise_conv2d_18/Kernel FLOAT32 [1, 5, 5, 256]None<br>179 depthwise_conv2d_18/Bias FLOAT32 [256]None<br></span>[177, 178, 179]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>180 depthwise_conv2d_18 FLOAT32 [1, 4, 4, 256]None<br></span>[180]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>82</td><td><span class='tooltip'><span class='tooltipcontent'>180 depthwise_conv2d_18 FLOAT32 [1, 4, 4, 256]None<br>181 conv2d_19/Kernel FLOAT32 [256, 1, 1, 256]None<br>182 conv2d_19/Bias FLOAT32 [256]None<br></span>[180, 181, 182]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>183 conv2d_19 FLOAT32 [1, 4, 4, 256]None<br></span>[183]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>83</td><td><span class='tooltip'><span class='tooltipcontent'>177 p_re_lu_18 FLOAT32 [1, 4, 4, 256]None<br>183 conv2d_19 FLOAT32 [1, 4, 4, 256]None<br></span>[177, 183]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>184 add_18__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br></span>[184]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>84</td><td><span class='tooltip'><span class='tooltipcontent'>184 add_18__xeno_compat__1 FLOAT32 [1, 4, 4, 256]None<br>185 p_re_lu_19/Alpha FLOAT32 [1, 1, 256]None<br></span>[184, 185]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>186 p_re_lu_19 FLOAT32 [1, 4, 4, 256]None<br></span>[186]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>85</td><td><span class='tooltip'><span class='tooltipcontent'>186 p_re_lu_19 FLOAT32 [1, 4, 4, 256]None<br>187 up_sampling2d/Size INT32 [2]None<br></span>[186, 187]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>188 up_sampling2d FLOAT32 [1, 8, 8, 256]None<br></span>[188]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_BILINEAR (6)</td>
+</tr>
+<tr>
+<td>86</td><td><span class='tooltip'><span class='tooltipcontent'>188 up_sampling2d FLOAT32 [1, 8, 8, 256]None<br>189 conv2d_20/Kernel FLOAT32 [256, 1, 1, 256]None<br>190 conv2d_20/Bias FLOAT32 [256]None<br></span>[188, 189, 190]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>191 conv2d_20 FLOAT32 [1, 8, 8, 256]None<br></span>[191]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>87</td><td><span class='tooltip'><span class='tooltipcontent'>191 conv2d_20 FLOAT32 [1, 8, 8, 256]None<br>192 p_re_lu_20/Alpha FLOAT32 [1, 1, 256]None<br></span>[191, 192]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>193 p_re_lu_20 FLOAT32 [1, 8, 8, 256]None<br></span>[193]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>88</td><td><span class='tooltip'><span class='tooltipcontent'>149 p_re_lu_15 FLOAT32 [1, 8, 8, 256]None<br>193 p_re_lu_20 FLOAT32 [1, 8, 8, 256]None<br></span>[149, 193]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>194 add_19__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[194]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>89</td><td><span class='tooltip'><span class='tooltipcontent'>194 add_19__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>195 depthwise_conv2d_19/Kernel FLOAT32 [1, 5, 5, 256]None<br>196 depthwise_conv2d_19/Bias FLOAT32 [256]None<br></span>[194, 195, 196]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>197 depthwise_conv2d_19 FLOAT32 [1, 8, 8, 256]None<br></span>[197]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>90</td><td><span class='tooltip'><span class='tooltipcontent'>197 depthwise_conv2d_19 FLOAT32 [1, 8, 8, 256]None<br>198 conv2d_21/Kernel FLOAT32 [256, 1, 1, 256]None<br>199 conv2d_21/Bias FLOAT32 [256]None<br></span>[197, 198, 199]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>200 conv2d_21 FLOAT32 [1, 8, 8, 256]None<br></span>[200]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>91</td><td><span class='tooltip'><span class='tooltipcontent'>194 add_19__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>200 conv2d_21 FLOAT32 [1, 8, 8, 256]None<br></span>[194, 200]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>201 add_20__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[201]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>92</td><td><span class='tooltip'><span class='tooltipcontent'>201 add_20__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>202 p_re_lu_21/Alpha FLOAT32 [1, 1, 256]None<br></span>[201, 202]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>203 p_re_lu_21 FLOAT32 [1, 8, 8, 256]None<br></span>[203]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>93</td><td><span class='tooltip'><span class='tooltipcontent'>203 p_re_lu_21 FLOAT32 [1, 8, 8, 256]None<br>204 depthwise_conv2d_20/Kernel FLOAT32 [1, 5, 5, 256]None<br>205 depthwise_conv2d_20/Bias FLOAT32 [256]None<br></span>[203, 204, 205]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>206 depthwise_conv2d_20 FLOAT32 [1, 8, 8, 256]None<br></span>[206]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>94</td><td><span class='tooltip'><span class='tooltipcontent'>206 depthwise_conv2d_20 FLOAT32 [1, 8, 8, 256]None<br>207 conv2d_22/Kernel FLOAT32 [256, 1, 1, 256]None<br>208 conv2d_22/Bias FLOAT32 [256]None<br></span>[206, 207, 208]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>209 conv2d_22 FLOAT32 [1, 8, 8, 256]None<br></span>[209]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>95</td><td><span class='tooltip'><span class='tooltipcontent'>203 p_re_lu_21 FLOAT32 [1, 8, 8, 256]None<br>209 conv2d_22 FLOAT32 [1, 8, 8, 256]None<br></span>[203, 209]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>210 add_21__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br></span>[210]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>96</td><td><span class='tooltip'><span class='tooltipcontent'>210 add_21__xeno_compat__1 FLOAT32 [1, 8, 8, 256]None<br>211 p_re_lu_22/Alpha FLOAT32 [1, 1, 256]None<br></span>[210, 211]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>212 p_re_lu_22 FLOAT32 [1, 8, 8, 256]None<br></span>[212]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>97</td><td><span class='tooltip'><span class='tooltipcontent'>212 p_re_lu_22 FLOAT32 [1, 8, 8, 256]None<br>213 up_sampling2d_1/Size INT32 [2]None<br></span>[212, 213]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>214 up_sampling2d_1 FLOAT32 [1, 16, 16, 256]None<br></span>[214]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_BILINEAR (6)</td>
+</tr>
+<tr>
+<td>98</td><td><span class='tooltip'><span class='tooltipcontent'>214 up_sampling2d_1 FLOAT32 [1, 16, 16, 256]None<br>215 conv2d_23/Kernel FLOAT32 [128, 1, 1, 256]None<br>216 conv2d_23/Bias FLOAT32 [128]None<br></span>[214, 215, 216]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>217 conv2d_23 FLOAT32 [1, 16, 16, 128]None<br></span>[217]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>99</td><td><span class='tooltip'><span class='tooltipcontent'>217 conv2d_23 FLOAT32 [1, 16, 16, 128]None<br>218 p_re_lu_23/Alpha FLOAT32 [1, 1, 128]None<br></span>[217, 218]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>219 p_re_lu_23 FLOAT32 [1, 16, 16, 128]None<br></span>[219]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>100</td><td><span class='tooltip'><span class='tooltipcontent'>110 p_re_lu_11 FLOAT32 [1, 16, 16, 128]None<br>219 p_re_lu_23 FLOAT32 [1, 16, 16, 128]None<br></span>[110, 219]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>220 add_22__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[220]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>101</td><td><span class='tooltip'><span class='tooltipcontent'>220 add_22__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>221 depthwise_conv2d_21/Kernel FLOAT32 [1, 5, 5, 128]None<br>222 depthwise_conv2d_21/Bias FLOAT32 [128]None<br></span>[220, 221, 222]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>223 depthwise_conv2d_21 FLOAT32 [1, 16, 16, 128]None<br></span>[223]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>102</td><td><span class='tooltip'><span class='tooltipcontent'>223 depthwise_conv2d_21 FLOAT32 [1, 16, 16, 128]None<br>224 conv2d_24/Kernel FLOAT32 [128, 1, 1, 128]None<br>225 conv2d_24/Bias FLOAT32 [128]None<br></span>[223, 224, 225]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>226 conv2d_24 FLOAT32 [1, 16, 16, 128]None<br></span>[226]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>103</td><td><span class='tooltip'><span class='tooltipcontent'>220 add_22__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>226 conv2d_24 FLOAT32 [1, 16, 16, 128]None<br></span>[220, 226]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>227 add_23__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[227]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>104</td><td><span class='tooltip'><span class='tooltipcontent'>227 add_23__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>228 p_re_lu_24/Alpha FLOAT32 [1, 1, 128]None<br></span>[227, 228]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>229 p_re_lu_24 FLOAT32 [1, 16, 16, 128]None<br></span>[229]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>105</td><td><span class='tooltip'><span class='tooltipcontent'>229 p_re_lu_24 FLOAT32 [1, 16, 16, 128]None<br>230 depthwise_conv2d_22/Kernel FLOAT32 [1, 5, 5, 128]None<br>231 depthwise_conv2d_22/Bias FLOAT32 [128]None<br></span>[229, 230, 231]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>232 depthwise_conv2d_22 FLOAT32 [1, 16, 16, 128]None<br></span>[232]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>106</td><td><span class='tooltip'><span class='tooltipcontent'>232 depthwise_conv2d_22 FLOAT32 [1, 16, 16, 128]None<br>233 conv2d_25/Kernel FLOAT32 [128, 1, 1, 128]None<br>234 conv2d_25/Bias FLOAT32 [128]None<br></span>[232, 233, 234]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>235 conv2d_25 FLOAT32 [1, 16, 16, 128]None<br></span>[235]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>107</td><td><span class='tooltip'><span class='tooltipcontent'>229 p_re_lu_24 FLOAT32 [1, 16, 16, 128]None<br>235 conv2d_25 FLOAT32 [1, 16, 16, 128]None<br></span>[229, 235]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>236 add_24__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br></span>[236]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (3)</td>
+</tr>
+<tr>
+<td>108</td><td><span class='tooltip'><span class='tooltipcontent'>236 add_24__xeno_compat__1 FLOAT32 [1, 16, 16, 128]None<br>237 p_re_lu_25/Alpha FLOAT32 [1, 1, 128]None<br></span>[236, 237]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>238 p_re_lu_25 FLOAT32 [1, 16, 16, 128]None<br></span>[238]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>109</td><td><span class='tooltip'><span class='tooltipcontent'>238 p_re_lu_25 FLOAT32 [1, 16, 16, 128]None<br>239 classificator_8/Kernel FLOAT32 [2, 1, 1, 128]None<br>240 classificator_8/Bias FLOAT32 [2]None<br></span>[238, 239, 240]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>241 classificator_8 FLOAT32 [1, 16, 16, 2]None<br></span>[241]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>110</td><td><span class='tooltip'><span class='tooltipcontent'>212 p_re_lu_22 FLOAT32 [1, 8, 8, 256]None<br>242 classificator_16/Kernel FLOAT32 [6, 1, 1, 256]None<br>243 classificator_16/Bias FLOAT32 [6]None<br></span>[212, 242, 243]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>244 classificator_16 FLOAT32 [1, 8, 8, 6]None<br></span>[244]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>111</td><td><span class='tooltip'><span class='tooltipcontent'>238 p_re_lu_25 FLOAT32 [1, 16, 16, 128]None<br>245 regressor_8/Kernel FLOAT32 [36, 1, 1, 128]None<br>246 regressor_8/Bias FLOAT32 [36]None<br></span>[238, 245, 246]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>247 regressor_8 FLOAT32 [1, 16, 16, 36]None<br></span>[247]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>112</td><td><span class='tooltip'><span class='tooltipcontent'>212 p_re_lu_22 FLOAT32 [1, 8, 8, 256]None<br>248 regressor_16/Kernel FLOAT32 [108, 1, 1, 256]None<br>249 regressor_16/Bias FLOAT32 [108]None<br></span>[212, 248, 249]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>250 regressor_16 FLOAT32 [1, 8, 8, 108]None<br></span>[250]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>113</td><td><span class='tooltip'><span class='tooltipcontent'>241 classificator_8 FLOAT32 [1, 16, 16, 2]None<br></span>[241]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>251 reshape FLOAT32 [1, 512, 1]None<br></span>[251]</span></td>
+<td>{'new_shape': [1, -1, 1]}</td>
+<td>RESHAPE (7)</td>
+</tr>
+<tr>
+<td>114</td><td><span class='tooltip'><span class='tooltipcontent'>244 classificator_16 FLOAT32 [1, 8, 8, 6]None<br></span>[244]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>252 reshape_2 FLOAT32 [1, 384, 1]None<br></span>[252]</span></td>
+<td>{'new_shape': [1, -1, 1]}</td>
+<td>RESHAPE (7)</td>
+</tr>
+<tr>
+<td>115</td><td><span class='tooltip'><span class='tooltipcontent'>247 regressor_8 FLOAT32 [1, 16, 16, 36]None<br></span>[247]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>253 reshape_1 FLOAT32 [1, 512, 18]None<br></span>[253]</span></td>
+<td>{'new_shape': [1, -1, 18]}</td>
+<td>RESHAPE (7)</td>
+</tr>
+<tr>
+<td>116</td><td><span class='tooltip'><span class='tooltipcontent'>250 regressor_16 FLOAT32 [1, 8, 8, 108]None<br></span>[250]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>254 reshape_3 FLOAT32 [1, 384, 18]None<br></span>[254]</span></td>
+<td>{'new_shape': [1, -1, 18]}</td>
+<td>RESHAPE (7)</td>
+</tr>
+<tr>
+<td>117</td><td><span class='tooltip'><span class='tooltipcontent'>251 reshape FLOAT32 [1, 512, 1]None<br>252 reshape_2 FLOAT32 [1, 384, 1]None<br></span>[251, 252]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>255 classificators FLOAT32 [1, 896, 1]None<br></span>[255]</span></td>
+<td>{'axis': 1, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (8)</td>
+</tr>
+<tr>
+<td>118</td><td><span class='tooltip'><span class='tooltipcontent'>253 reshape_1 FLOAT32 [1, 512, 18]None<br>254 reshape_3 FLOAT32 [1, 384, 18]None<br></span>[253, 254]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>256 regressors FLOAT32 [1, 896, 18]None<br></span>[256]</span></td>
+<td>{'axis': 1, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (8)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "PRELU (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "ADD (3)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "PRELU (1)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "ADD (3)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "PRELU (1)", "group": 2, "x": 200, "y": 2000}, {"id": "o10", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 2200}, {"id": "o11", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2400}, {"id": "o12", "name": "ADD (3)", "group": 2, "x": 200, "y": 2600}, {"id": "o13", "name": "PRELU (1)", "group": 2, "x": 200, "y": 2800}, {"id": "o14", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 3000}, {"id": "o15", "name": "MAX_POOL_2D (4)", "group": 2, "x": 200, "y": 3200}, {"id": "o16", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3400}, {"id": "o17", "name": "PAD (5)", "group": 2, "x": 200, "y": 3600}, {"id": "o18", "name": "ADD (3)", "group": 2, "x": 200, "y": 3800}, {"id": "o19", "name": "PRELU (1)", "group": 2, "x": 200, "y": 4000}, {"id": "o20", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 4200}, {"id": "o21", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4400}, {"id": "o22", "name": "ADD (3)", "group": 2, "x": 200, "y": 4600}, {"id": "o23", "name": "PRELU (1)", "group": 2, "x": 200, "y": 4800}, {"id": "o24", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 5000}, {"id": "o25", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5200}, {"id": "o26", "name": "ADD (3)", "group": 2, "x": 200, "y": 5400}, {"id": "o27", "name": "PRELU (1)", "group": 2, "x": 200, "y": 5600}, {"id": "o28", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 5800}, {"id": "o29", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6000}, {"id": "o30", "name": "ADD (3)", "group": 2, "x": 200, "y": 6200}, {"id": "o31", "name": "PRELU (1)", "group": 2, "x": 200, "y": 6400}, {"id": "o32", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 6600}, {"id": "o33", "name": "MAX_POOL_2D (4)", "group": 2, "x": 200, "y": 6800}, {"id": "o34", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7000}, {"id": "o35", "name": "PAD (5)", "group": 2, "x": 200, "y": 7200}, {"id": "o36", "name": "ADD (3)", "group": 2, "x": 200, "y": 7400}, {"id": "o37", "name": "PRELU (1)", "group": 2, "x": 200, "y": 7600}, {"id": "o38", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 7800}, {"id": "o39", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8000}, {"id": "o40", "name": "ADD (3)", "group": 2, "x": 200, "y": 8200}, {"id": "o41", "name": "PRELU (1)", "group": 2, "x": 200, "y": 8400}, {"id": "o42", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 8600}, {"id": "o43", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8800}, {"id": "o44", "name": "ADD (3)", "group": 2, "x": 200, "y": 9000}, {"id": "o45", "name": "PRELU (1)", "group": 2, "x": 200, "y": 9200}, {"id": "o46", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 9400}, {"id": "o47", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9600}, {"id": "o48", "name": "ADD (3)", "group": 2, "x": 200, "y": 9800}, {"id": "o49", "name": "PRELU (1)", "group": 2, "x": 200, "y": 10000}, {"id": "o50", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 10200}, {"id": "o51", "name": "MAX_POOL_2D (4)", "group": 2, "x": 200, "y": 10400}, {"id": "o52", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10600}, {"id": "o53", "name": "PAD (5)", "group": 2, "x": 200, "y": 10800}, {"id": "o54", "name": "ADD (3)", "group": 2, "x": 200, "y": 11000}, {"id": "o55", "name": "PRELU (1)", "group": 2, "x": 200, "y": 11200}, {"id": "o56", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 11400}, {"id": "o57", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11600}, {"id": "o58", "name": "ADD (3)", "group": 2, "x": 200, "y": 11800}, {"id": "o59", "name": "PRELU (1)", "group": 2, "x": 200, "y": 12000}, {"id": "o60", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 12200}, {"id": "o61", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 12400}, {"id": "o62", "name": "ADD (3)", "group": 2, "x": 200, "y": 12600}, {"id": "o63", "name": "PRELU (1)", "group": 2, "x": 200, "y": 12800}, {"id": "o64", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 13000}, {"id": "o65", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 13200}, {"id": "o66", "name": "ADD (3)", "group": 2, "x": 200, "y": 13400}, {"id": "o67", "name": "PRELU (1)", "group": 2, "x": 200, "y": 13600}, {"id": "o68", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 13800}, {"id": "o69", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 14000}, {"id": "o70", "name": "MAX_POOL_2D (4)", "group": 2, "x": 200, "y": 14200}, {"id": "o71", "name": "ADD (3)", "group": 2, "x": 200, "y": 14400}, {"id": "o72", "name": "PRELU (1)", "group": 2, "x": 200, "y": 14600}, {"id": "o73", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 14800}, {"id": "o74", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 15000}, {"id": "o75", "name": "ADD (3)", "group": 2, "x": 200, "y": 15200}, {"id": "o76", "name": "PRELU (1)", "group": 2, "x": 200, "y": 15400}, {"id": "o77", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 15600}, {"id": "o78", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 15800}, {"id": "o79", "name": "ADD (3)", "group": 2, "x": 200, "y": 16000}, {"id": "o80", "name": "PRELU (1)", "group": 2, "x": 200, "y": 16200}, {"id": "o81", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 16400}, {"id": "o82", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 16600}, {"id": "o83", "name": "ADD (3)", "group": 2, "x": 200, "y": 16800}, {"id": "o84", "name": "PRELU (1)", "group": 2, "x": 200, "y": 17000}, {"id": "o85", "name": "RESIZE_BILINEAR (6)", "group": 2, "x": 200, "y": 17200}, {"id": "o86", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 17400}, {"id": "o87", "name": "PRELU (1)", "group": 2, "x": 200, "y": 17600}, {"id": "o88", "name": "ADD (3)", "group": 2, "x": 200, "y": 17800}, {"id": "o89", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 18000}, {"id": "o90", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 18200}, {"id": "o91", "name": "ADD (3)", "group": 2, "x": 200, "y": 18400}, {"id": "o92", "name": "PRELU (1)", "group": 2, "x": 200, "y": 18600}, {"id": "o93", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 18800}, {"id": "o94", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 19000}, {"id": "o95", "name": "ADD (3)", "group": 2, "x": 200, "y": 19200}, {"id": "o96", "name": "PRELU (1)", "group": 2, "x": 200, "y": 19400}, {"id": "o97", "name": "RESIZE_BILINEAR (6)", "group": 2, "x": 200, "y": 19600}, {"id": "o98", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 19800}, {"id": "o99", "name": "PRELU (1)", "group": 2, "x": 200, "y": 20000}, {"id": "o100", "name": "ADD (3)", "group": 2, "x": 200, "y": 20200}, {"id": "o101", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 20400}, {"id": "o102", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 20600}, {"id": "o103", "name": "ADD (3)", "group": 2, "x": 200, "y": 20800}, {"id": "o104", "name": "PRELU (1)", "group": 2, "x": 200, "y": 21000}, {"id": "o105", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 21200}, {"id": "o106", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 21400}, {"id": "o107", "name": "ADD (3)", "group": 2, "x": 200, "y": 21600}, {"id": "o108", "name": "PRELU (1)", "group": 2, "x": 200, "y": 21800}, {"id": "o109", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 22000}, {"id": "o110", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 22200}, {"id": "o111", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 22400}, {"id": "o112", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 22600}, {"id": "o113", "name": "RESHAPE (7)", "group": 2, "x": 200, "y": 22800}, {"id": "o114", "name": "RESHAPE (7)", "group": 2, "x": 200, "y": 23000}, {"id": "o115", "name": "RESHAPE (7)", "group": 2, "x": 200, "y": 23200}, {"id": "o116", "name": "RESHAPE (7)", "group": 2, "x": 200, "y": 23400}, {"id": "o117", "name": "CONCATENATION (8)", "group": 2, "x": 200, "y": 23600}, {"id": "o118", "name": "CONCATENATION (8)", "group": 2, "x": 200, "y": 23800}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 340, "y": 100.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 100.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 170, "y": 300.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 340, "y": 300.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 170, "y": 500.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 340, "y": 500.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 510, "y": 500.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 170, "y": 700.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 340, "y": 700.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 510, "y": 700.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 340, "y": 900.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 170, "y": 1100.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 340, "y": 1100.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 340, "y": 1300.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 510, "y": 1300.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 510, "y": 1500.0}, {"id": "t20", "name": "[] (20)", "group": 1, "x": 340, "y": 1700.0}, {"id": "t21", "name": "[] (21)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t22", "name": "[] (22)", "group": 1, "x": 340, "y": 1900.0}, {"id": "t23", "name": "[] (23)", "group": 1, "x": 170, "y": 2100.0}, {"id": "t24", "name": "[] (24)", "group": 1, "x": 340, "y": 2100.0}, {"id": "t25", "name": "[] (25)", "group": 1, "x": 510, "y": 2100.0}, {"id": "t26", "name": "[] (26)", "group": 1, "x": 170, "y": 2300.0}, {"id": "t27", "name": "[] (27)", "group": 1, "x": 340, "y": 2300.0}, {"id": "t28", "name": "[] (28)", "group": 1, "x": 510, "y": 2300.0}, {"id": "t29", "name": "[] (29)", "group": 1, "x": 340, "y": 2500.0}, {"id": "t30", "name": "[] (30)", "group": 1, "x": 170, "y": 2700.0}, {"id": "t31", "name": "[] (31)", "group": 1, "x": 340, "y": 2700.0}, {"id": "t32", "name": "[] (32)", "group": 1, "x": 170, "y": 2900.0}, {"id": "t33", "name": "[] (33)", "group": 1, "x": 340, "y": 2900.0}, {"id": "t34", "name": "[] (34)", "group": 1, "x": 510, "y": 2900.0}, {"id": "t35", "name": "[] (35)", "group": 1, "x": 170, "y": 3300.0}, {"id": "t36", "name": "[] (36)", "group": 1, "x": 170, "y": 3500.0}, {"id": "t37", "name": "[] (37)", "group": 1, "x": 340, "y": 3300.0}, {"id": "t38", "name": "[] (38)", "group": 1, "x": 510, "y": 3300.0}, {"id": "t39", "name": "[] (39)", "group": 1, "x": 340, "y": 3700.0}, {"id": "t40", "name": "[] (40)", "group": 1, "x": 340, "y": 3500.0}, {"id": "t41", "name": "[] (41)", "group": 1, "x": 170, "y": 3700.0}, {"id": "t42", "name": "[] (42)", "group": 1, "x": 170, "y": 3900.0}, {"id": "t43", "name": "[] (43)", "group": 1, "x": 340, "y": 3900.0}, {"id": "t44", "name": "[] (44)", "group": 1, "x": 170, "y": 4100.0}, {"id": "t45", "name": "[] (45)", "group": 1, "x": 340, "y": 4100.0}, {"id": "t46", "name": "[] (46)", "group": 1, "x": 510, "y": 4100.0}, {"id": "t47", "name": "[] (47)", "group": 1, "x": 170, "y": 4300.0}, {"id": "t48", "name": "[] (48)", "group": 1, "x": 340, "y": 4300.0}, {"id": "t49", "name": "[] (49)", "group": 1, "x": 510, "y": 4300.0}, {"id": "t50", "name": "[] (50)", "group": 1, "x": 340, "y": 4500.0}, {"id": "t51", "name": "[] (51)", "group": 1, "x": 170, "y": 4700.0}, {"id": "t52", "name": "[] (52)", "group": 1, "x": 340, "y": 4700.0}, {"id": "t53", "name": "[] (53)", "group": 1, "x": 170, "y": 4900.0}, {"id": "t54", "name": "[] (54)", "group": 1, "x": 340, "y": 4900.0}, {"id": "t55", "name": "[] (55)", "group": 1, "x": 510, "y": 4900.0}, {"id": "t56", "name": "[] (56)", "group": 1, "x": 170, "y": 5100.0}, {"id": "t57", "name": "[] (57)", "group": 1, "x": 340, "y": 5100.0}, {"id": "t58", "name": "[] (58)", "group": 1, "x": 510, "y": 5100.0}, {"id": "t59", "name": "[] (59)", "group": 1, "x": 340, "y": 5300.0}, {"id": "t60", "name": "[] (60)", "group": 1, "x": 170, "y": 5500.0}, {"id": "t61", "name": "[] (61)", "group": 1, "x": 340, "y": 5500.0}, {"id": "t62", "name": "[] (62)", "group": 1, "x": 170, "y": 5700.0}, {"id": "t63", "name": "[] (63)", "group": 1, "x": 340, "y": 5700.0}, {"id": "t64", "name": "[] (64)", "group": 1, "x": 510, "y": 5700.0}, {"id": "t65", "name": "[] (65)", "group": 1, "x": 170, "y": 5900.0}, {"id": "t66", "name": "[] (66)", "group": 1, "x": 340, "y": 5900.0}, {"id": "t67", "name": "[] (67)", "group": 1, "x": 510, "y": 5900.0}, {"id": "t68", "name": "[] (68)", "group": 1, "x": 340, "y": 6100.0}, {"id": "t69", "name": "[] (69)", "group": 1, "x": 170, "y": 6300.0}, {"id": "t70", "name": "[] (70)", "group": 1, "x": 340, "y": 6300.0}, {"id": "t71", "name": "[] (71)", "group": 1, "x": 170, "y": 6500.0}, {"id": "t72", "name": "[] (72)", "group": 1, "x": 340, "y": 6500.0}, {"id": "t73", "name": "[] (73)", "group": 1, "x": 510, "y": 6500.0}, {"id": "t74", "name": "[] (74)", "group": 1, "x": 170, "y": 6900.0}, {"id": "t75", "name": "[] (75)", "group": 1, "x": 170, "y": 7100.0}, {"id": "t76", "name": "[] (76)", "group": 1, "x": 340, "y": 6900.0}, {"id": "t77", "name": "[] (77)", "group": 1, "x": 510, "y": 6900.0}, {"id": "t78", "name": "[] (78)", "group": 1, "x": 340, "y": 7300.0}, {"id": "t79", "name": "[] (79)", "group": 1, "x": 340, "y": 7100.0}, {"id": "t80", "name": "[] (80)", "group": 1, "x": 170, "y": 7300.0}, {"id": "t81", "name": "[] (81)", "group": 1, "x": 170, "y": 7500.0}, {"id": "t82", "name": "[] (82)", "group": 1, "x": 340, "y": 7500.0}, {"id": "t83", "name": "[] (83)", "group": 1, "x": 170, "y": 7700.0}, {"id": "t84", "name": "[] (84)", "group": 1, "x": 340, "y": 7700.0}, {"id": "t85", "name": "[] (85)", "group": 1, "x": 510, "y": 7700.0}, {"id": "t86", "name": "[] (86)", "group": 1, "x": 170, "y": 7900.0}, {"id": "t87", "name": "[] (87)", "group": 1, "x": 340, "y": 7900.0}, {"id": "t88", "name": "[] (88)", "group": 1, "x": 510, "y": 7900.0}, {"id": "t89", "name": "[] (89)", "group": 1, "x": 340, "y": 8100.0}, {"id": "t90", "name": "[] (90)", "group": 1, "x": 170, "y": 8300.0}, {"id": "t91", "name": "[] (91)", "group": 1, "x": 340, "y": 8300.0}, {"id": "t92", "name": "[] (92)", "group": 1, "x": 170, "y": 8500.0}, {"id": "t93", "name": "[] (93)", "group": 1, "x": 340, "y": 8500.0}, {"id": "t94", "name": "[] (94)", "group": 1, "x": 510, "y": 8500.0}, {"id": "t95", "name": "[] (95)", "group": 1, "x": 170, "y": 8700.0}, {"id": "t96", "name": "[] (96)", "group": 1, "x": 340, "y": 8700.0}, {"id": "t97", "name": "[] (97)", "group": 1, "x": 510, "y": 8700.0}, {"id": "t98", "name": "[] (98)", "group": 1, "x": 340, "y": 8900.0}, {"id": "t99", "name": "[] (99)", "group": 1, "x": 170, "y": 9100.0}, {"id": "t100", "name": "[] (100)", "group": 1, "x": 340, "y": 9100.0}, {"id": "t101", "name": "[] (101)", "group": 1, "x": 170, "y": 9300.0}, {"id": "t102", "name": "[] (102)", "group": 1, "x": 340, "y": 9300.0}, {"id": "t103", "name": "[] (103)", "group": 1, "x": 510, "y": 9300.0}, {"id": "t104", "name": "[] (104)", "group": 1, "x": 170, "y": 9500.0}, {"id": "t105", "name": "[] (105)", "group": 1, "x": 340, "y": 9500.0}, {"id": "t106", "name": "[] (106)", "group": 1, "x": 510, "y": 9500.0}, {"id": "t107", "name": "[] (107)", "group": 1, "x": 340, "y": 9700.0}, {"id": "t108", "name": "[] (108)", "group": 1, "x": 170, "y": 9900.0}, {"id": "t109", "name": "[] (109)", "group": 1, "x": 340, "y": 9900.0}, {"id": "t110", "name": "[] (110)", "group": 1, "x": 170, "y": 10100.0}, {"id": "t111", "name": "[] (111)", "group": 1, "x": 340, "y": 10100.0}, {"id": "t112", "name": "[] (112)", "group": 1, "x": 510, "y": 10100.0}, {"id": "t113", "name": "[] (113)", "group": 1, "x": 170, "y": 10500.0}, {"id": "t114", "name": "[] (114)", "group": 1, "x": 170, "y": 10700.0}, {"id": "t115", "name": "[] (115)", "group": 1, "x": 340, "y": 10500.0}, {"id": "t116", "name": "[] (116)", "group": 1, "x": 510, "y": 10500.0}, {"id": "t117", "name": "[] (117)", "group": 1, "x": 340, "y": 10900.0}, {"id": "t118", "name": "[] (118)", "group": 1, "x": 340, "y": 10700.0}, {"id": "t119", "name": "[] (119)", "group": 1, "x": 170, "y": 10900.0}, {"id": "t120", "name": "[] (120)", "group": 1, "x": 170, "y": 11100.0}, {"id": "t121", "name": "[] (121)", "group": 1, "x": 340, "y": 11100.0}, {"id": "t122", "name": "[] (122)", "group": 1, "x": 170, "y": 11300.0}, {"id": "t123", "name": "[] (123)", "group": 1, "x": 340, "y": 11300.0}, {"id": "t124", "name": "[] (124)", "group": 1, "x": 510, "y": 11300.0}, {"id": "t125", "name": "[] (125)", "group": 1, "x": 170, "y": 11500.0}, {"id": "t126", "name": "[] (126)", "group": 1, "x": 340, "y": 11500.0}, {"id": "t127", "name": "[] (127)", "group": 1, "x": 510, "y": 11500.0}, {"id": "t128", "name": "[] (128)", "group": 1, "x": 340, "y": 11700.0}, {"id": "t129", "name": "[] (129)", "group": 1, "x": 170, "y": 11900.0}, {"id": "t130", "name": "[] (130)", "group": 1, "x": 340, "y": 11900.0}, {"id": "t131", "name": "[] (131)", "group": 1, "x": 170, "y": 12100.0}, {"id": "t132", "name": "[] (132)", "group": 1, "x": 340, "y": 12100.0}, {"id": "t133", "name": "[] (133)", "group": 1, "x": 510, "y": 12100.0}, {"id": "t134", "name": "[] (134)", "group": 1, "x": 170, "y": 12300.0}, {"id": "t135", "name": "[] (135)", "group": 1, "x": 340, "y": 12300.0}, {"id": "t136", "name": "[] (136)", "group": 1, "x": 510, "y": 12300.0}, {"id": "t137", "name": "[] (137)", "group": 1, "x": 340, "y": 12500.0}, {"id": "t138", "name": "[] (138)", "group": 1, "x": 170, "y": 12700.0}, {"id": "t139", "name": "[] (139)", "group": 1, "x": 340, "y": 12700.0}, {"id": "t140", "name": "[] (140)", "group": 1, "x": 170, "y": 12900.0}, {"id": "t141", "name": "[] (141)", "group": 1, "x": 340, "y": 12900.0}, {"id": "t142", "name": "[] (142)", "group": 1, "x": 510, "y": 12900.0}, {"id": "t143", "name": "[] (143)", "group": 1, "x": 170, "y": 13100.0}, {"id": "t144", "name": "[] (144)", "group": 1, "x": 340, "y": 13100.0}, {"id": "t145", "name": "[] (145)", "group": 1, "x": 510, "y": 13100.0}, {"id": "t146", "name": "[] (146)", "group": 1, "x": 340, "y": 13300.0}, {"id": "t147", "name": "[] (147)", "group": 1, "x": 170, "y": 13500.0}, {"id": "t148", "name": "[] (148)", "group": 1, "x": 340, "y": 13500.0}, {"id": "t149", "name": "[] (149)", "group": 1, "x": 170, "y": 13700.0}, {"id": "t150", "name": "[] (150)", "group": 1, "x": 340, "y": 13700.0}, {"id": "t151", "name": "[] (151)", "group": 1, "x": 510, "y": 13700.0}, {"id": "t152", "name": "[] (152)", "group": 1, "x": 170, "y": 13900.0}, {"id": "t153", "name": "[] (153)", "group": 1, "x": 340, "y": 13900.0}, {"id": "t154", "name": "[] (154)", "group": 1, "x": 510, "y": 13900.0}, {"id": "t155", "name": "[] (155)", "group": 1, "x": 340, "y": 14300.0}, {"id": "t156", "name": "[] (156)", "group": 1, "x": 170, "y": 14300.0}, {"id": "t157", "name": "[] (157)", "group": 1, "x": 170, "y": 14500.0}, {"id": "t158", "name": "[] (158)", "group": 1, "x": 340, "y": 14500.0}, {"id": "t159", "name": "[] (159)", "group": 1, "x": 170, "y": 14700.0}, {"id": "t160", "name": "[] (160)", "group": 1, "x": 340, "y": 14700.0}, {"id": "t161", "name": "[] (161)", "group": 1, "x": 510, "y": 14700.0}, {"id": "t162", "name": "[] (162)", "group": 1, "x": 170, "y": 14900.0}, {"id": "t163", "name": "[] (163)", "group": 1, "x": 340, "y": 14900.0}, {"id": "t164", "name": "[] (164)", "group": 1, "x": 510, "y": 14900.0}, {"id": "t165", "name": "[] (165)", "group": 1, "x": 340, "y": 15100.0}, {"id": "t166", "name": "[] (166)", "group": 1, "x": 170, "y": 15300.0}, {"id": "t167", "name": "[] (167)", "group": 1, "x": 340, "y": 15300.0}, {"id": "t168", "name": "[] (168)", "group": 1, "x": 170, "y": 15500.0}, {"id": "t169", "name": "[] (169)", "group": 1, "x": 340, "y": 15500.0}, {"id": "t170", "name": "[] (170)", "group": 1, "x": 510, "y": 15500.0}, {"id": "t171", "name": "[] (171)", "group": 1, "x": 170, "y": 15700.0}, {"id": "t172", "name": "[] (172)", "group": 1, "x": 340, "y": 15700.0}, {"id": "t173", "name": "[] (173)", "group": 1, "x": 510, "y": 15700.0}, {"id": "t174", "name": "[] (174)", "group": 1, "x": 340, "y": 15900.0}, {"id": "t175", "name": "[] (175)", "group": 1, "x": 170, "y": 16100.0}, {"id": "t176", "name": "[] (176)", "group": 1, "x": 340, "y": 16100.0}, {"id": "t177", "name": "[] (177)", "group": 1, "x": 170, "y": 16300.0}, {"id": "t178", "name": "[] (178)", "group": 1, "x": 340, "y": 16300.0}, {"id": "t179", "name": "[] (179)", "group": 1, "x": 510, "y": 16300.0}, {"id": "t180", "name": "[] (180)", "group": 1, "x": 170, "y": 16500.0}, {"id": "t181", "name": "[] (181)", "group": 1, "x": 340, "y": 16500.0}, {"id": "t182", "name": "[] (182)", "group": 1, "x": 510, "y": 16500.0}, {"id": "t183", "name": "[] (183)", "group": 1, "x": 340, "y": 16700.0}, {"id": "t184", "name": "[] (184)", "group": 1, "x": 170, "y": 16900.0}, {"id": "t185", "name": "[] (185)", "group": 1, "x": 340, "y": 16900.0}, {"id": "t186", "name": "[] (186)", "group": 1, "x": 170, "y": 17100.0}, {"id": "t187", "name": "[] (187)", "group": 1, "x": 340, "y": 17100.0}, {"id": "t188", "name": "[] (188)", "group": 1, "x": 170, "y": 17300.0}, {"id": "t189", "name": "[] (189)", "group": 1, "x": 340, "y": 17300.0}, {"id": "t190", "name": "[] (190)", "group": 1, "x": 510, "y": 17300.0}, {"id": "t191", "name": "[] (191)", "group": 1, "x": 170, "y": 17500.0}, {"id": "t192", "name": "[] (192)", "group": 1, "x": 340, "y": 17500.0}, {"id": "t193", "name": "[] (193)", "group": 1, "x": 340, "y": 17700.0}, {"id": "t194", "name": "[] (194)", "group": 1, "x": 170, "y": 17900.0}, {"id": "t195", "name": "[] (195)", "group": 1, "x": 340, "y": 17900.0}, {"id": "t196", "name": "[] (196)", "group": 1, "x": 510, "y": 17900.0}, {"id": "t197", "name": "[] (197)", "group": 1, "x": 170, "y": 18100.0}, {"id": "t198", "name": "[] (198)", "group": 1, "x": 340, "y": 18100.0}, {"id": "t199", "name": "[] (199)", "group": 1, "x": 510, "y": 18100.0}, {"id": "t200", "name": "[] (200)", "group": 1, "x": 340, "y": 18300.0}, {"id": "t201", "name": "[] (201)", "group": 1, "x": 170, "y": 18500.0}, {"id": "t202", "name": "[] (202)", "group": 1, "x": 340, "y": 18500.0}, {"id": "t203", "name": "[] (203)", "group": 1, "x": 170, "y": 18700.0}, {"id": "t204", "name": "[] (204)", "group": 1, "x": 340, "y": 18700.0}, {"id": "t205", "name": "[] (205)", "group": 1, "x": 510, "y": 18700.0}, {"id": "t206", "name": "[] (206)", "group": 1, "x": 170, "y": 18900.0}, {"id": "t207", "name": "[] (207)", "group": 1, "x": 340, "y": 18900.0}, {"id": "t208", "name": "[] (208)", "group": 1, "x": 510, "y": 18900.0}, {"id": "t209", "name": "[] (209)", "group": 1, "x": 340, "y": 19100.0}, {"id": "t210", "name": "[] (210)", "group": 1, "x": 170, "y": 19300.0}, {"id": "t211", "name": "[] (211)", "group": 1, "x": 340, "y": 19300.0}, {"id": "t212", "name": "[] (212)", "group": 1, "x": 170, "y": 19500.0}, {"id": "t213", "name": "[] (213)", "group": 1, "x": 340, "y": 19500.0}, {"id": "t214", "name": "[] (214)", "group": 1, "x": 170, "y": 19700.0}, {"id": "t215", "name": "[] (215)", "group": 1, "x": 340, "y": 19700.0}, {"id": "t216", "name": "[] (216)", "group": 1, "x": 510, "y": 19700.0}, {"id": "t217", "name": "[] (217)", "group": 1, "x": 170, "y": 19900.0}, {"id": "t218", "name": "[] (218)", "group": 1, "x": 340, "y": 19900.0}, {"id": "t219", "name": "[] (219)", "group": 1, "x": 340, "y": 20100.0}, {"id": "t220", "name": "[] (220)", "group": 1, "x": 170, "y": 20300.0}, {"id": "t221", "name": "[] (221)", "group": 1, "x": 340, "y": 20300.0}, {"id": "t222", "name": "[] (222)", "group": 1, "x": 510, "y": 20300.0}, {"id": "t223", "name": "[] (223)", "group": 1, "x": 170, "y": 20500.0}, {"id": "t224", "name": "[] (224)", "group": 1, "x": 340, "y": 20500.0}, {"id": "t225", "name": "[] (225)", "group": 1, "x": 510, "y": 20500.0}, {"id": "t226", "name": "[] (226)", "group": 1, "x": 340, "y": 20700.0}, {"id": "t227", "name": "[] (227)", "group": 1, "x": 170, "y": 20900.0}, {"id": "t228", "name": "[] (228)", "group": 1, "x": 340, "y": 20900.0}, {"id": "t229", "name": "[] (229)", "group": 1, "x": 170, "y": 21100.0}, {"id": "t230", "name": "[] (230)", "group": 1, "x": 340, "y": 21100.0}, {"id": "t231", "name": "[] (231)", "group": 1, "x": 510, "y": 21100.0}, {"id": "t232", "name": "[] (232)", "group": 1, "x": 170, "y": 21300.0}, {"id": "t233", "name": "[] (233)", "group": 1, "x": 340, "y": 21300.0}, {"id": "t234", "name": "[] (234)", "group": 1, "x": 510, "y": 21300.0}, {"id": "t235", "name": "[] (235)", "group": 1, "x": 340, "y": 21500.0}, {"id": "t236", "name": "[] (236)", "group": 1, "x": 170, "y": 21700.0}, {"id": "t237", "name": "[] (237)", "group": 1, "x": 340, "y": 21700.0}, {"id": "t238", "name": "[] (238)", "group": 1, "x": 170, "y": 21900.0}, {"id": "t239", "name": "[] (239)", "group": 1, "x": 340, "y": 21900.0}, {"id": "t240", "name": "[] (240)", "group": 1, "x": 510, "y": 21900.0}, {"id": "t241", "name": "[] (241)", "group": 1, "x": 170, "y": 22700.0}, {"id": "t242", "name": "[] (242)", "group": 1, "x": 340, "y": 22100.0}, {"id": "t243", "name": "[] (243)", "group": 1, "x": 510, "y": 22100.0}, {"id": "t244", "name": "[] (244)", "group": 1, "x": 170, "y": 22900.0}, {"id": "t245", "name": "[] (245)", "group": 1, "x": 340, "y": 22300.0}, {"id": "t246", "name": "[] (246)", "group": 1, "x": 510, "y": 22300.0}, {"id": "t247", "name": "[] (247)", "group": 1, "x": 170, "y": 23100.0}, {"id": "t248", "name": "[] (248)", "group": 1, "x": 340, "y": 22500.0}, {"id": "t249", "name": "[] (249)", "group": 1, "x": 510, "y": 22500.0}, {"id": "t250", "name": "[] (250)", "group": 1, "x": 170, "y": 23300.0}, {"id": "t251", "name": "[] (251)", "group": 1, "x": 170, "y": 23500.0}, {"id": "t252", "name": "[] (252)", "group": 1, "x": 340, "y": 23500.0}, {"id": "t253", "name": "[] (253)", "group": 1, "x": 170, "y": 23700.0}, {"id": "t254", "name": "[] (254)", "group": 1, "x": 340, "y": 23700.0}, {"id": "t255", "name": "[] (255)", "group": 1, "x": 170, "y": 23700.0}, {"id": "t256", "name": "[] (256)", "group": 1, "x": 170, "y": 23900.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t1", "target": "o0"}, {"source": "t2", "target": "o0"}, {"target": "t3", "source": "o0"}, {"source": "t3", "target": "o1"}, {"source": "t4", "target": "o1"}, {"target": "t5", "source": "o1"}, {"source": "t5", "target": "o2"}, {"source": "t6", "target": "o2"}, {"source": "t7", "target": "o2"}, {"target": "t8", "source": "o2"}, {"source": "t8", "target": "o3"}, {"source": "t9", "target": "o3"}, {"source": "t10", "target": "o3"}, {"target": "t11", "source": "o3"}, {"source": "t5", "target": "o4"}, {"source": "t11", "target": "o4"}, {"target": "t12", "source": "o4"}, {"source": "t12", "target": "o5"}, {"source": "t13", "target": "o5"}, {"target": "t14", "source": "o5"}, {"source": "t14", "target": "o6"}, {"source": "t15", "target": "o6"}, {"source": "t16", "target": "o6"}, {"target": "t17", "source": "o6"}, {"source": "t17", "target": "o7"}, {"source": "t18", "target": "o7"}, {"source": "t19", "target": "o7"}, {"target": "t20", "source": "o7"}, {"source": "t14", "target": "o8"}, {"source": "t20", "target": "o8"}, {"target": "t21", "source": "o8"}, {"source": "t21", "target": "o9"}, {"source": "t22", "target": "o9"}, {"target": "t23", "source": "o9"}, {"source": "t23", "target": "o10"}, {"source": "t24", "target": "o10"}, {"source": "t25", "target": "o10"}, {"target": "t26", "source": "o10"}, {"source": "t26", "target": "o11"}, {"source": "t27", "target": "o11"}, {"source": "t28", "target": "o11"}, {"target": "t29", "source": "o11"}, {"source": "t23", "target": "o12"}, {"source": "t29", "target": "o12"}, {"target": "t30", "source": "o12"}, {"source": "t30", "target": "o13"}, {"source": "t31", "target": "o13"}, {"target": "t32", "source": "o13"}, {"source": "t32", "target": "o14"}, {"source": "t33", "target": "o14"}, {"source": "t34", "target": "o14"}, {"target": "t35", "source": "o14"}, {"source": "t32", "target": "o15"}, {"target": "t36", "source": "o15"}, {"source": "t35", "target": "o16"}, {"source": "t37", "target": "o16"}, {"source": "t38", "target": "o16"}, {"target": "t39", "source": "o16"}, {"source": "t36", "target": "o17"}, {"source": "t40", "target": "o17"}, {"target": "t41", "source": "o17"}, {"source": "t41", "target": "o18"}, {"source": "t39", "target": "o18"}, {"target": "t42", "source": "o18"}, {"source": "t42", "target": "o19"}, {"source": "t43", "target": "o19"}, {"target": "t44", "source": "o19"}, {"source": "t44", "target": "o20"}, {"source": "t45", "target": "o20"}, {"source": "t46", "target": "o20"}, {"target": "t47", "source": "o20"}, {"source": "t47", "target": "o21"}, {"source": "t48", "target": "o21"}, {"source": "t49", "target": "o21"}, {"target": "t50", "source": "o21"}, {"source": "t44", "target": "o22"}, {"source": "t50", "target": "o22"}, {"target": "t51", "source": "o22"}, {"source": "t51", "target": "o23"}, {"source": "t52", "target": "o23"}, {"target": "t53", "source": "o23"}, {"source": "t53", "target": "o24"}, {"source": "t54", "target": "o24"}, {"source": "t55", "target": "o24"}, {"target": "t56", "source": "o24"}, {"source": "t56", "target": "o25"}, {"source": "t57", "target": "o25"}, {"source": "t58", "target": "o25"}, {"target": "t59", "source": "o25"}, {"source": "t53", "target": "o26"}, {"source": "t59", "target": "o26"}, {"target": "t60", "source": "o26"}, {"source": "t60", "target": "o27"}, {"source": "t61", "target": "o27"}, {"target": "t62", "source": "o27"}, {"source": "t62", "target": "o28"}, {"source": "t63", "target": "o28"}, {"source": "t64", "target": "o28"}, {"target": "t65", "source": "o28"}, {"source": "t65", "target": "o29"}, {"source": "t66", "target": "o29"}, {"source": "t67", "target": "o29"}, {"target": "t68", "source": "o29"}, {"source": "t62", "target": "o30"}, {"source": "t68", "target": "o30"}, {"target": "t69", "source": "o30"}, {"source": "t69", "target": "o31"}, {"source": "t70", "target": "o31"}, {"target": "t71", "source": "o31"}, {"source": "t71", "target": "o32"}, {"source": "t72", "target": "o32"}, {"source": "t73", "target": "o32"}, {"target": "t74", "source": "o32"}, {"source": "t71", "target": "o33"}, {"target": "t75", "source": "o33"}, {"source": "t74", "target": "o34"}, {"source": "t76", "target": "o34"}, {"source": "t77", "target": "o34"}, {"target": "t78", "source": "o34"}, {"source": "t75", "target": "o35"}, {"source": "t79", "target": "o35"}, {"target": "t80", "source": "o35"}, {"source": "t80", "target": "o36"}, {"source": "t78", "target": "o36"}, {"target": "t81", "source": "o36"}, {"source": "t81", "target": "o37"}, {"source": "t82", "target": "o37"}, {"target": "t83", "source": "o37"}, {"source": "t83", "target": "o38"}, {"source": "t84", "target": "o38"}, {"source": "t85", "target": "o38"}, {"target": "t86", "source": "o38"}, {"source": "t86", "target": "o39"}, {"source": "t87", "target": "o39"}, {"source": "t88", "target": "o39"}, {"target": "t89", "source": "o39"}, {"source": "t83", "target": "o40"}, {"source": "t89", "target": "o40"}, {"target": "t90", "source": "o40"}, {"source": "t90", "target": "o41"}, {"source": "t91", "target": "o41"}, {"target": "t92", "source": "o41"}, {"source": "t92", "target": "o42"}, {"source": "t93", "target": "o42"}, {"source": "t94", "target": "o42"}, {"target": "t95", "source": "o42"}, {"source": "t95", "target": "o43"}, {"source": "t96", "target": "o43"}, {"source": "t97", "target": "o43"}, {"target": "t98", "source": "o43"}, {"source": "t92", "target": "o44"}, {"source": "t98", "target": "o44"}, {"target": "t99", "source": "o44"}, {"source": "t99", "target": "o45"}, {"source": "t100", "target": "o45"}, {"target": "t101", "source": "o45"}, {"source": "t101", "target": "o46"}, {"source": "t102", "target": "o46"}, {"source": "t103", "target": "o46"}, {"target": "t104", "source": "o46"}, {"source": "t104", "target": "o47"}, {"source": "t105", "target": "o47"}, {"source": "t106", "target": "o47"}, {"target": "t107", "source": "o47"}, {"source": "t101", "target": "o48"}, {"source": "t107", "target": "o48"}, {"target": "t108", "source": "o48"}, {"source": "t108", "target": "o49"}, {"source": "t109", "target": "o49"}, {"target": "t110", "source": "o49"}, {"source": "t110", "target": "o50"}, {"source": "t111", "target": "o50"}, {"source": "t112", "target": "o50"}, {"target": "t113", "source": "o50"}, {"source": "t110", "target": "o51"}, {"target": "t114", "source": "o51"}, {"source": "t113", "target": "o52"}, {"source": "t115", "target": "o52"}, {"source": "t116", "target": "o52"}, {"target": "t117", "source": "o52"}, {"source": "t114", "target": "o53"}, {"source": "t118", "target": "o53"}, {"target": "t119", "source": "o53"}, {"source": "t119", "target": "o54"}, {"source": "t117", "target": "o54"}, {"target": "t120", "source": "o54"}, {"source": "t120", "target": "o55"}, {"source": "t121", "target": "o55"}, {"target": "t122", "source": "o55"}, {"source": "t122", "target": "o56"}, {"source": "t123", "target": "o56"}, {"source": "t124", "target": "o56"}, {"target": "t125", "source": "o56"}, {"source": "t125", "target": "o57"}, {"source": "t126", "target": "o57"}, {"source": "t127", "target": "o57"}, {"target": "t128", "source": "o57"}, {"source": "t122", "target": "o58"}, {"source": "t128", "target": "o58"}, {"target": "t129", "source": "o58"}, {"source": "t129", "target": "o59"}, {"source": "t130", "target": "o59"}, {"target": "t131", "source": "o59"}, {"source": "t131", "target": "o60"}, {"source": "t132", "target": "o60"}, {"source": "t133", "target": "o60"}, {"target": "t134", "source": "o60"}, {"source": "t134", "target": "o61"}, {"source": "t135", "target": "o61"}, {"source": "t136", "target": "o61"}, {"target": "t137", "source": "o61"}, {"source": "t131", "target": "o62"}, {"source": "t137", "target": "o62"}, {"target": "t138", "source": "o62"}, {"source": "t138", "target": "o63"}, {"source": "t139", "target": "o63"}, {"target": "t140", "source": "o63"}, {"source": "t140", "target": "o64"}, {"source": "t141", "target": "o64"}, {"source": "t142", "target": "o64"}, {"target": "t143", "source": "o64"}, {"source": "t143", "target": "o65"}, {"source": "t144", "target": "o65"}, {"source": "t145", "target": "o65"}, {"target": "t146", "source": "o65"}, {"source": "t140", "target": "o66"}, {"source": "t146", "target": "o66"}, {"target": "t147", "source": "o66"}, {"source": "t147", "target": "o67"}, {"source": "t148", "target": "o67"}, {"target": "t149", "source": "o67"}, {"source": "t149", "target": "o68"}, {"source": "t150", "target": "o68"}, {"source": "t151", "target": "o68"}, {"target": "t152", "source": "o68"}, {"source": "t152", "target": "o69"}, {"source": "t153", "target": "o69"}, {"source": "t154", "target": "o69"}, {"target": "t155", "source": "o69"}, {"source": "t149", "target": "o70"}, {"target": "t156", "source": "o70"}, {"source": "t156", "target": "o71"}, {"source": "t155", "target": "o71"}, {"target": "t157", "source": "o71"}, {"source": "t157", "target": "o72"}, {"source": "t158", "target": "o72"}, {"target": "t159", "source": "o72"}, {"source": "t159", "target": "o73"}, {"source": "t160", "target": "o73"}, {"source": "t161", "target": "o73"}, {"target": "t162", "source": "o73"}, {"source": "t162", "target": "o74"}, {"source": "t163", "target": "o74"}, {"source": "t164", "target": "o74"}, {"target": "t165", "source": "o74"}, {"source": "t159", "target": "o75"}, {"source": "t165", "target": "o75"}, {"target": "t166", "source": "o75"}, {"source": "t166", "target": "o76"}, {"source": "t167", "target": "o76"}, {"target": "t168", "source": "o76"}, {"source": "t168", "target": "o77"}, {"source": "t169", "target": "o77"}, {"source": "t170", "target": "o77"}, {"target": "t171", "source": "o77"}, {"source": "t171", "target": "o78"}, {"source": "t172", "target": "o78"}, {"source": "t173", "target": "o78"}, {"target": "t174", "source": "o78"}, {"source": "t168", "target": "o79"}, {"source": "t174", "target": "o79"}, {"target": "t175", "source": "o79"}, {"source": "t175", "target": "o80"}, {"source": "t176", "target": "o80"}, {"target": "t177", "source": "o80"}, {"source": "t177", "target": "o81"}, {"source": "t178", "target": "o81"}, {"source": "t179", "target": "o81"}, {"target": "t180", "source": "o81"}, {"source": "t180", "target": "o82"}, {"source": "t181", "target": "o82"}, {"source": "t182", "target": "o82"}, {"target": "t183", "source": "o82"}, {"source": "t177", "target": "o83"}, {"source": "t183", "target": "o83"}, {"target": "t184", "source": "o83"}, {"source": "t184", "target": "o84"}, {"source": "t185", "target": "o84"}, {"target": "t186", "source": "o84"}, {"source": "t186", "target": "o85"}, {"source": "t187", "target": "o85"}, {"target": "t188", "source": "o85"}, {"source": "t188", "target": "o86"}, {"source": "t189", "target": "o86"}, {"source": "t190", "target": "o86"}, {"target": "t191", "source": "o86"}, {"source": "t191", "target": "o87"}, {"source": "t192", "target": "o87"}, {"target": "t193", "source": "o87"}, {"source": "t149", "target": "o88"}, {"source": "t193", "target": "o88"}, {"target": "t194", "source": "o88"}, {"source": "t194", "target": "o89"}, {"source": "t195", "target": "o89"}, {"source": "t196", "target": "o89"}, {"target": "t197", "source": "o89"}, {"source": "t197", "target": "o90"}, {"source": "t198", "target": "o90"}, {"source": "t199", "target": "o90"}, {"target": "t200", "source": "o90"}, {"source": "t194", "target": "o91"}, {"source": "t200", "target": "o91"}, {"target": "t201", "source": "o91"}, {"source": "t201", "target": "o92"}, {"source": "t202", "target": "o92"}, {"target": "t203", "source": "o92"}, {"source": "t203", "target": "o93"}, {"source": "t204", "target": "o93"}, {"source": "t205", "target": "o93"}, {"target": "t206", "source": "o93"}, {"source": "t206", "target": "o94"}, {"source": "t207", "target": "o94"}, {"source": "t208", "target": "o94"}, {"target": "t209", "source": "o94"}, {"source": "t203", "target": "o95"}, {"source": "t209", "target": "o95"}, {"target": "t210", "source": "o95"}, {"source": "t210", "target": "o96"}, {"source": "t211", "target": "o96"}, {"target": "t212", "source": "o96"}, {"source": "t212", "target": "o97"}, {"source": "t213", "target": "o97"}, {"target": "t214", "source": "o97"}, {"source": "t214", "target": "o98"}, {"source": "t215", "target": "o98"}, {"source": "t216", "target": "o98"}, {"target": "t217", "source": "o98"}, {"source": "t217", "target": "o99"}, {"source": "t218", "target": "o99"}, {"target": "t219", "source": "o99"}, {"source": "t110", "target": "o100"}, {"source": "t219", "target": "o100"}, {"target": "t220", "source": "o100"}, {"source": "t220", "target": "o101"}, {"source": "t221", "target": "o101"}, {"source": "t222", "target": "o101"}, {"target": "t223", "source": "o101"}, {"source": "t223", "target": "o102"}, {"source": "t224", "target": "o102"}, {"source": "t225", "target": "o102"}, {"target": "t226", "source": "o102"}, {"source": "t220", "target": "o103"}, {"source": "t226", "target": "o103"}, {"target": "t227", "source": "o103"}, {"source": "t227", "target": "o104"}, {"source": "t228", "target": "o104"}, {"target": "t229", "source": "o104"}, {"source": "t229", "target": "o105"}, {"source": "t230", "target": "o105"}, {"source": "t231", "target": "o105"}, {"target": "t232", "source": "o105"}, {"source": "t232", "target": "o106"}, {"source": "t233", "target": "o106"}, {"source": "t234", "target": "o106"}, {"target": "t235", "source": "o106"}, {"source": "t229", "target": "o107"}, {"source": "t235", "target": "o107"}, {"target": "t236", "source": "o107"}, {"source": "t236", "target": "o108"}, {"source": "t237", "target": "o108"}, {"target": "t238", "source": "o108"}, {"source": "t238", "target": "o109"}, {"source": "t239", "target": "o109"}, {"source": "t240", "target": "o109"}, {"target": "t241", "source": "o109"}, {"source": "t212", "target": "o110"}, {"source": "t242", "target": "o110"}, {"source": "t243", "target": "o110"}, {"target": "t244", "source": "o110"}, {"source": "t238", "target": "o111"}, {"source": "t245", "target": "o111"}, {"source": "t246", "target": "o111"}, {"target": "t247", "source": "o111"}, {"source": "t212", "target": "o112"}, {"source": "t248", "target": "o112"}, {"source": "t249", "target": "o112"}, {"target": "t250", "source": "o112"}, {"source": "t241", "target": "o113"}, {"target": "t251", "source": "o113"}, {"source": "t244", "target": "o114"}, {"target": "t252", "source": "o114"}, {"source": "t247", "target": "o115"}, {"target": "t253", "source": "o115"}, {"source": "t250", "target": "o116"}, {"target": "t254", "source": "o116"}, {"source": "t251", "target": "o117"}, {"source": "t252", "target": "o117"}, {"target": "t255", "source": "o117"}, {"source": "t253", "target": "o118"}, {"source": "t254", "target": "o118"}, {"target": "t256", "source": "o118"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>9600 bytes</td>
+</tr>
+<tr>
+<td>2</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>3200 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>3200 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>12</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>13</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>14</td><td>3200 bytes</td>
+</tr>
+<tr>
+<td>15</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>16</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>17</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>18</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>19</td><td>3200 bytes</td>
+</tr>
+<tr>
+<td>20</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>21</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>23</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>24</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>25</td><td>6400 bytes</td>
+</tr>
+<tr>
+<td>26</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>27</td><td>16384 bytes</td>
+</tr>
+<tr>
+<td>28</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>29</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>30</td><td>6400 bytes</td>
+</tr>
+<tr>
+<td>31</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>32</td><td>16384 bytes</td>
+</tr>
+<tr>
+<td>33</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>34</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>35</td><td>6400 bytes</td>
+</tr>
+<tr>
+<td>36</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>37</td><td>16384 bytes</td>
+</tr>
+<tr>
+<td>38</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>39</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>40</td><td>6400 bytes</td>
+</tr>
+<tr>
+<td>41</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>42</td><td>32768 bytes</td>
+</tr>
+<tr>
+<td>43</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>44</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>45</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>46</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>47</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>48</td><td>65536 bytes</td>
+</tr>
+<tr>
+<td>49</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>50</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>51</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>52</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>53</td><td>65536 bytes</td>
+</tr>
+<tr>
+<td>54</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>55</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>56</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>57</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>58</td><td>65536 bytes</td>
+</tr>
+<tr>
+<td>59</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>60</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>61</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>62</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>63</td><td>131072 bytes</td>
+</tr>
+<tr>
+<td>64</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>65</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>66</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>67</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>68</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>69</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>70</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>71</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>72</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>73</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>74</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>75</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>76</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>77</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>78</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>79</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>80</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>81</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>82</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>83</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>84</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>85</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>86</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>87</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>88</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>89</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>90</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>91</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>92</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>93</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>94</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>95</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>96</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>97</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>98</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>99</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>100</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>101</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>102</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>103</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>104</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>105</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>106</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>107</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>108</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>109</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>110</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>111</td><td>25600 bytes</td>
+</tr>
+<tr>
+<td>112</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>113</td><td>262144 bytes</td>
+</tr>
+<tr>
+<td>114</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>115</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>116</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>117</td><td>131072 bytes</td>
+</tr>
+<tr>
+<td>118</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>119</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>120</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>121</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>122</td><td>65536 bytes</td>
+</tr>
+<tr>
+<td>123</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>124</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>125</td><td>12800 bytes</td>
+</tr>
+<tr>
+<td>126</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>127</td><td>65536 bytes</td>
+</tr>
+<tr>
+<td>128</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>129</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>130</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>131</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>132</td><td>6144 bytes</td>
+</tr>
+<tr>
+<td>133</td><td>24 bytes</td>
+</tr>
+<tr>
+<td>134</td><td>18432 bytes</td>
+</tr>
+<tr>
+<td>135</td><td>144 bytes</td>
+</tr>
+<tr>
+<td>136</td><td>110592 bytes</td>
+</tr>
+<tr>
+<td>137</td><td>432 bytes</td>
+</tr>
+<tr>
+<td>138</td><td>520 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>PRELU</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td><td>DEPTHWISE_CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td><td>ADD</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td><td>MAX_POOL_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td><td>PAD</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td><td>RESIZE_BILINEAR</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td><td>RESHAPE</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td><td>CONCATENATION</td>
+<td></td>
+<td>1</td>
+</tr>
+</table>
+</body></html>

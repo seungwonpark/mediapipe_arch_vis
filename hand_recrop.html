@@ -1,0 +1,2097 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>C:\Users\yyyyy\Documents\git\unclassified\mediapipe\mediapipe\modules\holistic_landmark\hand_recrop.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[107, 101, 114, 97, 115, 50, 116, 102, 108, 105, 116, 101, 95, 104, 97, 110, 100, 114, 101, 99, 114, 111, 112, 95, 50, 48, 50, 48, 95, 48, 55, 95, 50, 49, 95, 118, 48, 46, 116, 102, 108, 105, 116, 101, 46, 103, 101, 110, 101, 114, 97, 116, 101, 100]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 input_1 FLOAT32 [1, 256, 256, 3]None<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>151 output_crop FLOAT32 [1, 1, 1, 4]None<br></span>[151]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>input_1</td>
+<td>FLOAT32</td>
+<td>[1, 256, 256, 3]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td><td>conv2d/Kernel</td>
+<td>FLOAT32</td>
+<td>[8, 3, 3, 3]</td>
+<td>None</td>
+<td>1</td>
+<td>None</td>
+</tr>
+<tr>
+<td>2</td><td>conv2d/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>2</td>
+<td>None</td>
+</tr>
+<tr>
+<td>3</td><td>conv2d</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>4</td><td>p_re_lu/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 8]</td>
+<td>None</td>
+<td>3</td>
+<td>None</td>
+</tr>
+<tr>
+<td>5</td><td>p_re_lu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>6</td><td>batch_normalization/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 8]</td>
+<td>None</td>
+<td>4</td>
+<td>None</td>
+</tr>
+<tr>
+<td>7</td><td>batch_normalization/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>5</td>
+<td>None</td>
+</tr>
+<tr>
+<td>8</td><td>batch_normalization</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>9</td><td>p_re_lu_1/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 8]</td>
+<td>None</td>
+<td>6</td>
+<td>None</td>
+</tr>
+<tr>
+<td>10</td><td>p_re_lu_1</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>11</td><td>batch_normalization_1/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 8]</td>
+<td>None</td>
+<td>7</td>
+<td>None</td>
+</tr>
+<tr>
+<td>12</td><td>batch_normalization_1/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>8</td>
+<td>None</td>
+</tr>
+<tr>
+<td>13</td><td>batch_normalization_1</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>14</td><td>conv2d_1/Kernel</td>
+<td>FLOAT32</td>
+<td>[8, 2, 2, 8]</td>
+<td>None</td>
+<td>9</td>
+<td>None</td>
+</tr>
+<tr>
+<td>15</td><td>conv2d_1/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>10</td>
+<td>None</td>
+</tr>
+<tr>
+<td>16</td><td>conv2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>17</td><td>p_re_lu_2/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 8]</td>
+<td>None</td>
+<td>11</td>
+<td>None</td>
+</tr>
+<tr>
+<td>18</td><td>p_re_lu_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>19</td><td>batch_normalization_2/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 8]</td>
+<td>None</td>
+<td>12</td>
+<td>None</td>
+</tr>
+<tr>
+<td>20</td><td>batch_normalization_2/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>13</td>
+<td>None</td>
+</tr>
+<tr>
+<td>21</td><td>batch_normalization_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>22</td><td>max_pooling2d</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>23</td><td>depthwise_conv2d/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 8]</td>
+<td>None</td>
+<td>14</td>
+<td>None</td>
+</tr>
+<tr>
+<td>24</td><td>depthwise_conv2d/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>15</td>
+<td>None</td>
+</tr>
+<tr>
+<td>25</td><td>depthwise_conv2d</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>26</td><td>channel_padding/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>16</td>
+<td>None</td>
+</tr>
+<tr>
+<td>27</td><td>channel_padding</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>28</td><td>conv2d_2/Kernel</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 8]</td>
+<td>None</td>
+<td>17</td>
+<td>None</td>
+</tr>
+<tr>
+<td>29</td><td>conv2d_2/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>18</td>
+<td>None</td>
+</tr>
+<tr>
+<td>30</td><td>conv2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>31</td><td>add__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>32</td><td>p_re_lu_3/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 16]</td>
+<td>None</td>
+<td>19</td>
+<td>None</td>
+</tr>
+<tr>
+<td>33</td><td>p_re_lu_3</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>34</td><td>batch_normalization_3/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 16]</td>
+<td>None</td>
+<td>20</td>
+<td>None</td>
+</tr>
+<tr>
+<td>35</td><td>batch_normalization_3/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>21</td>
+<td>None</td>
+</tr>
+<tr>
+<td>36</td><td>batch_normalization_3</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>37</td><td>conv2d_3/Kernel</td>
+<td>FLOAT32</td>
+<td>[16, 2, 2, 16]</td>
+<td>None</td>
+<td>22</td>
+<td>None</td>
+</tr>
+<tr>
+<td>38</td><td>conv2d_3/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>23</td>
+<td>None</td>
+</tr>
+<tr>
+<td>39</td><td>conv2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>40</td><td>p_re_lu_4/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 16]</td>
+<td>None</td>
+<td>24</td>
+<td>None</td>
+</tr>
+<tr>
+<td>41</td><td>p_re_lu_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>42</td><td>batch_normalization_4/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 16]</td>
+<td>None</td>
+<td>25</td>
+<td>None</td>
+</tr>
+<tr>
+<td>43</td><td>batch_normalization_4/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>26</td>
+<td>None</td>
+</tr>
+<tr>
+<td>44</td><td>batch_normalization_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>45</td><td>max_pooling2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>46</td><td>depthwise_conv2d_1/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 16]</td>
+<td>None</td>
+<td>27</td>
+<td>None</td>
+</tr>
+<tr>
+<td>47</td><td>depthwise_conv2d_1/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>28</td>
+<td>None</td>
+</tr>
+<tr>
+<td>48</td><td>depthwise_conv2d_1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>49</td><td>channel_padding_1/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>29</td>
+<td>None</td>
+</tr>
+<tr>
+<td>50</td><td>channel_padding_1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>51</td><td>conv2d_4/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 16]</td>
+<td>None</td>
+<td>30</td>
+<td>None</td>
+</tr>
+<tr>
+<td>52</td><td>conv2d_4/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>31</td>
+<td>None</td>
+</tr>
+<tr>
+<td>53</td><td>conv2d_4</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>54</td><td>add_1__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>55</td><td>p_re_lu_5/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>32</td>
+<td>None</td>
+</tr>
+<tr>
+<td>56</td><td>p_re_lu_5</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>57</td><td>batch_normalization_5/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 32]</td>
+<td>None</td>
+<td>33</td>
+<td>None</td>
+</tr>
+<tr>
+<td>58</td><td>batch_normalization_5/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>34</td>
+<td>None</td>
+</tr>
+<tr>
+<td>59</td><td>batch_normalization_5</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>60</td><td>conv2d_5/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 2, 2, 32]</td>
+<td>None</td>
+<td>35</td>
+<td>None</td>
+</tr>
+<tr>
+<td>61</td><td>conv2d_5/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>36</td>
+<td>None</td>
+</tr>
+<tr>
+<td>62</td><td>conv2d_5</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>63</td><td>p_re_lu_6/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>37</td>
+<td>None</td>
+</tr>
+<tr>
+<td>64</td><td>p_re_lu_6</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>65</td><td>batch_normalization_6/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 32]</td>
+<td>None</td>
+<td>38</td>
+<td>None</td>
+</tr>
+<tr>
+<td>66</td><td>batch_normalization_6/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>39</td>
+<td>None</td>
+</tr>
+<tr>
+<td>67</td><td>batch_normalization_6</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>68</td><td>max_pooling2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>69</td><td>depthwise_conv2d_2/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 32]</td>
+<td>None</td>
+<td>40</td>
+<td>None</td>
+</tr>
+<tr>
+<td>70</td><td>depthwise_conv2d_2/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>41</td>
+<td>None</td>
+</tr>
+<tr>
+<td>71</td><td>depthwise_conv2d_2</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>72</td><td>channel_padding_2/Paddings</td>
+<td>INT32</td>
+<td>[4, 2]</td>
+<td>None</td>
+<td>42</td>
+<td>None</td>
+</tr>
+<tr>
+<td>73</td><td>channel_padding_2</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>74</td><td>conv2d_6/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 32]</td>
+<td>None</td>
+<td>43</td>
+<td>None</td>
+</tr>
+<tr>
+<td>75</td><td>conv2d_6/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>44</td>
+<td>None</td>
+</tr>
+<tr>
+<td>76</td><td>conv2d_6</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>77</td><td>add_2__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>78</td><td>p_re_lu_7/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>45</td>
+<td>None</td>
+</tr>
+<tr>
+<td>79</td><td>p_re_lu_7</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>80</td><td>batch_normalization_7/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 64]</td>
+<td>None</td>
+<td>46</td>
+<td>None</td>
+</tr>
+<tr>
+<td>81</td><td>batch_normalization_7/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>47</td>
+<td>None</td>
+</tr>
+<tr>
+<td>82</td><td>batch_normalization_7</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>83</td><td>conv2d_7/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 2, 2, 64]</td>
+<td>None</td>
+<td>48</td>
+<td>None</td>
+</tr>
+<tr>
+<td>84</td><td>conv2d_7/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>49</td>
+<td>None</td>
+</tr>
+<tr>
+<td>85</td><td>conv2d_7</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>86</td><td>p_re_lu_8/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>50</td>
+<td>None</td>
+</tr>
+<tr>
+<td>87</td><td>p_re_lu_8</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>88</td><td>batch_normalization_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 32]</td>
+<td>None</td>
+<td>51</td>
+<td>None</td>
+</tr>
+<tr>
+<td>89</td><td>batch_normalization_8/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>52</td>
+<td>None</td>
+</tr>
+<tr>
+<td>90</td><td>batch_normalization_8</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>91</td><td>depthwise_conv2d_3/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 32]</td>
+<td>None</td>
+<td>53</td>
+<td>None</td>
+</tr>
+<tr>
+<td>92</td><td>depthwise_conv2d_3/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>54</td>
+<td>None</td>
+</tr>
+<tr>
+<td>93</td><td>depthwise_conv2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>94</td><td>max_pooling2d_3</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>95</td><td>conv2d_8/Kernel</td>
+<td>FLOAT32</td>
+<td>[64, 1, 1, 32]</td>
+<td>None</td>
+<td>55</td>
+<td>None</td>
+</tr>
+<tr>
+<td>96</td><td>conv2d_8/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>56</td>
+<td>None</td>
+</tr>
+<tr>
+<td>97</td><td>conv2d_8</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>98</td><td>add_3__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>99</td><td>p_re_lu_9/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 64]</td>
+<td>None</td>
+<td>57</td>
+<td>None</td>
+</tr>
+<tr>
+<td>100</td><td>p_re_lu_9</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>101</td><td>batch_normalization_9/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 64]</td>
+<td>None</td>
+<td>58</td>
+<td>None</td>
+</tr>
+<tr>
+<td>102</td><td>batch_normalization_9/Bias</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>59</td>
+<td>None</td>
+</tr>
+<tr>
+<td>103</td><td>batch_normalization_9</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>104</td><td>conv2d_9/Kernel</td>
+<td>FLOAT32</td>
+<td>[16, 2, 2, 64]</td>
+<td>None</td>
+<td>60</td>
+<td>None</td>
+</tr>
+<tr>
+<td>105</td><td>conv2d_9/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>61</td>
+<td>None</td>
+</tr>
+<tr>
+<td>106</td><td>conv2d_9</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>107</td><td>p_re_lu_10/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 16]</td>
+<td>None</td>
+<td>62</td>
+<td>None</td>
+</tr>
+<tr>
+<td>108</td><td>p_re_lu_10</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>109</td><td>batch_normalization_10/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 16]</td>
+<td>None</td>
+<td>63</td>
+<td>None</td>
+</tr>
+<tr>
+<td>110</td><td>batch_normalization_10/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>64</td>
+<td>None</td>
+</tr>
+<tr>
+<td>111</td><td>batch_normalization_10</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>112</td><td>max_pooling2d_4</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 64]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>113</td><td>depthwise_conv2d_4/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 16]</td>
+<td>None</td>
+<td>65</td>
+<td>None</td>
+</tr>
+<tr>
+<td>114</td><td>depthwise_conv2d_4/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>66</td>
+<td>None</td>
+</tr>
+<tr>
+<td>115</td><td>depthwise_conv2d_4</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>116</td><td>channel_padding_3/Begin</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>67</td>
+<td>None</td>
+</tr>
+<tr>
+<td>117</td><td>channel_padding_3/End</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>68</td>
+<td>None</td>
+</tr>
+<tr>
+<td>118</td><td>channel_padding_3/Strides</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>69</td>
+<td>None</td>
+</tr>
+<tr>
+<td>119</td><td>channel_padding_3</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>120</td><td>conv2d_10/Kernel</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 16]</td>
+<td>None</td>
+<td>70</td>
+<td>None</td>
+</tr>
+<tr>
+<td>121</td><td>conv2d_10/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>71</td>
+<td>None</td>
+</tr>
+<tr>
+<td>122</td><td>conv2d_10</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>123</td><td>add_4__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>124</td><td>p_re_lu_11/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 32]</td>
+<td>None</td>
+<td>72</td>
+<td>None</td>
+</tr>
+<tr>
+<td>125</td><td>p_re_lu_11</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>126</td><td>batch_normalization_11/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 32]</td>
+<td>None</td>
+<td>73</td>
+<td>None</td>
+</tr>
+<tr>
+<td>127</td><td>batch_normalization_11/Bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>74</td>
+<td>None</td>
+</tr>
+<tr>
+<td>128</td><td>batch_normalization_11</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>129</td><td>conv2d_11/Kernel</td>
+<td>FLOAT32</td>
+<td>[8, 2, 2, 32]</td>
+<td>None</td>
+<td>75</td>
+<td>None</td>
+</tr>
+<tr>
+<td>130</td><td>conv2d_11/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>76</td>
+<td>None</td>
+</tr>
+<tr>
+<td>131</td><td>conv2d_11</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>132</td><td>p_re_lu_12/Alpha</td>
+<td>FLOAT32</td>
+<td>[1, 1, 8]</td>
+<td>None</td>
+<td>77</td>
+<td>None</td>
+</tr>
+<tr>
+<td>133</td><td>p_re_lu_12</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>134</td><td>batch_normalization_12/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 8]</td>
+<td>None</td>
+<td>78</td>
+<td>None</td>
+</tr>
+<tr>
+<td>135</td><td>batch_normalization_12/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>79</td>
+<td>None</td>
+</tr>
+<tr>
+<td>136</td><td>batch_normalization_12</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>137</td><td>max_pooling2d_5</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 32]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>138</td><td>depthwise_conv2d_5/Kernel</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 8]</td>
+<td>None</td>
+<td>80</td>
+<td>None</td>
+</tr>
+<tr>
+<td>139</td><td>depthwise_conv2d_5/Bias</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>81</td>
+<td>None</td>
+</tr>
+<tr>
+<td>140</td><td>depthwise_conv2d_5</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 8]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>141</td><td>channel_padding_4/Begin</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>82</td>
+<td>None</td>
+</tr>
+<tr>
+<td>142</td><td>channel_padding_4/End</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>83</td>
+<td>None</td>
+</tr>
+<tr>
+<td>143</td><td>channel_padding_4/Strides</td>
+<td>INT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>84</td>
+<td>None</td>
+</tr>
+<tr>
+<td>144</td><td>channel_padding_4</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>145</td><td>conv2d_12/Kernel</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 8]</td>
+<td>None</td>
+<td>85</td>
+<td>None</td>
+</tr>
+<tr>
+<td>146</td><td>conv2d_12/Bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>86</td>
+<td>None</td>
+</tr>
+<tr>
+<td>147</td><td>conv2d_12</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>148</td><td>add_5__xeno_compat__1</td>
+<td>FLOAT32</td>
+<td>[1, 2, 2, 16]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>149</td><td>output_crop/Kernel</td>
+<td>FLOAT32</td>
+<td>[4, 2, 2, 16]</td>
+<td>None</td>
+<td>87</td>
+<td>None</td>
+</tr>
+<tr>
+<td>150</td><td>output_crop/Bias</td>
+<td>FLOAT32</td>
+<td>[4]</td>
+<td>None</td>
+<td>88</td>
+<td>None</td>
+</tr>
+<tr>
+<td>151</td><td>output_crop</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 4]</td>
+<td>None</td>
+<td>0</td>
+<td>None</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 input_1 FLOAT32 [1, 256, 256, 3]None<br>1 conv2d/Kernel FLOAT32 [8, 3, 3, 3]None<br>2 conv2d/Bias FLOAT32 [8]None<br></span>[0, 1, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>3 conv2d FLOAT32 [1, 128, 128, 8]None<br></span>[3]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>3 conv2d FLOAT32 [1, 128, 128, 8]None<br>4 p_re_lu/Alpha FLOAT32 [1, 1, 8]None<br></span>[3, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>5 p_re_lu FLOAT32 [1, 128, 128, 8]None<br></span>[5]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>5 p_re_lu FLOAT32 [1, 128, 128, 8]None<br>6 batch_normalization/Kernel FLOAT32 [1, 1, 1, 8]None<br>7 batch_normalization/Bias FLOAT32 [8]None<br></span>[5, 6, 7]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>8 batch_normalization FLOAT32 [1, 128, 128, 8]None<br></span>[8]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>8 batch_normalization FLOAT32 [1, 128, 128, 8]None<br>9 p_re_lu_1/Alpha FLOAT32 [1, 1, 8]None<br></span>[8, 9]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>10 p_re_lu_1 FLOAT32 [1, 128, 128, 8]None<br></span>[10]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>10 p_re_lu_1 FLOAT32 [1, 128, 128, 8]None<br>11 batch_normalization_1/Kernel FLOAT32 [1, 1, 1, 8]None<br>12 batch_normalization_1/Bias FLOAT32 [8]None<br></span>[10, 11, 12]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>13 batch_normalization_1 FLOAT32 [1, 128, 128, 8]None<br></span>[13]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>13 batch_normalization_1 FLOAT32 [1, 128, 128, 8]None<br>14 conv2d_1/Kernel FLOAT32 [8, 2, 2, 8]None<br>15 conv2d_1/Bias FLOAT32 [8]None<br></span>[13, 14, 15]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>16 conv2d_1 FLOAT32 [1, 64, 64, 8]None<br></span>[16]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>16 conv2d_1 FLOAT32 [1, 64, 64, 8]None<br>17 p_re_lu_2/Alpha FLOAT32 [1, 1, 8]None<br></span>[16, 17]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>18 p_re_lu_2 FLOAT32 [1, 64, 64, 8]None<br></span>[18]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>18 p_re_lu_2 FLOAT32 [1, 64, 64, 8]None<br>19 batch_normalization_2/Kernel FLOAT32 [1, 1, 1, 8]None<br>20 batch_normalization_2/Bias FLOAT32 [8]None<br></span>[18, 19, 20]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>21 batch_normalization_2 FLOAT32 [1, 64, 64, 8]None<br></span>[21]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>8 batch_normalization FLOAT32 [1, 128, 128, 8]None<br></span>[8]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>22 max_pooling2d FLOAT32 [1, 64, 64, 8]None<br></span>[22]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>21 batch_normalization_2 FLOAT32 [1, 64, 64, 8]None<br>23 depthwise_conv2d/Kernel FLOAT32 [1, 3, 3, 8]None<br>24 depthwise_conv2d/Bias FLOAT32 [8]None<br></span>[21, 23, 24]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>25 depthwise_conv2d FLOAT32 [1, 64, 64, 8]None<br></span>[25]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>10</td><td><span class='tooltip'><span class='tooltipcontent'>22 max_pooling2d FLOAT32 [1, 64, 64, 8]None<br>26 channel_padding/Paddings INT32 [4, 2]None<br></span>[22, 26]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>27 channel_padding FLOAT32 [1, 64, 64, 16]None<br></span>[27]</span></td>
+<td>None</td>
+<td>PAD (4)</td>
+</tr>
+<tr>
+<td>11</td><td><span class='tooltip'><span class='tooltipcontent'>25 depthwise_conv2d FLOAT32 [1, 64, 64, 8]None<br>28 conv2d_2/Kernel FLOAT32 [16, 1, 1, 8]None<br>29 conv2d_2/Bias FLOAT32 [16]None<br></span>[25, 28, 29]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>30 conv2d_2 FLOAT32 [1, 64, 64, 16]None<br></span>[30]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>12</td><td><span class='tooltip'><span class='tooltipcontent'>27 channel_padding FLOAT32 [1, 64, 64, 16]None<br>30 conv2d_2 FLOAT32 [1, 64, 64, 16]None<br></span>[27, 30]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>31 add__xeno_compat__1 FLOAT32 [1, 64, 64, 16]None<br></span>[31]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>13</td><td><span class='tooltip'><span class='tooltipcontent'>31 add__xeno_compat__1 FLOAT32 [1, 64, 64, 16]None<br>32 p_re_lu_3/Alpha FLOAT32 [1, 1, 16]None<br></span>[31, 32]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>33 p_re_lu_3 FLOAT32 [1, 64, 64, 16]None<br></span>[33]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>14</td><td><span class='tooltip'><span class='tooltipcontent'>33 p_re_lu_3 FLOAT32 [1, 64, 64, 16]None<br>34 batch_normalization_3/Kernel FLOAT32 [1, 1, 1, 16]None<br>35 batch_normalization_3/Bias FLOAT32 [16]None<br></span>[33, 34, 35]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>36 batch_normalization_3 FLOAT32 [1, 64, 64, 16]None<br></span>[36]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>15</td><td><span class='tooltip'><span class='tooltipcontent'>36 batch_normalization_3 FLOAT32 [1, 64, 64, 16]None<br>37 conv2d_3/Kernel FLOAT32 [16, 2, 2, 16]None<br>38 conv2d_3/Bias FLOAT32 [16]None<br></span>[36, 37, 38]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>39 conv2d_3 FLOAT32 [1, 32, 32, 16]None<br></span>[39]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>16</td><td><span class='tooltip'><span class='tooltipcontent'>39 conv2d_3 FLOAT32 [1, 32, 32, 16]None<br>40 p_re_lu_4/Alpha FLOAT32 [1, 1, 16]None<br></span>[39, 40]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>41 p_re_lu_4 FLOAT32 [1, 32, 32, 16]None<br></span>[41]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>17</td><td><span class='tooltip'><span class='tooltipcontent'>41 p_re_lu_4 FLOAT32 [1, 32, 32, 16]None<br>42 batch_normalization_4/Kernel FLOAT32 [1, 1, 1, 16]None<br>43 batch_normalization_4/Bias FLOAT32 [16]None<br></span>[41, 42, 43]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>44 batch_normalization_4 FLOAT32 [1, 32, 32, 16]None<br></span>[44]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>18</td><td><span class='tooltip'><span class='tooltipcontent'>31 add__xeno_compat__1 FLOAT32 [1, 64, 64, 16]None<br></span>[31]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>45 max_pooling2d_1 FLOAT32 [1, 32, 32, 16]None<br></span>[45]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>19</td><td><span class='tooltip'><span class='tooltipcontent'>44 batch_normalization_4 FLOAT32 [1, 32, 32, 16]None<br>46 depthwise_conv2d_1/Kernel FLOAT32 [1, 3, 3, 16]None<br>47 depthwise_conv2d_1/Bias FLOAT32 [16]None<br></span>[44, 46, 47]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>48 depthwise_conv2d_1 FLOAT32 [1, 32, 32, 16]None<br></span>[48]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>20</td><td><span class='tooltip'><span class='tooltipcontent'>45 max_pooling2d_1 FLOAT32 [1, 32, 32, 16]None<br>49 channel_padding_1/Paddings INT32 [4, 2]None<br></span>[45, 49]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>50 channel_padding_1 FLOAT32 [1, 32, 32, 32]None<br></span>[50]</span></td>
+<td>None</td>
+<td>PAD (4)</td>
+</tr>
+<tr>
+<td>21</td><td><span class='tooltip'><span class='tooltipcontent'>48 depthwise_conv2d_1 FLOAT32 [1, 32, 32, 16]None<br>51 conv2d_4/Kernel FLOAT32 [32, 1, 1, 16]None<br>52 conv2d_4/Bias FLOAT32 [32]None<br></span>[48, 51, 52]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>53 conv2d_4 FLOAT32 [1, 32, 32, 32]None<br></span>[53]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>22</td><td><span class='tooltip'><span class='tooltipcontent'>50 channel_padding_1 FLOAT32 [1, 32, 32, 32]None<br>53 conv2d_4 FLOAT32 [1, 32, 32, 32]None<br></span>[50, 53]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>54 add_1__xeno_compat__1 FLOAT32 [1, 32, 32, 32]None<br></span>[54]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>23</td><td><span class='tooltip'><span class='tooltipcontent'>54 add_1__xeno_compat__1 FLOAT32 [1, 32, 32, 32]None<br>55 p_re_lu_5/Alpha FLOAT32 [1, 1, 32]None<br></span>[54, 55]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>56 p_re_lu_5 FLOAT32 [1, 32, 32, 32]None<br></span>[56]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>24</td><td><span class='tooltip'><span class='tooltipcontent'>56 p_re_lu_5 FLOAT32 [1, 32, 32, 32]None<br>57 batch_normalization_5/Kernel FLOAT32 [1, 1, 1, 32]None<br>58 batch_normalization_5/Bias FLOAT32 [32]None<br></span>[56, 57, 58]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>59 batch_normalization_5 FLOAT32 [1, 32, 32, 32]None<br></span>[59]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>25</td><td><span class='tooltip'><span class='tooltipcontent'>59 batch_normalization_5 FLOAT32 [1, 32, 32, 32]None<br>60 conv2d_5/Kernel FLOAT32 [32, 2, 2, 32]None<br>61 conv2d_5/Bias FLOAT32 [32]None<br></span>[59, 60, 61]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>62 conv2d_5 FLOAT32 [1, 16, 16, 32]None<br></span>[62]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>26</td><td><span class='tooltip'><span class='tooltipcontent'>62 conv2d_5 FLOAT32 [1, 16, 16, 32]None<br>63 p_re_lu_6/Alpha FLOAT32 [1, 1, 32]None<br></span>[62, 63]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>64 p_re_lu_6 FLOAT32 [1, 16, 16, 32]None<br></span>[64]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>27</td><td><span class='tooltip'><span class='tooltipcontent'>64 p_re_lu_6 FLOAT32 [1, 16, 16, 32]None<br>65 batch_normalization_6/Kernel FLOAT32 [1, 1, 1, 32]None<br>66 batch_normalization_6/Bias FLOAT32 [32]None<br></span>[64, 65, 66]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>67 batch_normalization_6 FLOAT32 [1, 16, 16, 32]None<br></span>[67]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>28</td><td><span class='tooltip'><span class='tooltipcontent'>54 add_1__xeno_compat__1 FLOAT32 [1, 32, 32, 32]None<br></span>[54]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>68 max_pooling2d_2 FLOAT32 [1, 16, 16, 32]None<br></span>[68]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>29</td><td><span class='tooltip'><span class='tooltipcontent'>67 batch_normalization_6 FLOAT32 [1, 16, 16, 32]None<br>69 depthwise_conv2d_2/Kernel FLOAT32 [1, 3, 3, 32]None<br>70 depthwise_conv2d_2/Bias FLOAT32 [32]None<br></span>[67, 69, 70]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>71 depthwise_conv2d_2 FLOAT32 [1, 16, 16, 32]None<br></span>[71]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>30</td><td><span class='tooltip'><span class='tooltipcontent'>68 max_pooling2d_2 FLOAT32 [1, 16, 16, 32]None<br>72 channel_padding_2/Paddings INT32 [4, 2]None<br></span>[68, 72]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>73 channel_padding_2 FLOAT32 [1, 16, 16, 64]None<br></span>[73]</span></td>
+<td>None</td>
+<td>PAD (4)</td>
+</tr>
+<tr>
+<td>31</td><td><span class='tooltip'><span class='tooltipcontent'>71 depthwise_conv2d_2 FLOAT32 [1, 16, 16, 32]None<br>74 conv2d_6/Kernel FLOAT32 [64, 1, 1, 32]None<br>75 conv2d_6/Bias FLOAT32 [64]None<br></span>[71, 74, 75]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>76 conv2d_6 FLOAT32 [1, 16, 16, 64]None<br></span>[76]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>32</td><td><span class='tooltip'><span class='tooltipcontent'>73 channel_padding_2 FLOAT32 [1, 16, 16, 64]None<br>76 conv2d_6 FLOAT32 [1, 16, 16, 64]None<br></span>[73, 76]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>77 add_2__xeno_compat__1 FLOAT32 [1, 16, 16, 64]None<br></span>[77]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>33</td><td><span class='tooltip'><span class='tooltipcontent'>77 add_2__xeno_compat__1 FLOAT32 [1, 16, 16, 64]None<br>78 p_re_lu_7/Alpha FLOAT32 [1, 1, 64]None<br></span>[77, 78]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>79 p_re_lu_7 FLOAT32 [1, 16, 16, 64]None<br></span>[79]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>34</td><td><span class='tooltip'><span class='tooltipcontent'>79 p_re_lu_7 FLOAT32 [1, 16, 16, 64]None<br>80 batch_normalization_7/Kernel FLOAT32 [1, 1, 1, 64]None<br>81 batch_normalization_7/Bias FLOAT32 [64]None<br></span>[79, 80, 81]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>82 batch_normalization_7 FLOAT32 [1, 16, 16, 64]None<br></span>[82]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>35</td><td><span class='tooltip'><span class='tooltipcontent'>82 batch_normalization_7 FLOAT32 [1, 16, 16, 64]None<br>83 conv2d_7/Kernel FLOAT32 [32, 2, 2, 64]None<br>84 conv2d_7/Bias FLOAT32 [32]None<br></span>[82, 83, 84]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>85 conv2d_7 FLOAT32 [1, 8, 8, 32]None<br></span>[85]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>36</td><td><span class='tooltip'><span class='tooltipcontent'>85 conv2d_7 FLOAT32 [1, 8, 8, 32]None<br>86 p_re_lu_8/Alpha FLOAT32 [1, 1, 32]None<br></span>[85, 86]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>87 p_re_lu_8 FLOAT32 [1, 8, 8, 32]None<br></span>[87]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>37</td><td><span class='tooltip'><span class='tooltipcontent'>87 p_re_lu_8 FLOAT32 [1, 8, 8, 32]None<br>88 batch_normalization_8/Kernel FLOAT32 [1, 1, 1, 32]None<br>89 batch_normalization_8/Bias FLOAT32 [32]None<br></span>[87, 88, 89]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>90 batch_normalization_8 FLOAT32 [1, 8, 8, 32]None<br></span>[90]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>38</td><td><span class='tooltip'><span class='tooltipcontent'>90 batch_normalization_8 FLOAT32 [1, 8, 8, 32]None<br>91 depthwise_conv2d_3/Kernel FLOAT32 [1, 3, 3, 32]None<br>92 depthwise_conv2d_3/Bias FLOAT32 [32]None<br></span>[90, 91, 92]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>93 depthwise_conv2d_3 FLOAT32 [1, 8, 8, 32]None<br></span>[93]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>39</td><td><span class='tooltip'><span class='tooltipcontent'>77 add_2__xeno_compat__1 FLOAT32 [1, 16, 16, 64]None<br></span>[77]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>94 max_pooling2d_3 FLOAT32 [1, 8, 8, 64]None<br></span>[94]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>40</td><td><span class='tooltip'><span class='tooltipcontent'>93 depthwise_conv2d_3 FLOAT32 [1, 8, 8, 32]None<br>95 conv2d_8/Kernel FLOAT32 [64, 1, 1, 32]None<br>96 conv2d_8/Bias FLOAT32 [64]None<br></span>[93, 95, 96]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>97 conv2d_8 FLOAT32 [1, 8, 8, 64]None<br></span>[97]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>41</td><td><span class='tooltip'><span class='tooltipcontent'>94 max_pooling2d_3 FLOAT32 [1, 8, 8, 64]None<br>97 conv2d_8 FLOAT32 [1, 8, 8, 64]None<br></span>[94, 97]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>98 add_3__xeno_compat__1 FLOAT32 [1, 8, 8, 64]None<br></span>[98]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>42</td><td><span class='tooltip'><span class='tooltipcontent'>98 add_3__xeno_compat__1 FLOAT32 [1, 8, 8, 64]None<br>99 p_re_lu_9/Alpha FLOAT32 [1, 1, 64]None<br></span>[98, 99]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>100 p_re_lu_9 FLOAT32 [1, 8, 8, 64]None<br></span>[100]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>43</td><td><span class='tooltip'><span class='tooltipcontent'>100 p_re_lu_9 FLOAT32 [1, 8, 8, 64]None<br>101 batch_normalization_9/Kernel FLOAT32 [1, 1, 1, 64]None<br>102 batch_normalization_9/Bias FLOAT32 [64]None<br></span>[100, 101, 102]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>103 batch_normalization_9 FLOAT32 [1, 8, 8, 64]None<br></span>[103]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>44</td><td><span class='tooltip'><span class='tooltipcontent'>103 batch_normalization_9 FLOAT32 [1, 8, 8, 64]None<br>104 conv2d_9/Kernel FLOAT32 [16, 2, 2, 64]None<br>105 conv2d_9/Bias FLOAT32 [16]None<br></span>[103, 104, 105]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>106 conv2d_9 FLOAT32 [1, 4, 4, 16]None<br></span>[106]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>45</td><td><span class='tooltip'><span class='tooltipcontent'>106 conv2d_9 FLOAT32 [1, 4, 4, 16]None<br>107 p_re_lu_10/Alpha FLOAT32 [1, 1, 16]None<br></span>[106, 107]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>108 p_re_lu_10 FLOAT32 [1, 4, 4, 16]None<br></span>[108]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>46</td><td><span class='tooltip'><span class='tooltipcontent'>108 p_re_lu_10 FLOAT32 [1, 4, 4, 16]None<br>109 batch_normalization_10/Kernel FLOAT32 [1, 1, 1, 16]None<br>110 batch_normalization_10/Bias FLOAT32 [16]None<br></span>[108, 109, 110]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>111 batch_normalization_10 FLOAT32 [1, 4, 4, 16]None<br></span>[111]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>47</td><td><span class='tooltip'><span class='tooltipcontent'>98 add_3__xeno_compat__1 FLOAT32 [1, 8, 8, 64]None<br></span>[98]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>112 max_pooling2d_4 FLOAT32 [1, 4, 4, 64]None<br></span>[112]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>48</td><td><span class='tooltip'><span class='tooltipcontent'>111 batch_normalization_10 FLOAT32 [1, 4, 4, 16]None<br>113 depthwise_conv2d_4/Kernel FLOAT32 [1, 3, 3, 16]None<br>114 depthwise_conv2d_4/Bias FLOAT32 [16]None<br></span>[111, 113, 114]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>115 depthwise_conv2d_4 FLOAT32 [1, 4, 4, 16]None<br></span>[115]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>49</td><td><span class='tooltip'><span class='tooltipcontent'>112 max_pooling2d_4 FLOAT32 [1, 4, 4, 64]None<br>116 channel_padding_3/Begin INT32 [4]None<br>117 channel_padding_3/End INT32 [4]None<br>118 channel_padding_3/Strides INT32 [4]None<br></span>[112, 116, 117, 118]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>119 channel_padding_3 FLOAT32 [1, 4, 4, 32]None<br></span>[119]</span></td>
+<td>{'begin_mask': 0, 'ellipsis_mask': 0, 'end_mask': 0, 'new_axis_mask': 0, 'shrink_axis_mask': 0}</td>
+<td>STRIDED_SLICE (6)</td>
+</tr>
+<tr>
+<td>50</td><td><span class='tooltip'><span class='tooltipcontent'>115 depthwise_conv2d_4 FLOAT32 [1, 4, 4, 16]None<br>120 conv2d_10/Kernel FLOAT32 [32, 1, 1, 16]None<br>121 conv2d_10/Bias FLOAT32 [32]None<br></span>[115, 120, 121]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>122 conv2d_10 FLOAT32 [1, 4, 4, 32]None<br></span>[122]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>51</td><td><span class='tooltip'><span class='tooltipcontent'>119 channel_padding_3 FLOAT32 [1, 4, 4, 32]None<br>122 conv2d_10 FLOAT32 [1, 4, 4, 32]None<br></span>[119, 122]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>123 add_4__xeno_compat__1 FLOAT32 [1, 4, 4, 32]None<br></span>[123]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>52</td><td><span class='tooltip'><span class='tooltipcontent'>123 add_4__xeno_compat__1 FLOAT32 [1, 4, 4, 32]None<br>124 p_re_lu_11/Alpha FLOAT32 [1, 1, 32]None<br></span>[123, 124]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>125 p_re_lu_11 FLOAT32 [1, 4, 4, 32]None<br></span>[125]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>53</td><td><span class='tooltip'><span class='tooltipcontent'>125 p_re_lu_11 FLOAT32 [1, 4, 4, 32]None<br>126 batch_normalization_11/Kernel FLOAT32 [1, 1, 1, 32]None<br>127 batch_normalization_11/Bias FLOAT32 [32]None<br></span>[125, 126, 127]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>128 batch_normalization_11 FLOAT32 [1, 4, 4, 32]None<br></span>[128]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>54</td><td><span class='tooltip'><span class='tooltipcontent'>128 batch_normalization_11 FLOAT32 [1, 4, 4, 32]None<br>129 conv2d_11/Kernel FLOAT32 [8, 2, 2, 32]None<br>130 conv2d_11/Bias FLOAT32 [8]None<br></span>[128, 129, 130]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>131 conv2d_11 FLOAT32 [1, 2, 2, 8]None<br></span>[131]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>55</td><td><span class='tooltip'><span class='tooltipcontent'>131 conv2d_11 FLOAT32 [1, 2, 2, 8]None<br>132 p_re_lu_12/Alpha FLOAT32 [1, 1, 8]None<br></span>[131, 132]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>133 p_re_lu_12 FLOAT32 [1, 2, 2, 8]None<br></span>[133]</span></td>
+<td>None</td>
+<td>PRELU (1)</td>
+</tr>
+<tr>
+<td>56</td><td><span class='tooltip'><span class='tooltipcontent'>133 p_re_lu_12 FLOAT32 [1, 2, 2, 8]None<br>134 batch_normalization_12/Kernel FLOAT32 [1, 1, 1, 8]None<br>135 batch_normalization_12/Bias FLOAT32 [8]None<br></span>[133, 134, 135]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>136 batch_normalization_12 FLOAT32 [1, 2, 2, 8]None<br></span>[136]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>57</td><td><span class='tooltip'><span class='tooltipcontent'>123 add_4__xeno_compat__1 FLOAT32 [1, 4, 4, 32]None<br></span>[123]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>137 max_pooling2d_5 FLOAT32 [1, 2, 2, 32]None<br></span>[137]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (3)</td>
+</tr>
+<tr>
+<td>58</td><td><span class='tooltip'><span class='tooltipcontent'>136 batch_normalization_12 FLOAT32 [1, 2, 2, 8]None<br>138 depthwise_conv2d_5/Kernel FLOAT32 [1, 3, 3, 8]None<br>139 depthwise_conv2d_5/Bias FLOAT32 [8]None<br></span>[136, 138, 139]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>140 depthwise_conv2d_5 FLOAT32 [1, 2, 2, 8]None<br></span>[140]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (2)</td>
+</tr>
+<tr>
+<td>59</td><td><span class='tooltip'><span class='tooltipcontent'>137 max_pooling2d_5 FLOAT32 [1, 2, 2, 32]None<br>141 channel_padding_4/Begin INT32 [4]None<br>142 channel_padding_4/End INT32 [4]None<br>143 channel_padding_4/Strides INT32 [4]None<br></span>[137, 141, 142, 143]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>144 channel_padding_4 FLOAT32 [1, 2, 2, 16]None<br></span>[144]</span></td>
+<td>{'begin_mask': 0, 'ellipsis_mask': 0, 'end_mask': 0, 'new_axis_mask': 0, 'shrink_axis_mask': 0}</td>
+<td>STRIDED_SLICE (6)</td>
+</tr>
+<tr>
+<td>60</td><td><span class='tooltip'><span class='tooltipcontent'>140 depthwise_conv2d_5 FLOAT32 [1, 2, 2, 8]None<br>145 conv2d_12/Kernel FLOAT32 [16, 1, 1, 8]None<br>146 conv2d_12/Bias FLOAT32 [16]None<br></span>[140, 145, 146]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>147 conv2d_12 FLOAT32 [1, 2, 2, 16]None<br></span>[147]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>61</td><td><span class='tooltip'><span class='tooltipcontent'>144 channel_padding_4 FLOAT32 [1, 2, 2, 16]None<br>147 conv2d_12 FLOAT32 [1, 2, 2, 16]None<br></span>[144, 147]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>148 add_5__xeno_compat__1 FLOAT32 [1, 2, 2, 16]None<br></span>[148]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (5)</td>
+</tr>
+<tr>
+<td>62</td><td><span class='tooltip'><span class='tooltipcontent'>148 add_5__xeno_compat__1 FLOAT32 [1, 2, 2, 16]None<br>149 output_crop/Kernel FLOAT32 [4, 2, 2, 16]None<br>150 output_crop/Bias FLOAT32 [4]None<br></span>[148, 149, 150]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>151 output_crop FLOAT32 [1, 1, 1, 4]None<br></span>[151]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "PRELU (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "PRELU (1)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "PRELU (1)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 2000}, {"id": "o10", "name": "PAD (4)", "group": 2, "x": 200, "y": 2200}, {"id": "o11", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2400}, {"id": "o12", "name": "ADD (5)", "group": 2, "x": 200, "y": 2600}, {"id": "o13", "name": "PRELU (1)", "group": 2, "x": 200, "y": 2800}, {"id": "o14", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 3000}, {"id": "o15", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3200}, {"id": "o16", "name": "PRELU (1)", "group": 2, "x": 200, "y": 3400}, {"id": "o17", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 3600}, {"id": "o18", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 3800}, {"id": "o19", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 4000}, {"id": "o20", "name": "PAD (4)", "group": 2, "x": 200, "y": 4200}, {"id": "o21", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4400}, {"id": "o22", "name": "ADD (5)", "group": 2, "x": 200, "y": 4600}, {"id": "o23", "name": "PRELU (1)", "group": 2, "x": 200, "y": 4800}, {"id": "o24", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 5000}, {"id": "o25", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5200}, {"id": "o26", "name": "PRELU (1)", "group": 2, "x": 200, "y": 5400}, {"id": "o27", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 5600}, {"id": "o28", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 5800}, {"id": "o29", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 6000}, {"id": "o30", "name": "PAD (4)", "group": 2, "x": 200, "y": 6200}, {"id": "o31", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6400}, {"id": "o32", "name": "ADD (5)", "group": 2, "x": 200, "y": 6600}, {"id": "o33", "name": "PRELU (1)", "group": 2, "x": 200, "y": 6800}, {"id": "o34", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 7000}, {"id": "o35", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7200}, {"id": "o36", "name": "PRELU (1)", "group": 2, "x": 200, "y": 7400}, {"id": "o37", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 7600}, {"id": "o38", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 7800}, {"id": "o39", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 8000}, {"id": "o40", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8200}, {"id": "o41", "name": "ADD (5)", "group": 2, "x": 200, "y": 8400}, {"id": "o42", "name": "PRELU (1)", "group": 2, "x": 200, "y": 8600}, {"id": "o43", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 8800}, {"id": "o44", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9000}, {"id": "o45", "name": "PRELU (1)", "group": 2, "x": 200, "y": 9200}, {"id": "o46", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 9400}, {"id": "o47", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 9600}, {"id": "o48", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 9800}, {"id": "o49", "name": "STRIDED_SLICE (6)", "group": 2, "x": 200, "y": 10000}, {"id": "o50", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10200}, {"id": "o51", "name": "ADD (5)", "group": 2, "x": 200, "y": 10400}, {"id": "o52", "name": "PRELU (1)", "group": 2, "x": 200, "y": 10600}, {"id": "o53", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 10800}, {"id": "o54", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11000}, {"id": "o55", "name": "PRELU (1)", "group": 2, "x": 200, "y": 11200}, {"id": "o56", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 11400}, {"id": "o57", "name": "MAX_POOL_2D (3)", "group": 2, "x": 200, "y": 11600}, {"id": "o58", "name": "DEPTHWISE_CONV_2D (2)", "group": 2, "x": 200, "y": 11800}, {"id": "o59", "name": "STRIDED_SLICE (6)", "group": 2, "x": 200, "y": 12000}, {"id": "o60", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 12200}, {"id": "o61", "name": "ADD (5)", "group": 2, "x": 200, "y": 12400}, {"id": "o62", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 12600}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 340, "y": 100.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 100.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 170, "y": 300.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 340, "y": 300.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 170, "y": 500.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 340, "y": 500.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 510, "y": 500.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 170, "y": 700.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 340, "y": 700.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 170, "y": 900.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 340, "y": 900.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 510, "y": 900.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 170, "y": 1100.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 340, "y": 1100.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 510, "y": 1100.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 340, "y": 1300.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t20", "name": "[] (20)", "group": 1, "x": 510, "y": 1500.0}, {"id": "t21", "name": "[] (21)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t22", "name": "[] (22)", "group": 1, "x": 170, "y": 2100.0}, {"id": "t23", "name": "[] (23)", "group": 1, "x": 340, "y": 1900.0}, {"id": "t24", "name": "[] (24)", "group": 1, "x": 510, "y": 1900.0}, {"id": "t25", "name": "[] (25)", "group": 1, "x": 170, "y": 2300.0}, {"id": "t26", "name": "[] (26)", "group": 1, "x": 340, "y": 2100.0}, {"id": "t27", "name": "[] (27)", "group": 1, "x": 170, "y": 2500.0}, {"id": "t28", "name": "[] (28)", "group": 1, "x": 340, "y": 2300.0}, {"id": "t29", "name": "[] (29)", "group": 1, "x": 510, "y": 2300.0}, {"id": "t30", "name": "[] (30)", "group": 1, "x": 340, "y": 2500.0}, {"id": "t31", "name": "[] (31)", "group": 1, "x": 170, "y": 2700.0}, {"id": "t32", "name": "[] (32)", "group": 1, "x": 340, "y": 2700.0}, {"id": "t33", "name": "[] (33)", "group": 1, "x": 170, "y": 2900.0}, {"id": "t34", "name": "[] (34)", "group": 1, "x": 340, "y": 2900.0}, {"id": "t35", "name": "[] (35)", "group": 1, "x": 510, "y": 2900.0}, {"id": "t36", "name": "[] (36)", "group": 1, "x": 170, "y": 3100.0}, {"id": "t37", "name": "[] (37)", "group": 1, "x": 340, "y": 3100.0}, {"id": "t38", "name": "[] (38)", "group": 1, "x": 510, "y": 3100.0}, {"id": "t39", "name": "[] (39)", "group": 1, "x": 170, "y": 3300.0}, {"id": "t40", "name": "[] (40)", "group": 1, "x": 340, "y": 3300.0}, {"id": "t41", "name": "[] (41)", "group": 1, "x": 170, "y": 3500.0}, {"id": "t42", "name": "[] (42)", "group": 1, "x": 340, "y": 3500.0}, {"id": "t43", "name": "[] (43)", "group": 1, "x": 510, "y": 3500.0}, {"id": "t44", "name": "[] (44)", "group": 1, "x": 170, "y": 3900.0}, {"id": "t45", "name": "[] (45)", "group": 1, "x": 170, "y": 4100.0}, {"id": "t46", "name": "[] (46)", "group": 1, "x": 340, "y": 3900.0}, {"id": "t47", "name": "[] (47)", "group": 1, "x": 510, "y": 3900.0}, {"id": "t48", "name": "[] (48)", "group": 1, "x": 170, "y": 4300.0}, {"id": "t49", "name": "[] (49)", "group": 1, "x": 340, "y": 4100.0}, {"id": "t50", "name": "[] (50)", "group": 1, "x": 170, "y": 4500.0}, {"id": "t51", "name": "[] (51)", "group": 1, "x": 340, "y": 4300.0}, {"id": "t52", "name": "[] (52)", "group": 1, "x": 510, "y": 4300.0}, {"id": "t53", "name": "[] (53)", "group": 1, "x": 340, "y": 4500.0}, {"id": "t54", "name": "[] (54)", "group": 1, "x": 170, "y": 4700.0}, {"id": "t55", "name": "[] (55)", "group": 1, "x": 340, "y": 4700.0}, {"id": "t56", "name": "[] (56)", "group": 1, "x": 170, "y": 4900.0}, {"id": "t57", "name": "[] (57)", "group": 1, "x": 340, "y": 4900.0}, {"id": "t58", "name": "[] (58)", "group": 1, "x": 510, "y": 4900.0}, {"id": "t59", "name": "[] (59)", "group": 1, "x": 170, "y": 5100.0}, {"id": "t60", "name": "[] (60)", "group": 1, "x": 340, "y": 5100.0}, {"id": "t61", "name": "[] (61)", "group": 1, "x": 510, "y": 5100.0}, {"id": "t62", "name": "[] (62)", "group": 1, "x": 170, "y": 5300.0}, {"id": "t63", "name": "[] (63)", "group": 1, "x": 340, "y": 5300.0}, {"id": "t64", "name": "[] (64)", "group": 1, "x": 170, "y": 5500.0}, {"id": "t65", "name": "[] (65)", "group": 1, "x": 340, "y": 5500.0}, {"id": "t66", "name": "[] (66)", "group": 1, "x": 510, "y": 5500.0}, {"id": "t67", "name": "[] (67)", "group": 1, "x": 170, "y": 5900.0}, {"id": "t68", "name": "[] (68)", "group": 1, "x": 170, "y": 6100.0}, {"id": "t69", "name": "[] (69)", "group": 1, "x": 340, "y": 5900.0}, {"id": "t70", "name": "[] (70)", "group": 1, "x": 510, "y": 5900.0}, {"id": "t71", "name": "[] (71)", "group": 1, "x": 170, "y": 6300.0}, {"id": "t72", "name": "[] (72)", "group": 1, "x": 340, "y": 6100.0}, {"id": "t73", "name": "[] (73)", "group": 1, "x": 170, "y": 6500.0}, {"id": "t74", "name": "[] (74)", "group": 1, "x": 340, "y": 6300.0}, {"id": "t75", "name": "[] (75)", "group": 1, "x": 510, "y": 6300.0}, {"id": "t76", "name": "[] (76)", "group": 1, "x": 340, "y": 6500.0}, {"id": "t77", "name": "[] (77)", "group": 1, "x": 170, "y": 6700.0}, {"id": "t78", "name": "[] (78)", "group": 1, "x": 340, "y": 6700.0}, {"id": "t79", "name": "[] (79)", "group": 1, "x": 170, "y": 6900.0}, {"id": "t80", "name": "[] (80)", "group": 1, "x": 340, "y": 6900.0}, {"id": "t81", "name": "[] (81)", "group": 1, "x": 510, "y": 6900.0}, {"id": "t82", "name": "[] (82)", "group": 1, "x": 170, "y": 7100.0}, {"id": "t83", "name": "[] (83)", "group": 1, "x": 340, "y": 7100.0}, {"id": "t84", "name": "[] (84)", "group": 1, "x": 510, "y": 7100.0}, {"id": "t85", "name": "[] (85)", "group": 1, "x": 170, "y": 7300.0}, {"id": "t86", "name": "[] (86)", "group": 1, "x": 340, "y": 7300.0}, {"id": "t87", "name": "[] (87)", "group": 1, "x": 170, "y": 7500.0}, {"id": "t88", "name": "[] (88)", "group": 1, "x": 340, "y": 7500.0}, {"id": "t89", "name": "[] (89)", "group": 1, "x": 510, "y": 7500.0}, {"id": "t90", "name": "[] (90)", "group": 1, "x": 170, "y": 7700.0}, {"id": "t91", "name": "[] (91)", "group": 1, "x": 340, "y": 7700.0}, {"id": "t92", "name": "[] (92)", "group": 1, "x": 510, "y": 7700.0}, {"id": "t93", "name": "[] (93)", "group": 1, "x": 170, "y": 8100.0}, {"id": "t94", "name": "[] (94)", "group": 1, "x": 170, "y": 8300.0}, {"id": "t95", "name": "[] (95)", "group": 1, "x": 340, "y": 8100.0}, {"id": "t96", "name": "[] (96)", "group": 1, "x": 510, "y": 8100.0}, {"id": "t97", "name": "[] (97)", "group": 1, "x": 340, "y": 8300.0}, {"id": "t98", "name": "[] (98)", "group": 1, "x": 170, "y": 8500.0}, {"id": "t99", "name": "[] (99)", "group": 1, "x": 340, "y": 8500.0}, {"id": "t100", "name": "[] (100)", "group": 1, "x": 170, "y": 8700.0}, {"id": "t101", "name": "[] (101)", "group": 1, "x": 340, "y": 8700.0}, {"id": "t102", "name": "[] (102)", "group": 1, "x": 510, "y": 8700.0}, {"id": "t103", "name": "[] (103)", "group": 1, "x": 170, "y": 8900.0}, {"id": "t104", "name": "[] (104)", "group": 1, "x": 340, "y": 8900.0}, {"id": "t105", "name": "[] (105)", "group": 1, "x": 510, "y": 8900.0}, {"id": "t106", "name": "[] (106)", "group": 1, "x": 170, "y": 9100.0}, {"id": "t107", "name": "[] (107)", "group": 1, "x": 340, "y": 9100.0}, {"id": "t108", "name": "[] (108)", "group": 1, "x": 170, "y": 9300.0}, {"id": "t109", "name": "[] (109)", "group": 1, "x": 340, "y": 9300.0}, {"id": "t110", "name": "[] (110)", "group": 1, "x": 510, "y": 9300.0}, {"id": "t111", "name": "[] (111)", "group": 1, "x": 170, "y": 9700.0}, {"id": "t112", "name": "[] (112)", "group": 1, "x": 170, "y": 9900.0}, {"id": "t113", "name": "[] (113)", "group": 1, "x": 340, "y": 9700.0}, {"id": "t114", "name": "[] (114)", "group": 1, "x": 510, "y": 9700.0}, {"id": "t115", "name": "[] (115)", "group": 1, "x": 170, "y": 10100.0}, {"id": "t116", "name": "[] (116)", "group": 1, "x": 340, "y": 9900.0}, {"id": "t117", "name": "[] (117)", "group": 1, "x": 510, "y": 9900.0}, {"id": "t118", "name": "[] (118)", "group": 1, "x": 680, "y": 9900.0}, {"id": "t119", "name": "[] (119)", "group": 1, "x": 170, "y": 10300.0}, {"id": "t120", "name": "[] (120)", "group": 1, "x": 340, "y": 10100.0}, {"id": "t121", "name": "[] (121)", "group": 1, "x": 510, "y": 10100.0}, {"id": "t122", "name": "[] (122)", "group": 1, "x": 340, "y": 10300.0}, {"id": "t123", "name": "[] (123)", "group": 1, "x": 170, "y": 10500.0}, {"id": "t124", "name": "[] (124)", "group": 1, "x": 340, "y": 10500.0}, {"id": "t125", "name": "[] (125)", "group": 1, "x": 170, "y": 10700.0}, {"id": "t126", "name": "[] (126)", "group": 1, "x": 340, "y": 10700.0}, {"id": "t127", "name": "[] (127)", "group": 1, "x": 510, "y": 10700.0}, {"id": "t128", "name": "[] (128)", "group": 1, "x": 170, "y": 10900.0}, {"id": "t129", "name": "[] (129)", "group": 1, "x": 340, "y": 10900.0}, {"id": "t130", "name": "[] (130)", "group": 1, "x": 510, "y": 10900.0}, {"id": "t131", "name": "[] (131)", "group": 1, "x": 170, "y": 11100.0}, {"id": "t132", "name": "[] (132)", "group": 1, "x": 340, "y": 11100.0}, {"id": "t133", "name": "[] (133)", "group": 1, "x": 170, "y": 11300.0}, {"id": "t134", "name": "[] (134)", "group": 1, "x": 340, "y": 11300.0}, {"id": "t135", "name": "[] (135)", "group": 1, "x": 510, "y": 11300.0}, {"id": "t136", "name": "[] (136)", "group": 1, "x": 170, "y": 11700.0}, {"id": "t137", "name": "[] (137)", "group": 1, "x": 170, "y": 11900.0}, {"id": "t138", "name": "[] (138)", "group": 1, "x": 340, "y": 11700.0}, {"id": "t139", "name": "[] (139)", "group": 1, "x": 510, "y": 11700.0}, {"id": "t140", "name": "[] (140)", "group": 1, "x": 170, "y": 12100.0}, {"id": "t141", "name": "[] (141)", "group": 1, "x": 340, "y": 11900.0}, {"id": "t142", "name": "[] (142)", "group": 1, "x": 510, "y": 11900.0}, {"id": "t143", "name": "[] (143)", "group": 1, "x": 680, "y": 11900.0}, {"id": "t144", "name": "[] (144)", "group": 1, "x": 170, "y": 12300.0}, {"id": "t145", "name": "[] (145)", "group": 1, "x": 340, "y": 12100.0}, {"id": "t146", "name": "[] (146)", "group": 1, "x": 510, "y": 12100.0}, {"id": "t147", "name": "[] (147)", "group": 1, "x": 340, "y": 12300.0}, {"id": "t148", "name": "[] (148)", "group": 1, "x": 170, "y": 12500.0}, {"id": "t149", "name": "[] (149)", "group": 1, "x": 340, "y": 12500.0}, {"id": "t150", "name": "[] (150)", "group": 1, "x": 510, "y": 12500.0}, {"id": "t151", "name": "[] (151)", "group": 1, "x": 170, "y": 12700.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t1", "target": "o0"}, {"source": "t2", "target": "o0"}, {"target": "t3", "source": "o0"}, {"source": "t3", "target": "o1"}, {"source": "t4", "target": "o1"}, {"target": "t5", "source": "o1"}, {"source": "t5", "target": "o2"}, {"source": "t6", "target": "o2"}, {"source": "t7", "target": "o2"}, {"target": "t8", "source": "o2"}, {"source": "t8", "target": "o3"}, {"source": "t9", "target": "o3"}, {"target": "t10", "source": "o3"}, {"source": "t10", "target": "o4"}, {"source": "t11", "target": "o4"}, {"source": "t12", "target": "o4"}, {"target": "t13", "source": "o4"}, {"source": "t13", "target": "o5"}, {"source": "t14", "target": "o5"}, {"source": "t15", "target": "o5"}, {"target": "t16", "source": "o5"}, {"source": "t16", "target": "o6"}, {"source": "t17", "target": "o6"}, {"target": "t18", "source": "o6"}, {"source": "t18", "target": "o7"}, {"source": "t19", "target": "o7"}, {"source": "t20", "target": "o7"}, {"target": "t21", "source": "o7"}, {"source": "t8", "target": "o8"}, {"target": "t22", "source": "o8"}, {"source": "t21", "target": "o9"}, {"source": "t23", "target": "o9"}, {"source": "t24", "target": "o9"}, {"target": "t25", "source": "o9"}, {"source": "t22", "target": "o10"}, {"source": "t26", "target": "o10"}, {"target": "t27", "source": "o10"}, {"source": "t25", "target": "o11"}, {"source": "t28", "target": "o11"}, {"source": "t29", "target": "o11"}, {"target": "t30", "source": "o11"}, {"source": "t27", "target": "o12"}, {"source": "t30", "target": "o12"}, {"target": "t31", "source": "o12"}, {"source": "t31", "target": "o13"}, {"source": "t32", "target": "o13"}, {"target": "t33", "source": "o13"}, {"source": "t33", "target": "o14"}, {"source": "t34", "target": "o14"}, {"source": "t35", "target": "o14"}, {"target": "t36", "source": "o14"}, {"source": "t36", "target": "o15"}, {"source": "t37", "target": "o15"}, {"source": "t38", "target": "o15"}, {"target": "t39", "source": "o15"}, {"source": "t39", "target": "o16"}, {"source": "t40", "target": "o16"}, {"target": "t41", "source": "o16"}, {"source": "t41", "target": "o17"}, {"source": "t42", "target": "o17"}, {"source": "t43", "target": "o17"}, {"target": "t44", "source": "o17"}, {"source": "t31", "target": "o18"}, {"target": "t45", "source": "o18"}, {"source": "t44", "target": "o19"}, {"source": "t46", "target": "o19"}, {"source": "t47", "target": "o19"}, {"target": "t48", "source": "o19"}, {"source": "t45", "target": "o20"}, {"source": "t49", "target": "o20"}, {"target": "t50", "source": "o20"}, {"source": "t48", "target": "o21"}, {"source": "t51", "target": "o21"}, {"source": "t52", "target": "o21"}, {"target": "t53", "source": "o21"}, {"source": "t50", "target": "o22"}, {"source": "t53", "target": "o22"}, {"target": "t54", "source": "o22"}, {"source": "t54", "target": "o23"}, {"source": "t55", "target": "o23"}, {"target": "t56", "source": "o23"}, {"source": "t56", "target": "o24"}, {"source": "t57", "target": "o24"}, {"source": "t58", "target": "o24"}, {"target": "t59", "source": "o24"}, {"source": "t59", "target": "o25"}, {"source": "t60", "target": "o25"}, {"source": "t61", "target": "o25"}, {"target": "t62", "source": "o25"}, {"source": "t62", "target": "o26"}, {"source": "t63", "target": "o26"}, {"target": "t64", "source": "o26"}, {"source": "t64", "target": "o27"}, {"source": "t65", "target": "o27"}, {"source": "t66", "target": "o27"}, {"target": "t67", "source": "o27"}, {"source": "t54", "target": "o28"}, {"target": "t68", "source": "o28"}, {"source": "t67", "target": "o29"}, {"source": "t69", "target": "o29"}, {"source": "t70", "target": "o29"}, {"target": "t71", "source": "o29"}, {"source": "t68", "target": "o30"}, {"source": "t72", "target": "o30"}, {"target": "t73", "source": "o30"}, {"source": "t71", "target": "o31"}, {"source": "t74", "target": "o31"}, {"source": "t75", "target": "o31"}, {"target": "t76", "source": "o31"}, {"source": "t73", "target": "o32"}, {"source": "t76", "target": "o32"}, {"target": "t77", "source": "o32"}, {"source": "t77", "target": "o33"}, {"source": "t78", "target": "o33"}, {"target": "t79", "source": "o33"}, {"source": "t79", "target": "o34"}, {"source": "t80", "target": "o34"}, {"source": "t81", "target": "o34"}, {"target": "t82", "source": "o34"}, {"source": "t82", "target": "o35"}, {"source": "t83", "target": "o35"}, {"source": "t84", "target": "o35"}, {"target": "t85", "source": "o35"}, {"source": "t85", "target": "o36"}, {"source": "t86", "target": "o36"}, {"target": "t87", "source": "o36"}, {"source": "t87", "target": "o37"}, {"source": "t88", "target": "o37"}, {"source": "t89", "target": "o37"}, {"target": "t90", "source": "o37"}, {"source": "t90", "target": "o38"}, {"source": "t91", "target": "o38"}, {"source": "t92", "target": "o38"}, {"target": "t93", "source": "o38"}, {"source": "t77", "target": "o39"}, {"target": "t94", "source": "o39"}, {"source": "t93", "target": "o40"}, {"source": "t95", "target": "o40"}, {"source": "t96", "target": "o40"}, {"target": "t97", "source": "o40"}, {"source": "t94", "target": "o41"}, {"source": "t97", "target": "o41"}, {"target": "t98", "source": "o41"}, {"source": "t98", "target": "o42"}, {"source": "t99", "target": "o42"}, {"target": "t100", "source": "o42"}, {"source": "t100", "target": "o43"}, {"source": "t101", "target": "o43"}, {"source": "t102", "target": "o43"}, {"target": "t103", "source": "o43"}, {"source": "t103", "target": "o44"}, {"source": "t104", "target": "o44"}, {"source": "t105", "target": "o44"}, {"target": "t106", "source": "o44"}, {"source": "t106", "target": "o45"}, {"source": "t107", "target": "o45"}, {"target": "t108", "source": "o45"}, {"source": "t108", "target": "o46"}, {"source": "t109", "target": "o46"}, {"source": "t110", "target": "o46"}, {"target": "t111", "source": "o46"}, {"source": "t98", "target": "o47"}, {"target": "t112", "source": "o47"}, {"source": "t111", "target": "o48"}, {"source": "t113", "target": "o48"}, {"source": "t114", "target": "o48"}, {"target": "t115", "source": "o48"}, {"source": "t112", "target": "o49"}, {"source": "t116", "target": "o49"}, {"source": "t117", "target": "o49"}, {"source": "t118", "target": "o49"}, {"target": "t119", "source": "o49"}, {"source": "t115", "target": "o50"}, {"source": "t120", "target": "o50"}, {"source": "t121", "target": "o50"}, {"target": "t122", "source": "o50"}, {"source": "t119", "target": "o51"}, {"source": "t122", "target": "o51"}, {"target": "t123", "source": "o51"}, {"source": "t123", "target": "o52"}, {"source": "t124", "target": "o52"}, {"target": "t125", "source": "o52"}, {"source": "t125", "target": "o53"}, {"source": "t126", "target": "o53"}, {"source": "t127", "target": "o53"}, {"target": "t128", "source": "o53"}, {"source": "t128", "target": "o54"}, {"source": "t129", "target": "o54"}, {"source": "t130", "target": "o54"}, {"target": "t131", "source": "o54"}, {"source": "t131", "target": "o55"}, {"source": "t132", "target": "o55"}, {"target": "t133", "source": "o55"}, {"source": "t133", "target": "o56"}, {"source": "t134", "target": "o56"}, {"source": "t135", "target": "o56"}, {"target": "t136", "source": "o56"}, {"source": "t123", "target": "o57"}, {"target": "t137", "source": "o57"}, {"source": "t136", "target": "o58"}, {"source": "t138", "target": "o58"}, {"source": "t139", "target": "o58"}, {"target": "t140", "source": "o58"}, {"source": "t137", "target": "o59"}, {"source": "t141", "target": "o59"}, {"source": "t142", "target": "o59"}, {"source": "t143", "target": "o59"}, {"target": "t144", "source": "o59"}, {"source": "t140", "target": "o60"}, {"source": "t145", "target": "o60"}, {"source": "t146", "target": "o60"}, {"target": "t147", "source": "o60"}, {"source": "t144", "target": "o61"}, {"source": "t147", "target": "o61"}, {"target": "t148", "source": "o61"}, {"source": "t148", "target": "o62"}, {"source": "t149", "target": "o62"}, {"source": "t150", "target": "o62"}, {"target": "t151", "source": "o62"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>864 bytes</td>
+</tr>
+<tr>
+<td>2</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>12</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>13</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>14</td><td>288 bytes</td>
+</tr>
+<tr>
+<td>15</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>16</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>17</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>18</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>19</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>20</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>21</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>23</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>24</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>25</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>26</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>27</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>28</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>29</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>30</td><td>2048 bytes</td>
+</tr>
+<tr>
+<td>31</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>32</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>33</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>34</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>35</td><td>16384 bytes</td>
+</tr>
+<tr>
+<td>36</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>37</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>38</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>39</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>40</td><td>1152 bytes</td>
+</tr>
+<tr>
+<td>41</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>42</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>43</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>44</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>45</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>46</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>47</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>48</td><td>32768 bytes</td>
+</tr>
+<tr>
+<td>49</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>50</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>51</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>52</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>53</td><td>1152 bytes</td>
+</tr>
+<tr>
+<td>54</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>55</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>56</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>57</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>58</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>59</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>60</td><td>16384 bytes</td>
+</tr>
+<tr>
+<td>61</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>62</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>63</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>64</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>65</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>66</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>67</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>68</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>69</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>70</td><td>2048 bytes</td>
+</tr>
+<tr>
+<td>71</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>72</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>73</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>74</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>75</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>76</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>77</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>78</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>79</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>80</td><td>288 bytes</td>
+</tr>
+<tr>
+<td>81</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>82</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>83</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>84</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>85</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>86</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>87</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>88</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>89</td><td>468 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>PRELU</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td><td>DEPTHWISE_CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td><td>MAX_POOL_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td><td>PAD</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td><td>ADD</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td><td>STRIDED_SLICE</td>
+<td></td>
+<td>1</td>
+</tr>
+</table>
+</body></html>

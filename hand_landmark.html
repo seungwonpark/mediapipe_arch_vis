@@ -1,0 +1,2488 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>C:\Users\yyyyy\Documents\git\unclassified\mediapipe\mediapipe\modules\hand_landmark\hand_landmark.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[77, 76, 73, 82, 32, 67, 111, 110, 118, 101, 114, 116, 101, 100, 46]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 input_1 FLOAT32 [1, 224, 224, 3]None<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>165 Identity FLOAT32 [1, 63]None<br>167 Identity_1 FLOAT32 [1, 1]None<br>169 Identity_2 FLOAT32 [1, 1]None<br></span>[165, 167, 169]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>input_1</td>
+<td>FLOAT32</td>
+<td>[1, 224, 224, 3]</td>
+<td>None</td>
+<td>1</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>1</td><td>model/model/conv_handedness/BiasAdd/ReadVariableOp/resource</td>
+<td>FLOAT32</td>
+<td>[1]</td>
+<td>None</td>
+<td>2</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>2</td><td>model/model/conv_handflag/BiasAdd/ReadVariableOp/resource</td>
+<td>FLOAT32</td>
+<td>[1]</td>
+<td>None</td>
+<td>3</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>3</td><td>model/model/conv_landmarks/BiasAdd/ReadVariableOp/resource</td>
+<td>FLOAT32</td>
+<td>[63]</td>
+<td>None</td>
+<td>4</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>4</td><td>model/model/flatten/Const</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>5</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>5</td><td>model/model/batch_normalization/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[24]</td>
+<td>None</td>
+<td>6</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>6</td><td>model/model/batch_normalization_1/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[24]</td>
+<td>None</td>
+<td>7</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>7</td><td>model/model/batch_normalization_10/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>8</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>8</td><td>model/model/batch_normalization_12/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[144]</td>
+<td>None</td>
+<td>9</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>9</td><td>model/model/batch_normalization_13/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[144]</td>
+<td>None</td>
+<td>10</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>10</td><td>model/model/batch_normalization_15/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[144]</td>
+<td>None</td>
+<td>11</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>11</td><td>model/model/batch_normalization_16/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[144]</td>
+<td>None</td>
+<td>12</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>12</td><td>model/model/batch_normalization_18/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>13</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>13</td><td>model/model/batch_normalization_19/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>14</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>14</td><td>model/model/batch_normalization_21/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>15</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>15</td><td>model/model/batch_normalization_22/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>16</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>16</td><td>model/model/batch_normalization_24/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>17</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>17</td><td>model/model/batch_normalization_25/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[240]</td>
+<td>None</td>
+<td>18</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>18</td><td>model/model/batch_normalization_27/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>19</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>19</td><td>model/model/batch_normalization_28/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>20</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>20</td><td>model/model/batch_normalization_3/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>21</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>21</td><td>model/model/batch_normalization_30/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>22</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>22</td><td>model/model/batch_normalization_31/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>23</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>23</td><td>model/model/batch_normalization_33/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>24</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>24</td><td>model/model/batch_normalization_34/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[336]</td>
+<td>None</td>
+<td>25</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>25</td><td>model/model/batch_normalization_36/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>26</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>26</td><td>model/model/batch_normalization_37/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>27</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>27</td><td>model/model/batch_normalization_39/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>28</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>28</td><td>model/model/batch_normalization_4/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>29</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>29</td><td>model/model/batch_normalization_40/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>30</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>30</td><td>model/model/batch_normalization_42/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>31</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>31</td><td>model/model/batch_normalization_43/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>32</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>32</td><td>model/model/batch_normalization_45/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>33</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>33</td><td>model/model/batch_normalization_46/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>34</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>34</td><td>model/model/batch_normalization_47/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[576]</td>
+<td>None</td>
+<td>35</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>35</td><td>model/model/batch_normalization_6/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>36</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>36</td><td>model/model/batch_normalization_7/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>37</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>37</td><td>model/model/batch_normalization_9/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>38</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>38</td><td>model/model/conv_handedness/MatMul</td>
+<td>FLOAT32</td>
+<td>[1, 2304]</td>
+<td>None</td>
+<td>39</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>39</td><td>model/model/conv_handflag/MatMul</td>
+<td>FLOAT32</td>
+<td>[1, 2304]</td>
+<td>None</td>
+<td>40</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>40</td><td>model/model/conv_landmarks/MatMul</td>
+<td>FLOAT32</td>
+<td>[63, 2304]</td>
+<td>None</td>
+<td>41</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>41</td><td>model/model/conv2d/Conv2D</td>
+<td>FLOAT32</td>
+<td>[24, 3, 3, 3]</td>
+<td>None</td>
+<td>42</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>42</td><td>model/model/conv2d_1/Conv2D</td>
+<td>FLOAT32</td>
+<td>[8, 1, 1, 24]</td>
+<td>None</td>
+<td>43</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>43</td><td>model/model/conv2d_2/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 8]</td>
+<td>None</td>
+<td>44</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>44</td><td>model/model/conv2d_3/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 32]</td>
+<td>None</td>
+<td>45</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>45</td><td>model/model/conv2d_4/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 16]</td>
+<td>None</td>
+<td>46</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>46</td><td>model/model/conv2d_5/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 96]</td>
+<td>None</td>
+<td>47</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>47</td><td>model/model/conv2d_6/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 16]</td>
+<td>None</td>
+<td>48</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>48</td><td>model/model/conv2d_7/Conv2D</td>
+<td>FLOAT32</td>
+<td>[24, 1, 1, 96]</td>
+<td>None</td>
+<td>49</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>49</td><td>model/model/conv2d_8/Conv2D</td>
+<td>FLOAT32</td>
+<td>[144, 1, 1, 24]</td>
+<td>None</td>
+<td>50</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>50</td><td>model/model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[24, 1, 1, 144]</td>
+<td>None</td>
+<td>51</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>51</td><td>model/model/conv2d_10/Conv2D</td>
+<td>FLOAT32</td>
+<td>[144, 1, 1, 24]</td>
+<td>None</td>
+<td>52</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>52</td><td>model/model/conv2d_11/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40, 1, 1, 144]</td>
+<td>None</td>
+<td>53</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>53</td><td>model/model/conv2d_12/Conv2D</td>
+<td>FLOAT32</td>
+<td>[240, 1, 1, 40]</td>
+<td>None</td>
+<td>54</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>54</td><td>model/model/conv2d_13/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40, 1, 1, 240]</td>
+<td>None</td>
+<td>55</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>55</td><td>model/model/conv2d_14/Conv2D</td>
+<td>FLOAT32</td>
+<td>[240, 1, 1, 40]</td>
+<td>None</td>
+<td>56</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>56</td><td>model/model/conv2d_15/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40, 1, 1, 240]</td>
+<td>None</td>
+<td>57</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>57</td><td>model/model/conv2d_16/Conv2D</td>
+<td>FLOAT32</td>
+<td>[240, 1, 1, 40]</td>
+<td>None</td>
+<td>58</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>58</td><td>model/model/conv2d_17/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56, 1, 1, 240]</td>
+<td>None</td>
+<td>59</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>59</td><td>model/model/conv2d_18/Conv2D</td>
+<td>FLOAT32</td>
+<td>[336, 1, 1, 56]</td>
+<td>None</td>
+<td>60</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>60</td><td>model/model/conv2d_19/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56, 1, 1, 336]</td>
+<td>None</td>
+<td>61</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>61</td><td>model/model/conv2d_20/Conv2D</td>
+<td>FLOAT32</td>
+<td>[336, 1, 1, 56]</td>
+<td>None</td>
+<td>62</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>62</td><td>model/model/conv2d_21/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56, 1, 1, 336]</td>
+<td>None</td>
+<td>63</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>63</td><td>model/model/conv2d_22/Conv2D</td>
+<td>FLOAT32</td>
+<td>[336, 1, 1, 56]</td>
+<td>None</td>
+<td>64</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>64</td><td>model/model/conv2d_23/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 336]</td>
+<td>None</td>
+<td>65</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>65</td><td>model/model/conv2d_24/Conv2D</td>
+<td>FLOAT32</td>
+<td>[576, 1, 1, 96]</td>
+<td>None</td>
+<td>66</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>66</td><td>model/model/conv2d_25/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 576]</td>
+<td>None</td>
+<td>67</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>67</td><td>model/model/conv2d_26/Conv2D</td>
+<td>FLOAT32</td>
+<td>[576, 1, 1, 96]</td>
+<td>None</td>
+<td>68</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>68</td><td>model/model/conv2d_27/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 576]</td>
+<td>None</td>
+<td>69</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>69</td><td>model/model/conv2d_28/Conv2D</td>
+<td>FLOAT32</td>
+<td>[576, 1, 1, 96]</td>
+<td>None</td>
+<td>70</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>70</td><td>model/model/conv2d_29/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96, 1, 1, 576]</td>
+<td>None</td>
+<td>71</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>71</td><td>model/model/conv2d_30/Conv2D</td>
+<td>FLOAT32</td>
+<td>[576, 1, 1, 96]</td>
+<td>None</td>
+<td>72</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>72</td><td>model/model/conv2d_31/Conv2D</td>
+<td>FLOAT32</td>
+<td>[144, 1, 1, 576]</td>
+<td>None</td>
+<td>73</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>73</td><td>model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 24]</td>
+<td>None</td>
+<td>74</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>74</td><td>model/model/batch_normalization_2/FusedBatchNormV3;model/model/conv2d_1/Conv2D</td>
+<td>FLOAT32</td>
+<td>[8]</td>
+<td>None</td>
+<td>75</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>75</td><td>model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 32]</td>
+<td>None</td>
+<td>76</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>76</td><td>model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>77</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>77</td><td>model/model/batch_normalization_7/FusedBatchNormV3;model/model/depthwise_conv2d_2/depthwise;model/model/conv2d_29/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 96]</td>
+<td>None</td>
+<td>78</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>78</td><td>model/model/batch_normalization_8/FusedBatchNormV3;model/model/conv2d_5/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>79</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>79</td><td>model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 96]</td>
+<td>None</td>
+<td>80</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>80</td><td>model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D</td>
+<td>FLOAT32</td>
+<td>[24]</td>
+<td>None</td>
+<td>81</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>81</td><td>model/model/batch_normalization_13/FusedBatchNormV3;model/model/depthwise_conv2d_4/depthwise;model/model/conv2d_31/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 144]</td>
+<td>None</td>
+<td>82</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>82</td><td>model/model/batch_normalization_14/FusedBatchNormV3;model/model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[24]</td>
+<td>None</td>
+<td>83</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>83</td><td>model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 144]</td>
+<td>None</td>
+<td>84</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>84</td><td>model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[144]</td>
+<td>None</td>
+<td>85</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>85</td><td>model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40]</td>
+<td>None</td>
+<td>86</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>86</td><td>model/model/batch_normalization_19/FusedBatchNormV3;model/model/depthwise_conv2d_6/depthwise;model/model/depthwise_conv2d_8/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 240]</td>
+<td>None</td>
+<td>87</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>87</td><td>model/model/batch_normalization_20/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_13/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40]</td>
+<td>None</td>
+<td>88</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>88</td><td>model/model/batch_normalization_22/FusedBatchNormV3;model/model/depthwise_conv2d_7/depthwise;model/model/depthwise_conv2d_8/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 240]</td>
+<td>None</td>
+<td>89</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>89</td><td>model/model/batch_normalization_23/FusedBatchNormV3;model/model/conv2d_15/Conv2D</td>
+<td>FLOAT32</td>
+<td>[40]</td>
+<td>None</td>
+<td>90</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>90</td><td>model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 240]</td>
+<td>None</td>
+<td>91</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>91</td><td>model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56]</td>
+<td>None</td>
+<td>92</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>92</td><td>model/model/batch_normalization_28/FusedBatchNormV3;model/model/depthwise_conv2d_9/depthwise;model/model/depthwise_conv2d_11/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 336]</td>
+<td>None</td>
+<td>93</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>93</td><td>model/model/batch_normalization_29/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_19/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56]</td>
+<td>None</td>
+<td>94</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>94</td><td>model/model/batch_normalization_31/FusedBatchNormV3;model/model/depthwise_conv2d_10/depthwise;model/model/depthwise_conv2d_11/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 336]</td>
+<td>None</td>
+<td>95</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>95</td><td>model/model/batch_normalization_32/FusedBatchNormV3;model/model/conv2d_21/Conv2D</td>
+<td>FLOAT32</td>
+<td>[56]</td>
+<td>None</td>
+<td>96</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>96</td><td>model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 336]</td>
+<td>None</td>
+<td>97</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>97</td><td>model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>98</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>98</td><td>model/model/batch_normalization_37/FusedBatchNormV3;model/model/depthwise_conv2d_12/depthwise;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 576]</td>
+<td>None</td>
+<td>99</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>99</td><td>model/model/batch_normalization_38/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_25/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>100</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>100</td><td>model/model/batch_normalization_40/FusedBatchNormV3;model/model/depthwise_conv2d_13/depthwise;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 576]</td>
+<td>None</td>
+<td>101</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>101</td><td>model/model/batch_normalization_41/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_27/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>102</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>102</td><td>model/model/batch_normalization_43/FusedBatchNormV3;model/model/depthwise_conv2d_14/depthwise;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 5, 5, 576]</td>
+<td>None</td>
+<td>103</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>103</td><td>model/model/batch_normalization_44/FusedBatchNormV3;model/model/conv2d_29/Conv2D</td>
+<td>FLOAT32</td>
+<td>[96]</td>
+<td>None</td>
+<td>104</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>104</td><td>model/model/batch_normalization_46/FusedBatchNormV3;model/model/depthwise_conv2d_15/depthwise;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 576]</td>
+<td>None</td>
+<td>105</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>105</td><td>model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 576]</td>
+<td>None</td>
+<td>106</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>106</td><td>model/model/tf.nn.relu6/Relu6;model/model/batch_normalization/FusedBatchNormV3;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D;model/model/conv2d/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 112, 112, 24]</td>
+<td>None</td>
+<td>107</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>107</td><td>model/model/tf.nn.relu6_1/Relu6;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 112, 112, 24]</td>
+<td>None</td>
+<td>108</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>108</td><td>model/model/batch_normalization_2/FusedBatchNormV3;model/model/conv2d_1/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 112, 112, 8]</td>
+<td>None</td>
+<td>109</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>109</td><td>model/model/tf.nn.relu6_2/Relu6;model/model/batch_normalization_3/FusedBatchNormV3;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise;model/model/conv2d_2/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 112, 112, 32]</td>
+<td>None</td>
+<td>110</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>110</td><td>model/model/tf.nn.relu6_3/Relu6;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 32]</td>
+<td>None</td>
+<td>111</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>111</td><td>model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 16]</td>
+<td>None</td>
+<td>112</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>112</td><td>model/model/tf.nn.relu6_4/Relu6;model/model/batch_normalization_6/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_4/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 96]</td>
+<td>None</td>
+<td>113</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>113</td><td>model/model/tf.nn.relu6_5/Relu6;model/model/batch_normalization_7/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/depthwise_conv2d_2/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 96]</td>
+<td>None</td>
+<td>114</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>114</td><td>model/model/batch_normalization_8/FusedBatchNormV3;model/model/conv2d_5/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 16]</td>
+<td>None</td>
+<td>115</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>115</td><td>model/model/tf.__operators__.add/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 16]</td>
+<td>None</td>
+<td>116</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>116</td><td>model/model/tf.nn.relu6_6/Relu6;model/model/batch_normalization_9/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_6/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 56, 56, 96]</td>
+<td>None</td>
+<td>117</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>117</td><td>model/model/tf.nn.relu6_7/Relu6;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 96]</td>
+<td>None</td>
+<td>118</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>118</td><td>model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 24]</td>
+<td>None</td>
+<td>119</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>119</td><td>model/model/tf.nn.relu6_8/Relu6;model/model/batch_normalization_12/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_8/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 144]</td>
+<td>None</td>
+<td>120</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>120</td><td>model/model/tf.nn.relu6_9/Relu6;model/model/batch_normalization_13/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/depthwise_conv2d_4/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 144]</td>
+<td>None</td>
+<td>121</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>121</td><td>model/model/batch_normalization_14/FusedBatchNormV3;model/model/conv2d_9/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 24]</td>
+<td>None</td>
+<td>122</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>122</td><td>model/model/tf.__operators__.add_1/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 24]</td>
+<td>None</td>
+<td>123</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>123</td><td>model/model/tf.nn.relu6_10/Relu6;model/model/batch_normalization_15/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_10/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 28, 28, 144]</td>
+<td>None</td>
+<td>124</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>124</td><td>model/model/tf.nn.relu6_11/Relu6;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 144]</td>
+<td>None</td>
+<td>125</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>125</td><td>model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 40]</td>
+<td>None</td>
+<td>126</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>126</td><td>model/model/tf.nn.relu6_12/Relu6;model/model/batch_normalization_18/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_12/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>127</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>127</td><td>model/model/tf.nn.relu6_13/Relu6;model/model/batch_normalization_19/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_6/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>128</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>128</td><td>model/model/batch_normalization_20/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_13/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 40]</td>
+<td>None</td>
+<td>129</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>129</td><td>model/model/tf.__operators__.add_2/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 40]</td>
+<td>None</td>
+<td>130</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>130</td><td>model/model/tf.nn.relu6_14/Relu6;model/model/batch_normalization_21/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_14/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>131</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>131</td><td>model/model/tf.nn.relu6_15/Relu6;model/model/batch_normalization_22/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_7/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>132</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>132</td><td>model/model/batch_normalization_23/FusedBatchNormV3;model/model/conv2d_15/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 40]</td>
+<td>None</td>
+<td>133</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>133</td><td>model/model/tf.__operators__.add_3/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 40]</td>
+<td>None</td>
+<td>134</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>134</td><td>model/model/tf.nn.relu6_16/Relu6;model/model/batch_normalization_24/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_16/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>135</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>135</td><td>model/model/tf.nn.relu6_17/Relu6;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 240]</td>
+<td>None</td>
+<td>136</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>136</td><td>model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 56]</td>
+<td>None</td>
+<td>137</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>137</td><td>model/model/tf.nn.relu6_18/Relu6;model/model/batch_normalization_27/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_18/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 336]</td>
+<td>None</td>
+<td>138</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>138</td><td>model/model/tf.nn.relu6_19/Relu6;model/model/batch_normalization_28/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_9/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 336]</td>
+<td>None</td>
+<td>139</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>139</td><td>model/model/batch_normalization_29/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_19/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 56]</td>
+<td>None</td>
+<td>140</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>140</td><td>model/model/tf.__operators__.add_4/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 56]</td>
+<td>None</td>
+<td>141</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>141</td><td>model/model/tf.nn.relu6_20/Relu6;model/model/batch_normalization_30/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_20/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 336]</td>
+<td>None</td>
+<td>142</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>142</td><td>model/model/tf.nn.relu6_21/Relu6;model/model/batch_normalization_31/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_10/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 336]</td>
+<td>None</td>
+<td>143</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>143</td><td>model/model/batch_normalization_32/FusedBatchNormV3;model/model/conv2d_21/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 56]</td>
+<td>None</td>
+<td>144</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>144</td><td>model/model/tf.__operators__.add_5/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 56]</td>
+<td>None</td>
+<td>145</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>145</td><td>model/model/tf.nn.relu6_22/Relu6;model/model/batch_normalization_33/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_22/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 14, 14, 336]</td>
+<td>None</td>
+<td>146</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>146</td><td>model/model/tf.nn.relu6_23/Relu6;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 336]</td>
+<td>None</td>
+<td>147</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>147</td><td>model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>148</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>148</td><td>model/model/tf.nn.relu6_24/Relu6;model/model/batch_normalization_36/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_24/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>149</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>149</td><td>model/model/tf.nn.relu6_25/Relu6;model/model/batch_normalization_37/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_12/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>150</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>150</td><td>model/model/batch_normalization_38/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_25/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>151</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>151</td><td>model/model/tf.__operators__.add_6/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>152</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>152</td><td>model/model/tf.nn.relu6_26/Relu6;model/model/batch_normalization_39/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_26/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>153</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>153</td><td>model/model/tf.nn.relu6_27/Relu6;model/model/batch_normalization_40/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_13/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>154</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>154</td><td>model/model/batch_normalization_41/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_27/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>155</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>155</td><td>model/model/tf.__operators__.add_7/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>156</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>156</td><td>model/model/tf.nn.relu6_28/Relu6;model/model/batch_normalization_42/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_28/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>157</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>157</td><td>model/model/tf.nn.relu6_29/Relu6;model/model/batch_normalization_43/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_14/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>158</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>158</td><td>model/model/batch_normalization_44/FusedBatchNormV3;model/model/conv2d_29/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>159</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>159</td><td>model/model/tf.__operators__.add_8/AddV2</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 96]</td>
+<td>None</td>
+<td>160</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>160</td><td>model/model/tf.nn.relu6_30/Relu6;model/model/batch_normalization_45/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_30/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>161</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>161</td><td>model/model/tf.nn.relu6_31/Relu6;model/model/batch_normalization_46/FusedBatchNormV3;model/model/depthwise_conv2d_15/depthwise;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 7, 7, 576]</td>
+<td>None</td>
+<td>162</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>162</td><td>model/model/tf.nn.relu6_32/Relu6;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 576]</td>
+<td>None</td>
+<td>163</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>163</td><td>model/model/conv2d_31/Conv2D1</td>
+<td>FLOAT32</td>
+<td>[1, 4, 4, 144]</td>
+<td>None</td>
+<td>164</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>164</td><td>model/model/flatten/Reshape</td>
+<td>FLOAT32</td>
+<td>[1, 2304]</td>
+<td>None</td>
+<td>165</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>165</td><td>Identity</td>
+<td>FLOAT32</td>
+<td>[1, 63]</td>
+<td>None</td>
+<td>166</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>166</td><td>model/model/conv_handflag/MatMul;model/model/conv_handflag/BiasAdd</td>
+<td>FLOAT32</td>
+<td>[1, 1]</td>
+<td>None</td>
+<td>167</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>167</td><td>Identity_1</td>
+<td>FLOAT32</td>
+<td>[1, 1]</td>
+<td>None</td>
+<td>168</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>168</td><td>model/model/conv_handedness/MatMul;model/model/conv_handedness/BiasAdd</td>
+<td>FLOAT32</td>
+<td>[1, 1]</td>
+<td>None</td>
+<td>169</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>169</td><td>Identity_2</td>
+<td>FLOAT32</td>
+<td>[1, 1]</td>
+<td>None</td>
+<td>170</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 input_1 FLOAT32 [1, 224, 224, 3]None<br>41 model/model/conv2d/Conv2D FLOAT32 [24, 3, 3, 3]None<br>5 model/model/batch_normalization/FusedBatchNormV3 FLOAT32 [24]None<br></span>[0, 41, 5]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>106 model/model/tf.nn.relu6/Relu6;model/model/batch_normalization/FusedBatchNormV3;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D;model/model/conv2d/Conv2D FLOAT32 [1, 112, 112, 24]None<br></span>[106]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>106 model/model/tf.nn.relu6/Relu6;model/model/batch_normalization/FusedBatchNormV3;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D;model/model/conv2d/Conv2D FLOAT32 [1, 112, 112, 24]None<br>73 model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D FLOAT32 [1, 3, 3, 24]None<br>6 model/model/batch_normalization_1/FusedBatchNormV3 FLOAT32 [24]None<br></span>[106, 73, 6]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>107 model/model/tf.nn.relu6_1/Relu6;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D FLOAT32 [1, 112, 112, 24]None<br></span>[107]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>107 model/model/tf.nn.relu6_1/Relu6;model/model/batch_normalization_1/FusedBatchNormV3;model/model/depthwise_conv2d/depthwise;model/model/conv2d_9/Conv2D FLOAT32 [1, 112, 112, 24]None<br>42 model/model/conv2d_1/Conv2D FLOAT32 [8, 1, 1, 24]None<br>74 model/model/batch_normalization_2/FusedBatchNormV3;model/model/conv2d_1/Conv2D FLOAT32 [8]None<br></span>[107, 42, 74]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>108 model/model/batch_normalization_2/FusedBatchNormV3;model/model/conv2d_1/Conv2D1 FLOAT32 [1, 112, 112, 8]None<br></span>[108]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>108 model/model/batch_normalization_2/FusedBatchNormV3;model/model/conv2d_1/Conv2D1 FLOAT32 [1, 112, 112, 8]None<br>43 model/model/conv2d_2/Conv2D FLOAT32 [32, 1, 1, 8]None<br>20 model/model/batch_normalization_3/FusedBatchNormV3 FLOAT32 [32]None<br></span>[108, 43, 20]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>109 model/model/tf.nn.relu6_2/Relu6;model/model/batch_normalization_3/FusedBatchNormV3;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise;model/model/conv2d_2/Conv2D FLOAT32 [1, 112, 112, 32]None<br></span>[109]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>109 model/model/tf.nn.relu6_2/Relu6;model/model/batch_normalization_3/FusedBatchNormV3;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise;model/model/conv2d_2/Conv2D FLOAT32 [1, 112, 112, 32]None<br>75 model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise FLOAT32 [1, 3, 3, 32]None<br>28 model/model/batch_normalization_4/FusedBatchNormV3 FLOAT32 [32]None<br></span>[109, 75, 28]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>110 model/model/tf.nn.relu6_3/Relu6;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise FLOAT32 [1, 56, 56, 32]None<br></span>[110]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>110 model/model/tf.nn.relu6_3/Relu6;model/model/batch_normalization_4/FusedBatchNormV3;model/model/depthwise_conv2d_1/depthwise FLOAT32 [1, 56, 56, 32]None<br>44 model/model/conv2d_3/Conv2D FLOAT32 [16, 1, 1, 32]None<br>76 model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D FLOAT32 [16]None<br></span>[110, 44, 76]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>111 model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D1 FLOAT32 [1, 56, 56, 16]None<br></span>[111]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>111 model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D1 FLOAT32 [1, 56, 56, 16]None<br>45 model/model/conv2d_4/Conv2D FLOAT32 [96, 1, 1, 16]None<br>35 model/model/batch_normalization_6/FusedBatchNormV3 FLOAT32 [96]None<br></span>[111, 45, 35]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>112 model/model/tf.nn.relu6_4/Relu6;model/model/batch_normalization_6/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_4/Conv2D FLOAT32 [1, 56, 56, 96]None<br></span>[112]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>112 model/model/tf.nn.relu6_4/Relu6;model/model/batch_normalization_6/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_4/Conv2D FLOAT32 [1, 56, 56, 96]None<br>77 model/model/batch_normalization_7/FusedBatchNormV3;model/model/depthwise_conv2d_2/depthwise;model/model/conv2d_29/Conv2D FLOAT32 [1, 3, 3, 96]None<br>36 model/model/batch_normalization_7/FusedBatchNormV3 FLOAT32 [96]None<br></span>[112, 77, 36]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>113 model/model/tf.nn.relu6_5/Relu6;model/model/batch_normalization_7/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/depthwise_conv2d_2/depthwise FLOAT32 [1, 56, 56, 96]None<br></span>[113]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>113 model/model/tf.nn.relu6_5/Relu6;model/model/batch_normalization_7/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/depthwise_conv2d_2/depthwise FLOAT32 [1, 56, 56, 96]None<br>46 model/model/conv2d_5/Conv2D FLOAT32 [16, 1, 1, 96]None<br>78 model/model/batch_normalization_8/FusedBatchNormV3;model/model/conv2d_5/Conv2D FLOAT32 [16]None<br></span>[113, 46, 78]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>114 model/model/batch_normalization_8/FusedBatchNormV3;model/model/conv2d_5/Conv2D1 FLOAT32 [1, 56, 56, 16]None<br></span>[114]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>114 model/model/batch_normalization_8/FusedBatchNormV3;model/model/conv2d_5/Conv2D1 FLOAT32 [1, 56, 56, 16]None<br>111 model/model/batch_normalization_5/FusedBatchNormV3;model/model/conv2d_5/Conv2D;model/model/conv2d_3/Conv2D1 FLOAT32 [1, 56, 56, 16]None<br></span>[114, 111]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>115 model/model/tf.__operators__.add/AddV2 FLOAT32 [1, 56, 56, 16]None<br></span>[115]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>10</td><td><span class='tooltip'><span class='tooltipcontent'>115 model/model/tf.__operators__.add/AddV2 FLOAT32 [1, 56, 56, 16]None<br>47 model/model/conv2d_6/Conv2D FLOAT32 [96, 1, 1, 16]None<br>37 model/model/batch_normalization_9/FusedBatchNormV3 FLOAT32 [96]None<br></span>[115, 47, 37]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>116 model/model/tf.nn.relu6_6/Relu6;model/model/batch_normalization_9/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_6/Conv2D FLOAT32 [1, 56, 56, 96]None<br></span>[116]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>11</td><td><span class='tooltip'><span class='tooltipcontent'>116 model/model/tf.nn.relu6_6/Relu6;model/model/batch_normalization_9/FusedBatchNormV3;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D;model/model/conv2d_6/Conv2D FLOAT32 [1, 56, 56, 96]None<br>79 model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D FLOAT32 [1, 5, 5, 96]None<br>7 model/model/batch_normalization_10/FusedBatchNormV3 FLOAT32 [96]None<br></span>[116, 79, 7]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>117 model/model/tf.nn.relu6_7/Relu6;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D FLOAT32 [1, 28, 28, 96]None<br></span>[117]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>12</td><td><span class='tooltip'><span class='tooltipcontent'>117 model/model/tf.nn.relu6_7/Relu6;model/model/batch_normalization_10/FusedBatchNormV3;model/model/depthwise_conv2d_3/depthwise;model/model/conv2d_29/Conv2D FLOAT32 [1, 28, 28, 96]None<br>48 model/model/conv2d_7/Conv2D FLOAT32 [24, 1, 1, 96]None<br>80 model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D FLOAT32 [24]None<br></span>[117, 48, 80]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>118 model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D1 FLOAT32 [1, 28, 28, 24]None<br></span>[118]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>13</td><td><span class='tooltip'><span class='tooltipcontent'>118 model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D1 FLOAT32 [1, 28, 28, 24]None<br>49 model/model/conv2d_8/Conv2D FLOAT32 [144, 1, 1, 24]None<br>8 model/model/batch_normalization_12/FusedBatchNormV3 FLOAT32 [144]None<br></span>[118, 49, 8]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>119 model/model/tf.nn.relu6_8/Relu6;model/model/batch_normalization_12/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_8/Conv2D FLOAT32 [1, 28, 28, 144]None<br></span>[119]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>14</td><td><span class='tooltip'><span class='tooltipcontent'>119 model/model/tf.nn.relu6_8/Relu6;model/model/batch_normalization_12/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_8/Conv2D FLOAT32 [1, 28, 28, 144]None<br>81 model/model/batch_normalization_13/FusedBatchNormV3;model/model/depthwise_conv2d_4/depthwise;model/model/conv2d_31/Conv2D FLOAT32 [1, 5, 5, 144]None<br>9 model/model/batch_normalization_13/FusedBatchNormV3 FLOAT32 [144]None<br></span>[119, 81, 9]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>120 model/model/tf.nn.relu6_9/Relu6;model/model/batch_normalization_13/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/depthwise_conv2d_4/depthwise FLOAT32 [1, 28, 28, 144]None<br></span>[120]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>15</td><td><span class='tooltip'><span class='tooltipcontent'>120 model/model/tf.nn.relu6_9/Relu6;model/model/batch_normalization_13/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/depthwise_conv2d_4/depthwise FLOAT32 [1, 28, 28, 144]None<br>50 model/model/conv2d_9/Conv2D FLOAT32 [24, 1, 1, 144]None<br>82 model/model/batch_normalization_14/FusedBatchNormV3;model/model/conv2d_9/Conv2D FLOAT32 [24]None<br></span>[120, 50, 82]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>121 model/model/batch_normalization_14/FusedBatchNormV3;model/model/conv2d_9/Conv2D1 FLOAT32 [1, 28, 28, 24]None<br></span>[121]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>16</td><td><span class='tooltip'><span class='tooltipcontent'>121 model/model/batch_normalization_14/FusedBatchNormV3;model/model/conv2d_9/Conv2D1 FLOAT32 [1, 28, 28, 24]None<br>118 model/model/batch_normalization_11/FusedBatchNormV3;model/model/conv2d_9/Conv2D;model/model/conv2d_7/Conv2D1 FLOAT32 [1, 28, 28, 24]None<br></span>[121, 118]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>122 model/model/tf.__operators__.add_1/AddV2 FLOAT32 [1, 28, 28, 24]None<br></span>[122]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>17</td><td><span class='tooltip'><span class='tooltipcontent'>122 model/model/tf.__operators__.add_1/AddV2 FLOAT32 [1, 28, 28, 24]None<br>51 model/model/conv2d_10/Conv2D FLOAT32 [144, 1, 1, 24]None<br>10 model/model/batch_normalization_15/FusedBatchNormV3 FLOAT32 [144]None<br></span>[122, 51, 10]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>123 model/model/tf.nn.relu6_10/Relu6;model/model/batch_normalization_15/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_10/Conv2D FLOAT32 [1, 28, 28, 144]None<br></span>[123]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>18</td><td><span class='tooltip'><span class='tooltipcontent'>123 model/model/tf.nn.relu6_10/Relu6;model/model/batch_normalization_15/FusedBatchNormV3;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D;model/model/conv2d_10/Conv2D FLOAT32 [1, 28, 28, 144]None<br>83 model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D FLOAT32 [1, 3, 3, 144]None<br>11 model/model/batch_normalization_16/FusedBatchNormV3 FLOAT32 [144]None<br></span>[123, 83, 11]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>124 model/model/tf.nn.relu6_11/Relu6;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D FLOAT32 [1, 14, 14, 144]None<br></span>[124]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>19</td><td><span class='tooltip'><span class='tooltipcontent'>124 model/model/tf.nn.relu6_11/Relu6;model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D FLOAT32 [1, 14, 14, 144]None<br>52 model/model/conv2d_11/Conv2D FLOAT32 [40, 1, 1, 144]None<br>85 model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D FLOAT32 [40]None<br></span>[124, 52, 85]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>125 model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br></span>[125]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>20</td><td><span class='tooltip'><span class='tooltipcontent'>125 model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br>53 model/model/conv2d_12/Conv2D FLOAT32 [240, 1, 1, 40]None<br>12 model/model/batch_normalization_18/FusedBatchNormV3 FLOAT32 [240]None<br></span>[125, 53, 12]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>126 model/model/tf.nn.relu6_12/Relu6;model/model/batch_normalization_18/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_12/Conv2D FLOAT32 [1, 14, 14, 240]None<br></span>[126]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>21</td><td><span class='tooltip'><span class='tooltipcontent'>126 model/model/tf.nn.relu6_12/Relu6;model/model/batch_normalization_18/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_12/Conv2D FLOAT32 [1, 14, 14, 240]None<br>86 model/model/batch_normalization_19/FusedBatchNormV3;model/model/depthwise_conv2d_6/depthwise;model/model/depthwise_conv2d_8/depthwise FLOAT32 [1, 3, 3, 240]None<br>13 model/model/batch_normalization_19/FusedBatchNormV3 FLOAT32 [240]None<br></span>[126, 86, 13]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>127 model/model/tf.nn.relu6_13/Relu6;model/model/batch_normalization_19/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_6/depthwise FLOAT32 [1, 14, 14, 240]None<br></span>[127]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>22</td><td><span class='tooltip'><span class='tooltipcontent'>127 model/model/tf.nn.relu6_13/Relu6;model/model/batch_normalization_19/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_6/depthwise FLOAT32 [1, 14, 14, 240]None<br>54 model/model/conv2d_13/Conv2D FLOAT32 [40, 1, 1, 240]None<br>87 model/model/batch_normalization_20/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_13/Conv2D FLOAT32 [40]None<br></span>[127, 54, 87]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>128 model/model/batch_normalization_20/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_13/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br></span>[128]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>23</td><td><span class='tooltip'><span class='tooltipcontent'>128 model/model/batch_normalization_20/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_13/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br>125 model/model/batch_normalization_17/FusedBatchNormV3;model/model/conv2d_15/Conv2D;model/model/conv2d_11/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br></span>[128, 125]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>129 model/model/tf.__operators__.add_2/AddV2 FLOAT32 [1, 14, 14, 40]None<br></span>[129]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>24</td><td><span class='tooltip'><span class='tooltipcontent'>129 model/model/tf.__operators__.add_2/AddV2 FLOAT32 [1, 14, 14, 40]None<br>55 model/model/conv2d_14/Conv2D FLOAT32 [240, 1, 1, 40]None<br>14 model/model/batch_normalization_21/FusedBatchNormV3 FLOAT32 [240]None<br></span>[129, 55, 14]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>130 model/model/tf.nn.relu6_14/Relu6;model/model/batch_normalization_21/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_14/Conv2D FLOAT32 [1, 14, 14, 240]None<br></span>[130]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>25</td><td><span class='tooltip'><span class='tooltipcontent'>130 model/model/tf.nn.relu6_14/Relu6;model/model/batch_normalization_21/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_14/Conv2D FLOAT32 [1, 14, 14, 240]None<br>88 model/model/batch_normalization_22/FusedBatchNormV3;model/model/depthwise_conv2d_7/depthwise;model/model/depthwise_conv2d_8/depthwise FLOAT32 [1, 3, 3, 240]None<br>15 model/model/batch_normalization_22/FusedBatchNormV3 FLOAT32 [240]None<br></span>[130, 88, 15]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>131 model/model/tf.nn.relu6_15/Relu6;model/model/batch_normalization_22/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_7/depthwise FLOAT32 [1, 14, 14, 240]None<br></span>[131]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>26</td><td><span class='tooltip'><span class='tooltipcontent'>131 model/model/tf.nn.relu6_15/Relu6;model/model/batch_normalization_22/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/depthwise_conv2d_7/depthwise FLOAT32 [1, 14, 14, 240]None<br>56 model/model/conv2d_15/Conv2D FLOAT32 [40, 1, 1, 240]None<br>89 model/model/batch_normalization_23/FusedBatchNormV3;model/model/conv2d_15/Conv2D FLOAT32 [40]None<br></span>[131, 56, 89]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>132 model/model/batch_normalization_23/FusedBatchNormV3;model/model/conv2d_15/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br></span>[132]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>27</td><td><span class='tooltip'><span class='tooltipcontent'>132 model/model/batch_normalization_23/FusedBatchNormV3;model/model/conv2d_15/Conv2D1 FLOAT32 [1, 14, 14, 40]None<br>129 model/model/tf.__operators__.add_2/AddV2 FLOAT32 [1, 14, 14, 40]None<br></span>[132, 129]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>133 model/model/tf.__operators__.add_3/AddV2 FLOAT32 [1, 14, 14, 40]None<br></span>[133]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>28</td><td><span class='tooltip'><span class='tooltipcontent'>133 model/model/tf.__operators__.add_3/AddV2 FLOAT32 [1, 14, 14, 40]None<br>57 model/model/conv2d_16/Conv2D FLOAT32 [240, 1, 1, 40]None<br>16 model/model/batch_normalization_24/FusedBatchNormV3 FLOAT32 [240]None<br></span>[133, 57, 16]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>134 model/model/tf.nn.relu6_16/Relu6;model/model/batch_normalization_24/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_16/Conv2D FLOAT32 [1, 14, 14, 240]None<br></span>[134]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>29</td><td><span class='tooltip'><span class='tooltipcontent'>134 model/model/tf.nn.relu6_16/Relu6;model/model/batch_normalization_24/FusedBatchNormV3;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise;model/model/conv2d_16/Conv2D FLOAT32 [1, 14, 14, 240]None<br>90 model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise FLOAT32 [1, 5, 5, 240]None<br>17 model/model/batch_normalization_25/FusedBatchNormV3 FLOAT32 [240]None<br></span>[134, 90, 17]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>135 model/model/tf.nn.relu6_17/Relu6;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise FLOAT32 [1, 14, 14, 240]None<br></span>[135]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>30</td><td><span class='tooltip'><span class='tooltipcontent'>135 model/model/tf.nn.relu6_17/Relu6;model/model/batch_normalization_25/FusedBatchNormV3;model/model/depthwise_conv2d_8/depthwise FLOAT32 [1, 14, 14, 240]None<br>58 model/model/conv2d_17/Conv2D FLOAT32 [56, 1, 1, 240]None<br>91 model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D FLOAT32 [56]None<br></span>[135, 58, 91]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>136 model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br></span>[136]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>31</td><td><span class='tooltip'><span class='tooltipcontent'>136 model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br>59 model/model/conv2d_18/Conv2D FLOAT32 [336, 1, 1, 56]None<br>18 model/model/batch_normalization_27/FusedBatchNormV3 FLOAT32 [336]None<br></span>[136, 59, 18]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>137 model/model/tf.nn.relu6_18/Relu6;model/model/batch_normalization_27/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_18/Conv2D FLOAT32 [1, 14, 14, 336]None<br></span>[137]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>32</td><td><span class='tooltip'><span class='tooltipcontent'>137 model/model/tf.nn.relu6_18/Relu6;model/model/batch_normalization_27/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_18/Conv2D FLOAT32 [1, 14, 14, 336]None<br>92 model/model/batch_normalization_28/FusedBatchNormV3;model/model/depthwise_conv2d_9/depthwise;model/model/depthwise_conv2d_11/depthwise FLOAT32 [1, 5, 5, 336]None<br>19 model/model/batch_normalization_28/FusedBatchNormV3 FLOAT32 [336]None<br></span>[137, 92, 19]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>138 model/model/tf.nn.relu6_19/Relu6;model/model/batch_normalization_28/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_9/depthwise FLOAT32 [1, 14, 14, 336]None<br></span>[138]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>33</td><td><span class='tooltip'><span class='tooltipcontent'>138 model/model/tf.nn.relu6_19/Relu6;model/model/batch_normalization_28/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_9/depthwise FLOAT32 [1, 14, 14, 336]None<br>60 model/model/conv2d_19/Conv2D FLOAT32 [56, 1, 1, 336]None<br>93 model/model/batch_normalization_29/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_19/Conv2D FLOAT32 [56]None<br></span>[138, 60, 93]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>139 model/model/batch_normalization_29/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_19/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br></span>[139]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>34</td><td><span class='tooltip'><span class='tooltipcontent'>139 model/model/batch_normalization_29/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_19/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br>136 model/model/batch_normalization_26/FusedBatchNormV3;model/model/conv2d_21/Conv2D;model/model/conv2d_17/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br></span>[139, 136]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>140 model/model/tf.__operators__.add_4/AddV2 FLOAT32 [1, 14, 14, 56]None<br></span>[140]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>35</td><td><span class='tooltip'><span class='tooltipcontent'>140 model/model/tf.__operators__.add_4/AddV2 FLOAT32 [1, 14, 14, 56]None<br>61 model/model/conv2d_20/Conv2D FLOAT32 [336, 1, 1, 56]None<br>21 model/model/batch_normalization_30/FusedBatchNormV3 FLOAT32 [336]None<br></span>[140, 61, 21]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>141 model/model/tf.nn.relu6_20/Relu6;model/model/batch_normalization_30/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_20/Conv2D FLOAT32 [1, 14, 14, 336]None<br></span>[141]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>36</td><td><span class='tooltip'><span class='tooltipcontent'>141 model/model/tf.nn.relu6_20/Relu6;model/model/batch_normalization_30/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_20/Conv2D FLOAT32 [1, 14, 14, 336]None<br>94 model/model/batch_normalization_31/FusedBatchNormV3;model/model/depthwise_conv2d_10/depthwise;model/model/depthwise_conv2d_11/depthwise FLOAT32 [1, 5, 5, 336]None<br>22 model/model/batch_normalization_31/FusedBatchNormV3 FLOAT32 [336]None<br></span>[141, 94, 22]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>142 model/model/tf.nn.relu6_21/Relu6;model/model/batch_normalization_31/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_10/depthwise FLOAT32 [1, 14, 14, 336]None<br></span>[142]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>37</td><td><span class='tooltip'><span class='tooltipcontent'>142 model/model/tf.nn.relu6_21/Relu6;model/model/batch_normalization_31/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/depthwise_conv2d_10/depthwise FLOAT32 [1, 14, 14, 336]None<br>62 model/model/conv2d_21/Conv2D FLOAT32 [56, 1, 1, 336]None<br>95 model/model/batch_normalization_32/FusedBatchNormV3;model/model/conv2d_21/Conv2D FLOAT32 [56]None<br></span>[142, 62, 95]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>143 model/model/batch_normalization_32/FusedBatchNormV3;model/model/conv2d_21/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br></span>[143]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>38</td><td><span class='tooltip'><span class='tooltipcontent'>143 model/model/batch_normalization_32/FusedBatchNormV3;model/model/conv2d_21/Conv2D1 FLOAT32 [1, 14, 14, 56]None<br>140 model/model/tf.__operators__.add_4/AddV2 FLOAT32 [1, 14, 14, 56]None<br></span>[143, 140]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>144 model/model/tf.__operators__.add_5/AddV2 FLOAT32 [1, 14, 14, 56]None<br></span>[144]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>39</td><td><span class='tooltip'><span class='tooltipcontent'>144 model/model/tf.__operators__.add_5/AddV2 FLOAT32 [1, 14, 14, 56]None<br>63 model/model/conv2d_22/Conv2D FLOAT32 [336, 1, 1, 56]None<br>23 model/model/batch_normalization_33/FusedBatchNormV3 FLOAT32 [336]None<br></span>[144, 63, 23]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>145 model/model/tf.nn.relu6_22/Relu6;model/model/batch_normalization_33/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_22/Conv2D FLOAT32 [1, 14, 14, 336]None<br></span>[145]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>40</td><td><span class='tooltip'><span class='tooltipcontent'>145 model/model/tf.nn.relu6_22/Relu6;model/model/batch_normalization_33/FusedBatchNormV3;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise;model/model/conv2d_22/Conv2D FLOAT32 [1, 14, 14, 336]None<br>96 model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise FLOAT32 [1, 5, 5, 336]None<br>24 model/model/batch_normalization_34/FusedBatchNormV3 FLOAT32 [336]None<br></span>[145, 96, 24]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>146 model/model/tf.nn.relu6_23/Relu6;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise FLOAT32 [1, 7, 7, 336]None<br></span>[146]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>41</td><td><span class='tooltip'><span class='tooltipcontent'>146 model/model/tf.nn.relu6_23/Relu6;model/model/batch_normalization_34/FusedBatchNormV3;model/model/depthwise_conv2d_11/depthwise FLOAT32 [1, 7, 7, 336]None<br>64 model/model/conv2d_23/Conv2D FLOAT32 [96, 1, 1, 336]None<br>97 model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D FLOAT32 [96]None<br></span>[146, 64, 97]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>147 model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br></span>[147]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>42</td><td><span class='tooltip'><span class='tooltipcontent'>147 model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br>65 model/model/conv2d_24/Conv2D FLOAT32 [576, 1, 1, 96]None<br>25 model/model/batch_normalization_36/FusedBatchNormV3 FLOAT32 [576]None<br></span>[147, 65, 25]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>148 model/model/tf.nn.relu6_24/Relu6;model/model/batch_normalization_36/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_24/Conv2D FLOAT32 [1, 7, 7, 576]None<br></span>[148]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>43</td><td><span class='tooltip'><span class='tooltipcontent'>148 model/model/tf.nn.relu6_24/Relu6;model/model/batch_normalization_36/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_24/Conv2D FLOAT32 [1, 7, 7, 576]None<br>98 model/model/batch_normalization_37/FusedBatchNormV3;model/model/depthwise_conv2d_12/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 5, 5, 576]None<br>26 model/model/batch_normalization_37/FusedBatchNormV3 FLOAT32 [576]None<br></span>[148, 98, 26]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>149 model/model/tf.nn.relu6_25/Relu6;model/model/batch_normalization_37/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_12/depthwise FLOAT32 [1, 7, 7, 576]None<br></span>[149]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>44</td><td><span class='tooltip'><span class='tooltipcontent'>149 model/model/tf.nn.relu6_25/Relu6;model/model/batch_normalization_37/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_12/depthwise FLOAT32 [1, 7, 7, 576]None<br>66 model/model/conv2d_25/Conv2D FLOAT32 [96, 1, 1, 576]None<br>99 model/model/batch_normalization_38/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_25/Conv2D FLOAT32 [96]None<br></span>[149, 66, 99]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>150 model/model/batch_normalization_38/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_25/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br></span>[150]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>45</td><td><span class='tooltip'><span class='tooltipcontent'>150 model/model/batch_normalization_38/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_25/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br>147 model/model/batch_normalization_35/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_23/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br></span>[150, 147]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>151 model/model/tf.__operators__.add_6/AddV2 FLOAT32 [1, 7, 7, 96]None<br></span>[151]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>46</td><td><span class='tooltip'><span class='tooltipcontent'>151 model/model/tf.__operators__.add_6/AddV2 FLOAT32 [1, 7, 7, 96]None<br>67 model/model/conv2d_26/Conv2D FLOAT32 [576, 1, 1, 96]None<br>27 model/model/batch_normalization_39/FusedBatchNormV3 FLOAT32 [576]None<br></span>[151, 67, 27]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>152 model/model/tf.nn.relu6_26/Relu6;model/model/batch_normalization_39/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_26/Conv2D FLOAT32 [1, 7, 7, 576]None<br></span>[152]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>47</td><td><span class='tooltip'><span class='tooltipcontent'>152 model/model/tf.nn.relu6_26/Relu6;model/model/batch_normalization_39/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_26/Conv2D FLOAT32 [1, 7, 7, 576]None<br>100 model/model/batch_normalization_40/FusedBatchNormV3;model/model/depthwise_conv2d_13/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 5, 5, 576]None<br>29 model/model/batch_normalization_40/FusedBatchNormV3 FLOAT32 [576]None<br></span>[152, 100, 29]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>153 model/model/tf.nn.relu6_27/Relu6;model/model/batch_normalization_40/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_13/depthwise FLOAT32 [1, 7, 7, 576]None<br></span>[153]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>48</td><td><span class='tooltip'><span class='tooltipcontent'>153 model/model/tf.nn.relu6_27/Relu6;model/model/batch_normalization_40/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_13/depthwise FLOAT32 [1, 7, 7, 576]None<br>68 model/model/conv2d_27/Conv2D FLOAT32 [96, 1, 1, 576]None<br>101 model/model/batch_normalization_41/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_27/Conv2D FLOAT32 [96]None<br></span>[153, 68, 101]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>154 model/model/batch_normalization_41/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_27/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br></span>[154]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>49</td><td><span class='tooltip'><span class='tooltipcontent'>154 model/model/batch_normalization_41/FusedBatchNormV3;model/model/conv2d_29/Conv2D;model/model/conv2d_27/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br>151 model/model/tf.__operators__.add_6/AddV2 FLOAT32 [1, 7, 7, 96]None<br></span>[154, 151]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>155 model/model/tf.__operators__.add_7/AddV2 FLOAT32 [1, 7, 7, 96]None<br></span>[155]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>50</td><td><span class='tooltip'><span class='tooltipcontent'>155 model/model/tf.__operators__.add_7/AddV2 FLOAT32 [1, 7, 7, 96]None<br>69 model/model/conv2d_28/Conv2D FLOAT32 [576, 1, 1, 96]None<br>30 model/model/batch_normalization_42/FusedBatchNormV3 FLOAT32 [576]None<br></span>[155, 69, 30]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>156 model/model/tf.nn.relu6_28/Relu6;model/model/batch_normalization_42/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_28/Conv2D FLOAT32 [1, 7, 7, 576]None<br></span>[156]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>51</td><td><span class='tooltip'><span class='tooltipcontent'>156 model/model/tf.nn.relu6_28/Relu6;model/model/batch_normalization_42/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_28/Conv2D FLOAT32 [1, 7, 7, 576]None<br>102 model/model/batch_normalization_43/FusedBatchNormV3;model/model/depthwise_conv2d_14/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 5, 5, 576]None<br>31 model/model/batch_normalization_43/FusedBatchNormV3 FLOAT32 [576]None<br></span>[156, 102, 31]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>157 model/model/tf.nn.relu6_29/Relu6;model/model/batch_normalization_43/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_14/depthwise FLOAT32 [1, 7, 7, 576]None<br></span>[157]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>52</td><td><span class='tooltip'><span class='tooltipcontent'>157 model/model/tf.nn.relu6_29/Relu6;model/model/batch_normalization_43/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/depthwise_conv2d_14/depthwise FLOAT32 [1, 7, 7, 576]None<br>70 model/model/conv2d_29/Conv2D FLOAT32 [96, 1, 1, 576]None<br>103 model/model/batch_normalization_44/FusedBatchNormV3;model/model/conv2d_29/Conv2D FLOAT32 [96]None<br></span>[157, 70, 103]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>158 model/model/batch_normalization_44/FusedBatchNormV3;model/model/conv2d_29/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br></span>[158]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>53</td><td><span class='tooltip'><span class='tooltipcontent'>158 model/model/batch_normalization_44/FusedBatchNormV3;model/model/conv2d_29/Conv2D1 FLOAT32 [1, 7, 7, 96]None<br>155 model/model/tf.__operators__.add_7/AddV2 FLOAT32 [1, 7, 7, 96]None<br></span>[158, 155]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>159 model/model/tf.__operators__.add_8/AddV2 FLOAT32 [1, 7, 7, 96]None<br></span>[159]</span></td>
+<td>{'fused_activation_function': 0, 'pot_scale_int16': True}</td>
+<td>ADD (2)</td>
+</tr>
+<tr>
+<td>54</td><td><span class='tooltip'><span class='tooltipcontent'>159 model/model/tf.__operators__.add_8/AddV2 FLOAT32 [1, 7, 7, 96]None<br>71 model/model/conv2d_30/Conv2D FLOAT32 [576, 1, 1, 96]None<br>32 model/model/batch_normalization_45/FusedBatchNormV3 FLOAT32 [576]None<br></span>[159, 71, 32]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>160 model/model/tf.nn.relu6_30/Relu6;model/model/batch_normalization_45/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_30/Conv2D FLOAT32 [1, 7, 7, 576]None<br></span>[160]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>55</td><td><span class='tooltip'><span class='tooltipcontent'>160 model/model/tf.nn.relu6_30/Relu6;model/model/batch_normalization_45/FusedBatchNormV3;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise;model/model/conv2d_30/Conv2D FLOAT32 [1, 7, 7, 576]None<br>104 model/model/batch_normalization_46/FusedBatchNormV3;model/model/depthwise_conv2d_15/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 3, 3, 576]None<br>33 model/model/batch_normalization_46/FusedBatchNormV3 FLOAT32 [576]None<br></span>[160, 104, 33]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>161 model/model/tf.nn.relu6_31/Relu6;model/model/batch_normalization_46/FusedBatchNormV3;model/model/depthwise_conv2d_15/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 7, 7, 576]None<br></span>[161]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>56</td><td><span class='tooltip'><span class='tooltipcontent'>161 model/model/tf.nn.relu6_31/Relu6;model/model/batch_normalization_46/FusedBatchNormV3;model/model/depthwise_conv2d_15/depthwise;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 7, 7, 576]None<br>105 model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 3, 3, 576]None<br>34 model/model/batch_normalization_47/FusedBatchNormV3 FLOAT32 [576]None<br></span>[161, 105, 34]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>162 model/model/tf.nn.relu6_32/Relu6;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 4, 4, 576]None<br></span>[162]</span></td>
+<td>{'depth_multiplier': 1, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>DEPTHWISE_CONV_2D (1)</td>
+</tr>
+<tr>
+<td>57</td><td><span class='tooltip'><span class='tooltipcontent'>162 model/model/tf.nn.relu6_32/Relu6;model/model/batch_normalization_47/FusedBatchNormV3;model/model/depthwise_conv2d_16/depthwise FLOAT32 [1, 4, 4, 576]None<br>72 model/model/conv2d_31/Conv2D FLOAT32 [144, 1, 1, 576]None<br>84 model/model/batch_normalization_16/FusedBatchNormV3;model/model/depthwise_conv2d_5/depthwise;model/model/conv2d_31/Conv2D1 FLOAT32 [144]None<br></span>[162, 72, 84]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>163 model/model/conv2d_31/Conv2D1 FLOAT32 [1, 4, 4, 144]None<br></span>[163]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>58</td><td><span class='tooltip'><span class='tooltipcontent'>163 model/model/conv2d_31/Conv2D1 FLOAT32 [1, 4, 4, 144]None<br>4 model/model/flatten/Const INT32 [2]None<br></span>[163, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>164 model/model/flatten/Reshape FLOAT32 [1, 2304]None<br></span>[164]</span></td>
+<td>None</td>
+<td>RESHAPE (3)</td>
+</tr>
+<tr>
+<td>59</td><td><span class='tooltip'><span class='tooltipcontent'>164 model/model/flatten/Reshape FLOAT32 [1, 2304]None<br>40 model/model/conv_landmarks/MatMul FLOAT32 [63, 2304]None<br>3 model/model/conv_landmarks/BiasAdd/ReadVariableOp/resource FLOAT32 [63]None<br></span>[164, 40, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>165 Identity FLOAT32 [1, 63]None<br></span>[165]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 0, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (4)</td>
+</tr>
+<tr>
+<td>60</td><td><span class='tooltip'><span class='tooltipcontent'>164 model/model/flatten/Reshape FLOAT32 [1, 2304]None<br>39 model/model/conv_handflag/MatMul FLOAT32 [1, 2304]None<br>2 model/model/conv_handflag/BiasAdd/ReadVariableOp/resource FLOAT32 [1]None<br></span>[164, 39, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>166 model/model/conv_handflag/MatMul;model/model/conv_handflag/BiasAdd FLOAT32 [1, 1]None<br></span>[166]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 0, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (4)</td>
+</tr>
+<tr>
+<td>61</td><td><span class='tooltip'><span class='tooltipcontent'>166 model/model/conv_handflag/MatMul;model/model/conv_handflag/BiasAdd FLOAT32 [1, 1]None<br></span>[166]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>167 Identity_1 FLOAT32 [1, 1]None<br></span>[167]</span></td>
+<td>None</td>
+<td>LOGISTIC (5)</td>
+</tr>
+<tr>
+<td>62</td><td><span class='tooltip'><span class='tooltipcontent'>164 model/model/flatten/Reshape FLOAT32 [1, 2304]None<br>38 model/model/conv_handedness/MatMul FLOAT32 [1, 2304]None<br>1 model/model/conv_handedness/BiasAdd/ReadVariableOp/resource FLOAT32 [1]None<br></span>[164, 38, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>168 model/model/conv_handedness/MatMul;model/model/conv_handedness/BiasAdd FLOAT32 [1, 1]None<br></span>[168]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 0, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (4)</td>
+</tr>
+<tr>
+<td>63</td><td><span class='tooltip'><span class='tooltipcontent'>168 model/model/conv_handedness/MatMul;model/model/conv_handedness/BiasAdd FLOAT32 [1, 1]None<br></span>[168]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>169 Identity_2 FLOAT32 [1, 1]None<br></span>[169]</span></td>
+<td>None</td>
+<td>LOGISTIC (5)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "ADD (2)", "group": 2, "x": 200, "y": 2000}, {"id": "o10", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2200}, {"id": "o11", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 2400}, {"id": "o12", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2600}, {"id": "o13", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2800}, {"id": "o14", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 3000}, {"id": "o15", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3200}, {"id": "o16", "name": "ADD (2)", "group": 2, "x": 200, "y": 3400}, {"id": "o17", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3600}, {"id": "o18", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 3800}, {"id": "o19", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4000}, {"id": "o20", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4200}, {"id": "o21", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 4400}, {"id": "o22", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4600}, {"id": "o23", "name": "ADD (2)", "group": 2, "x": 200, "y": 4800}, {"id": "o24", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5000}, {"id": "o25", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 5200}, {"id": "o26", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5400}, {"id": "o27", "name": "ADD (2)", "group": 2, "x": 200, "y": 5600}, {"id": "o28", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5800}, {"id": "o29", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 6000}, {"id": "o30", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6200}, {"id": "o31", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6400}, {"id": "o32", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 6600}, {"id": "o33", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6800}, {"id": "o34", "name": "ADD (2)", "group": 2, "x": 200, "y": 7000}, {"id": "o35", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7200}, {"id": "o36", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 7400}, {"id": "o37", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7600}, {"id": "o38", "name": "ADD (2)", "group": 2, "x": 200, "y": 7800}, {"id": "o39", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8000}, {"id": "o40", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 8200}, {"id": "o41", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8400}, {"id": "o42", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8600}, {"id": "o43", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 8800}, {"id": "o44", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9000}, {"id": "o45", "name": "ADD (2)", "group": 2, "x": 200, "y": 9200}, {"id": "o46", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9400}, {"id": "o47", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 9600}, {"id": "o48", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9800}, {"id": "o49", "name": "ADD (2)", "group": 2, "x": 200, "y": 10000}, {"id": "o50", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10200}, {"id": "o51", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 10400}, {"id": "o52", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10600}, {"id": "o53", "name": "ADD (2)", "group": 2, "x": 200, "y": 10800}, {"id": "o54", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11000}, {"id": "o55", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 11200}, {"id": "o56", "name": "DEPTHWISE_CONV_2D (1)", "group": 2, "x": 200, "y": 11400}, {"id": "o57", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11600}, {"id": "o58", "name": "RESHAPE (3)", "group": 2, "x": 200, "y": 11800}, {"id": "o59", "name": "FULLY_CONNECTED (4)", "group": 2, "x": 200, "y": 12000}, {"id": "o60", "name": "FULLY_CONNECTED (4)", "group": 2, "x": 200, "y": 12200}, {"id": "o61", "name": "LOGISTIC (5)", "group": 2, "x": 200, "y": 12400}, {"id": "o62", "name": "FULLY_CONNECTED (4)", "group": 2, "x": 200, "y": 12600}, {"id": "o63", "name": "LOGISTIC (5)", "group": 2, "x": 200, "y": 12800}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 510, "y": 12500.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 12100.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 510, "y": 11900.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 340, "y": 11700.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 510, "y": 100.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 510, "y": 300.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 510, "y": 2300.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 510, "y": 2700.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 510, "y": 2900.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 510, "y": 3500.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 510, "y": 3700.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 510, "y": 4100.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 510, "y": 4300.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 510, "y": 4900.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 510, "y": 5100.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 510, "y": 5700.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 510, "y": 5900.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 510, "y": 6300.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 510, "y": 6500.0}, {"id": "t20", "name": "[] (20)", "group": 1, "x": 510, "y": 700.0}, {"id": "t21", "name": "[] (21)", "group": 1, "x": 510, "y": 7100.0}, {"id": "t22", "name": "[] (22)", "group": 1, "x": 510, "y": 7300.0}, {"id": "t23", "name": "[] (23)", "group": 1, "x": 510, "y": 7900.0}, {"id": "t24", "name": "[] (24)", "group": 1, "x": 510, "y": 8100.0}, {"id": "t25", "name": "[] (25)", "group": 1, "x": 510, "y": 8500.0}, {"id": "t26", "name": "[] (26)", "group": 1, "x": 510, "y": 8700.0}, {"id": "t27", "name": "[] (27)", "group": 1, "x": 510, "y": 9300.0}, {"id": "t28", "name": "[] (28)", "group": 1, "x": 510, "y": 900.0}, {"id": "t29", "name": "[] (29)", "group": 1, "x": 510, "y": 9500.0}, {"id": "t30", "name": "[] (30)", "group": 1, "x": 510, "y": 10100.0}, {"id": "t31", "name": "[] (31)", "group": 1, "x": 510, "y": 10300.0}, {"id": "t32", "name": "[] (32)", "group": 1, "x": 510, "y": 10900.0}, {"id": "t33", "name": "[] (33)", "group": 1, "x": 510, "y": 11100.0}, {"id": "t34", "name": "[] (34)", "group": 1, "x": 510, "y": 11300.0}, {"id": "t35", "name": "[] (35)", "group": 1, "x": 510, "y": 1300.0}, {"id": "t36", "name": "[] (36)", "group": 1, "x": 510, "y": 1500.0}, {"id": "t37", "name": "[] (37)", "group": 1, "x": 510, "y": 2100.0}, {"id": "t38", "name": "[] (38)", "group": 1, "x": 340, "y": 12500.0}, {"id": "t39", "name": "[] (39)", "group": 1, "x": 340, "y": 12100.0}, {"id": "t40", "name": "[] (40)", "group": 1, "x": 340, "y": 11900.0}, {"id": "t41", "name": "[] (41)", "group": 1, "x": 340, "y": 100.0}, {"id": "t42", "name": "[] (42)", "group": 1, "x": 340, "y": 500.0}, {"id": "t43", "name": "[] (43)", "group": 1, "x": 340, "y": 700.0}, {"id": "t44", "name": "[] (44)", "group": 1, "x": 340, "y": 1100.0}, {"id": "t45", "name": "[] (45)", "group": 1, "x": 340, "y": 1300.0}, {"id": "t46", "name": "[] (46)", "group": 1, "x": 340, "y": 1700.0}, {"id": "t47", "name": "[] (47)", "group": 1, "x": 340, "y": 2100.0}, {"id": "t48", "name": "[] (48)", "group": 1, "x": 340, "y": 2500.0}, {"id": "t49", "name": "[] (49)", "group": 1, "x": 340, "y": 2700.0}, {"id": "t50", "name": "[] (50)", "group": 1, "x": 340, "y": 3100.0}, {"id": "t51", "name": "[] (51)", "group": 1, "x": 340, "y": 3500.0}, {"id": "t52", "name": "[] (52)", "group": 1, "x": 340, "y": 3900.0}, {"id": "t53", "name": "[] (53)", "group": 1, "x": 340, "y": 4100.0}, {"id": "t54", "name": "[] (54)", "group": 1, "x": 340, "y": 4500.0}, {"id": "t55", "name": "[] (55)", "group": 1, "x": 340, "y": 4900.0}, {"id": "t56", "name": "[] (56)", "group": 1, "x": 340, "y": 5300.0}, {"id": "t57", "name": "[] (57)", "group": 1, "x": 340, "y": 5700.0}, {"id": "t58", "name": "[] (58)", "group": 1, "x": 340, "y": 6100.0}, {"id": "t59", "name": "[] (59)", "group": 1, "x": 340, "y": 6300.0}, {"id": "t60", "name": "[] (60)", "group": 1, "x": 340, "y": 6700.0}, {"id": "t61", "name": "[] (61)", "group": 1, "x": 340, "y": 7100.0}, {"id": "t62", "name": "[] (62)", "group": 1, "x": 340, "y": 7500.0}, {"id": "t63", "name": "[] (63)", "group": 1, "x": 340, "y": 7900.0}, {"id": "t64", "name": "[] (64)", "group": 1, "x": 340, "y": 8300.0}, {"id": "t65", "name": "[] (65)", "group": 1, "x": 340, "y": 8500.0}, {"id": "t66", "name": "[] (66)", "group": 1, "x": 340, "y": 8900.0}, {"id": "t67", "name": "[] (67)", "group": 1, "x": 340, "y": 9300.0}, {"id": "t68", "name": "[] (68)", "group": 1, "x": 340, "y": 9700.0}, {"id": "t69", "name": "[] (69)", "group": 1, "x": 340, "y": 10100.0}, {"id": "t70", "name": "[] (70)", "group": 1, "x": 340, "y": 10500.0}, {"id": "t71", "name": "[] (71)", "group": 1, "x": 340, "y": 10900.0}, {"id": "t72", "name": "[] (72)", "group": 1, "x": 340, "y": 11500.0}, {"id": "t73", "name": "[] (73)", "group": 1, "x": 340, "y": 300.0}, {"id": "t74", "name": "[] (74)", "group": 1, "x": 510, "y": 500.0}, {"id": "t75", "name": "[] (75)", "group": 1, "x": 340, "y": 900.0}, {"id": "t76", "name": "[] (76)", "group": 1, "x": 510, "y": 1100.0}, {"id": "t77", "name": "[] (77)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t78", "name": "[] (78)", "group": 1, "x": 510, "y": 1700.0}, {"id": "t79", "name": "[] (79)", "group": 1, "x": 340, "y": 2300.0}, {"id": "t80", "name": "[] (80)", "group": 1, "x": 510, "y": 2500.0}, {"id": "t81", "name": "[] (81)", "group": 1, "x": 340, "y": 2900.0}, {"id": "t82", "name": "[] (82)", "group": 1, "x": 510, "y": 3100.0}, {"id": "t83", "name": "[] (83)", "group": 1, "x": 340, "y": 3700.0}, {"id": "t84", "name": "[] (84)", "group": 1, "x": 510, "y": 11500.0}, {"id": "t85", "name": "[] (85)", "group": 1, "x": 510, "y": 3900.0}, {"id": "t86", "name": "[] (86)", "group": 1, "x": 340, "y": 4300.0}, {"id": "t87", "name": "[] (87)", "group": 1, "x": 510, "y": 4500.0}, {"id": "t88", "name": "[] (88)", "group": 1, "x": 340, "y": 5100.0}, {"id": "t89", "name": "[] (89)", "group": 1, "x": 510, "y": 5300.0}, {"id": "t90", "name": "[] (90)", "group": 1, "x": 340, "y": 5900.0}, {"id": "t91", "name": "[] (91)", "group": 1, "x": 510, "y": 6100.0}, {"id": "t92", "name": "[] (92)", "group": 1, "x": 340, "y": 6500.0}, {"id": "t93", "name": "[] (93)", "group": 1, "x": 510, "y": 6700.0}, {"id": "t94", "name": "[] (94)", "group": 1, "x": 340, "y": 7300.0}, {"id": "t95", "name": "[] (95)", "group": 1, "x": 510, "y": 7500.0}, {"id": "t96", "name": "[] (96)", "group": 1, "x": 340, "y": 8100.0}, {"id": "t97", "name": "[] (97)", "group": 1, "x": 510, "y": 8300.0}, {"id": "t98", "name": "[] (98)", "group": 1, "x": 340, "y": 8700.0}, {"id": "t99", "name": "[] (99)", "group": 1, "x": 510, "y": 8900.0}, {"id": "t100", "name": "[] (100)", "group": 1, "x": 340, "y": 9500.0}, {"id": "t101", "name": "[] (101)", "group": 1, "x": 510, "y": 9700.0}, {"id": "t102", "name": "[] (102)", "group": 1, "x": 340, "y": 10300.0}, {"id": "t103", "name": "[] (103)", "group": 1, "x": 510, "y": 10500.0}, {"id": "t104", "name": "[] (104)", "group": 1, "x": 340, "y": 11100.0}, {"id": "t105", "name": "[] (105)", "group": 1, "x": 340, "y": 11300.0}, {"id": "t106", "name": "[] (106)", "group": 1, "x": 170, "y": 300.0}, {"id": "t107", "name": "[] (107)", "group": 1, "x": 170, "y": 500.0}, {"id": "t108", "name": "[] (108)", "group": 1, "x": 170, "y": 700.0}, {"id": "t109", "name": "[] (109)", "group": 1, "x": 170, "y": 900.0}, {"id": "t110", "name": "[] (110)", "group": 1, "x": 170, "y": 1100.0}, {"id": "t111", "name": "[] (111)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t112", "name": "[] (112)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t113", "name": "[] (113)", "group": 1, "x": 170, "y": 1700.0}, {"id": "t114", "name": "[] (114)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t115", "name": "[] (115)", "group": 1, "x": 170, "y": 2100.0}, {"id": "t116", "name": "[] (116)", "group": 1, "x": 170, "y": 2300.0}, {"id": "t117", "name": "[] (117)", "group": 1, "x": 170, "y": 2500.0}, {"id": "t118", "name": "[] (118)", "group": 1, "x": 170, "y": 2700.0}, {"id": "t119", "name": "[] (119)", "group": 1, "x": 170, "y": 2900.0}, {"id": "t120", "name": "[] (120)", "group": 1, "x": 170, "y": 3100.0}, {"id": "t121", "name": "[] (121)", "group": 1, "x": 170, "y": 3300.0}, {"id": "t122", "name": "[] (122)", "group": 1, "x": 170, "y": 3500.0}, {"id": "t123", "name": "[] (123)", "group": 1, "x": 170, "y": 3700.0}, {"id": "t124", "name": "[] (124)", "group": 1, "x": 170, "y": 3900.0}, {"id": "t125", "name": "[] (125)", "group": 1, "x": 170, "y": 4100.0}, {"id": "t126", "name": "[] (126)", "group": 1, "x": 170, "y": 4300.0}, {"id": "t127", "name": "[] (127)", "group": 1, "x": 170, "y": 4500.0}, {"id": "t128", "name": "[] (128)", "group": 1, "x": 170, "y": 4700.0}, {"id": "t129", "name": "[] (129)", "group": 1, "x": 170, "y": 4900.0}, {"id": "t130", "name": "[] (130)", "group": 1, "x": 170, "y": 5100.0}, {"id": "t131", "name": "[] (131)", "group": 1, "x": 170, "y": 5300.0}, {"id": "t132", "name": "[] (132)", "group": 1, "x": 170, "y": 5500.0}, {"id": "t133", "name": "[] (133)", "group": 1, "x": 170, "y": 5700.0}, {"id": "t134", "name": "[] (134)", "group": 1, "x": 170, "y": 5900.0}, {"id": "t135", "name": "[] (135)", "group": 1, "x": 170, "y": 6100.0}, {"id": "t136", "name": "[] (136)", "group": 1, "x": 170, "y": 6300.0}, {"id": "t137", "name": "[] (137)", "group": 1, "x": 170, "y": 6500.0}, {"id": "t138", "name": "[] (138)", "group": 1, "x": 170, "y": 6700.0}, {"id": "t139", "name": "[] (139)", "group": 1, "x": 170, "y": 6900.0}, {"id": "t140", "name": "[] (140)", "group": 1, "x": 170, "y": 7100.0}, {"id": "t141", "name": "[] (141)", "group": 1, "x": 170, "y": 7300.0}, {"id": "t142", "name": "[] (142)", "group": 1, "x": 170, "y": 7500.0}, {"id": "t143", "name": "[] (143)", "group": 1, "x": 170, "y": 7700.0}, {"id": "t144", "name": "[] (144)", "group": 1, "x": 170, "y": 7900.0}, {"id": "t145", "name": "[] (145)", "group": 1, "x": 170, "y": 8100.0}, {"id": "t146", "name": "[] (146)", "group": 1, "x": 170, "y": 8300.0}, {"id": "t147", "name": "[] (147)", "group": 1, "x": 170, "y": 8500.0}, {"id": "t148", "name": "[] (148)", "group": 1, "x": 170, "y": 8700.0}, {"id": "t149", "name": "[] (149)", "group": 1, "x": 170, "y": 8900.0}, {"id": "t150", "name": "[] (150)", "group": 1, "x": 170, "y": 9100.0}, {"id": "t151", "name": "[] (151)", "group": 1, "x": 170, "y": 9300.0}, {"id": "t152", "name": "[] (152)", "group": 1, "x": 170, "y": 9500.0}, {"id": "t153", "name": "[] (153)", "group": 1, "x": 170, "y": 9700.0}, {"id": "t154", "name": "[] (154)", "group": 1, "x": 170, "y": 9900.0}, {"id": "t155", "name": "[] (155)", "group": 1, "x": 170, "y": 10100.0}, {"id": "t156", "name": "[] (156)", "group": 1, "x": 170, "y": 10300.0}, {"id": "t157", "name": "[] (157)", "group": 1, "x": 170, "y": 10500.0}, {"id": "t158", "name": "[] (158)", "group": 1, "x": 170, "y": 10700.0}, {"id": "t159", "name": "[] (159)", "group": 1, "x": 170, "y": 10900.0}, {"id": "t160", "name": "[] (160)", "group": 1, "x": 170, "y": 11100.0}, {"id": "t161", "name": "[] (161)", "group": 1, "x": 170, "y": 11300.0}, {"id": "t162", "name": "[] (162)", "group": 1, "x": 170, "y": 11500.0}, {"id": "t163", "name": "[] (163)", "group": 1, "x": 170, "y": 11700.0}, {"id": "t164", "name": "[] (164)", "group": 1, "x": 170, "y": 11900.0}, {"id": "t165", "name": "[] (165)", "group": 1, "x": 170, "y": 12100.0}, {"id": "t166", "name": "[] (166)", "group": 1, "x": 170, "y": 12300.0}, {"id": "t167", "name": "[] (167)", "group": 1, "x": 170, "y": 12500.0}, {"id": "t168", "name": "[] (168)", "group": 1, "x": 170, "y": 12700.0}, {"id": "t169", "name": "[] (169)", "group": 1, "x": 170, "y": 12900.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t41", "target": "o0"}, {"source": "t5", "target": "o0"}, {"target": "t106", "source": "o0"}, {"source": "t106", "target": "o1"}, {"source": "t73", "target": "o1"}, {"source": "t6", "target": "o1"}, {"target": "t107", "source": "o1"}, {"source": "t107", "target": "o2"}, {"source": "t42", "target": "o2"}, {"source": "t74", "target": "o2"}, {"target": "t108", "source": "o2"}, {"source": "t108", "target": "o3"}, {"source": "t43", "target": "o3"}, {"source": "t20", "target": "o3"}, {"target": "t109", "source": "o3"}, {"source": "t109", "target": "o4"}, {"source": "t75", "target": "o4"}, {"source": "t28", "target": "o4"}, {"target": "t110", "source": "o4"}, {"source": "t110", "target": "o5"}, {"source": "t44", "target": "o5"}, {"source": "t76", "target": "o5"}, {"target": "t111", "source": "o5"}, {"source": "t111", "target": "o6"}, {"source": "t45", "target": "o6"}, {"source": "t35", "target": "o6"}, {"target": "t112", "source": "o6"}, {"source": "t112", "target": "o7"}, {"source": "t77", "target": "o7"}, {"source": "t36", "target": "o7"}, {"target": "t113", "source": "o7"}, {"source": "t113", "target": "o8"}, {"source": "t46", "target": "o8"}, {"source": "t78", "target": "o8"}, {"target": "t114", "source": "o8"}, {"source": "t114", "target": "o9"}, {"source": "t111", "target": "o9"}, {"target": "t115", "source": "o9"}, {"source": "t115", "target": "o10"}, {"source": "t47", "target": "o10"}, {"source": "t37", "target": "o10"}, {"target": "t116", "source": "o10"}, {"source": "t116", "target": "o11"}, {"source": "t79", "target": "o11"}, {"source": "t7", "target": "o11"}, {"target": "t117", "source": "o11"}, {"source": "t117", "target": "o12"}, {"source": "t48", "target": "o12"}, {"source": "t80", "target": "o12"}, {"target": "t118", "source": "o12"}, {"source": "t118", "target": "o13"}, {"source": "t49", "target": "o13"}, {"source": "t8", "target": "o13"}, {"target": "t119", "source": "o13"}, {"source": "t119", "target": "o14"}, {"source": "t81", "target": "o14"}, {"source": "t9", "target": "o14"}, {"target": "t120", "source": "o14"}, {"source": "t120", "target": "o15"}, {"source": "t50", "target": "o15"}, {"source": "t82", "target": "o15"}, {"target": "t121", "source": "o15"}, {"source": "t121", "target": "o16"}, {"source": "t118", "target": "o16"}, {"target": "t122", "source": "o16"}, {"source": "t122", "target": "o17"}, {"source": "t51", "target": "o17"}, {"source": "t10", "target": "o17"}, {"target": "t123", "source": "o17"}, {"source": "t123", "target": "o18"}, {"source": "t83", "target": "o18"}, {"source": "t11", "target": "o18"}, {"target": "t124", "source": "o18"}, {"source": "t124", "target": "o19"}, {"source": "t52", "target": "o19"}, {"source": "t85", "target": "o19"}, {"target": "t125", "source": "o19"}, {"source": "t125", "target": "o20"}, {"source": "t53", "target": "o20"}, {"source": "t12", "target": "o20"}, {"target": "t126", "source": "o20"}, {"source": "t126", "target": "o21"}, {"source": "t86", "target": "o21"}, {"source": "t13", "target": "o21"}, {"target": "t127", "source": "o21"}, {"source": "t127", "target": "o22"}, {"source": "t54", "target": "o22"}, {"source": "t87", "target": "o22"}, {"target": "t128", "source": "o22"}, {"source": "t128", "target": "o23"}, {"source": "t125", "target": "o23"}, {"target": "t129", "source": "o23"}, {"source": "t129", "target": "o24"}, {"source": "t55", "target": "o24"}, {"source": "t14", "target": "o24"}, {"target": "t130", "source": "o24"}, {"source": "t130", "target": "o25"}, {"source": "t88", "target": "o25"}, {"source": "t15", "target": "o25"}, {"target": "t131", "source": "o25"}, {"source": "t131", "target": "o26"}, {"source": "t56", "target": "o26"}, {"source": "t89", "target": "o26"}, {"target": "t132", "source": "o26"}, {"source": "t132", "target": "o27"}, {"source": "t129", "target": "o27"}, {"target": "t133", "source": "o27"}, {"source": "t133", "target": "o28"}, {"source": "t57", "target": "o28"}, {"source": "t16", "target": "o28"}, {"target": "t134", "source": "o28"}, {"source": "t134", "target": "o29"}, {"source": "t90", "target": "o29"}, {"source": "t17", "target": "o29"}, {"target": "t135", "source": "o29"}, {"source": "t135", "target": "o30"}, {"source": "t58", "target": "o30"}, {"source": "t91", "target": "o30"}, {"target": "t136", "source": "o30"}, {"source": "t136", "target": "o31"}, {"source": "t59", "target": "o31"}, {"source": "t18", "target": "o31"}, {"target": "t137", "source": "o31"}, {"source": "t137", "target": "o32"}, {"source": "t92", "target": "o32"}, {"source": "t19", "target": "o32"}, {"target": "t138", "source": "o32"}, {"source": "t138", "target": "o33"}, {"source": "t60", "target": "o33"}, {"source": "t93", "target": "o33"}, {"target": "t139", "source": "o33"}, {"source": "t139", "target": "o34"}, {"source": "t136", "target": "o34"}, {"target": "t140", "source": "o34"}, {"source": "t140", "target": "o35"}, {"source": "t61", "target": "o35"}, {"source": "t21", "target": "o35"}, {"target": "t141", "source": "o35"}, {"source": "t141", "target": "o36"}, {"source": "t94", "target": "o36"}, {"source": "t22", "target": "o36"}, {"target": "t142", "source": "o36"}, {"source": "t142", "target": "o37"}, {"source": "t62", "target": "o37"}, {"source": "t95", "target": "o37"}, {"target": "t143", "source": "o37"}, {"source": "t143", "target": "o38"}, {"source": "t140", "target": "o38"}, {"target": "t144", "source": "o38"}, {"source": "t144", "target": "o39"}, {"source": "t63", "target": "o39"}, {"source": "t23", "target": "o39"}, {"target": "t145", "source": "o39"}, {"source": "t145", "target": "o40"}, {"source": "t96", "target": "o40"}, {"source": "t24", "target": "o40"}, {"target": "t146", "source": "o40"}, {"source": "t146", "target": "o41"}, {"source": "t64", "target": "o41"}, {"source": "t97", "target": "o41"}, {"target": "t147", "source": "o41"}, {"source": "t147", "target": "o42"}, {"source": "t65", "target": "o42"}, {"source": "t25", "target": "o42"}, {"target": "t148", "source": "o42"}, {"source": "t148", "target": "o43"}, {"source": "t98", "target": "o43"}, {"source": "t26", "target": "o43"}, {"target": "t149", "source": "o43"}, {"source": "t149", "target": "o44"}, {"source": "t66", "target": "o44"}, {"source": "t99", "target": "o44"}, {"target": "t150", "source": "o44"}, {"source": "t150", "target": "o45"}, {"source": "t147", "target": "o45"}, {"target": "t151", "source": "o45"}, {"source": "t151", "target": "o46"}, {"source": "t67", "target": "o46"}, {"source": "t27", "target": "o46"}, {"target": "t152", "source": "o46"}, {"source": "t152", "target": "o47"}, {"source": "t100", "target": "o47"}, {"source": "t29", "target": "o47"}, {"target": "t153", "source": "o47"}, {"source": "t153", "target": "o48"}, {"source": "t68", "target": "o48"}, {"source": "t101", "target": "o48"}, {"target": "t154", "source": "o48"}, {"source": "t154", "target": "o49"}, {"source": "t151", "target": "o49"}, {"target": "t155", "source": "o49"}, {"source": "t155", "target": "o50"}, {"source": "t69", "target": "o50"}, {"source": "t30", "target": "o50"}, {"target": "t156", "source": "o50"}, {"source": "t156", "target": "o51"}, {"source": "t102", "target": "o51"}, {"source": "t31", "target": "o51"}, {"target": "t157", "source": "o51"}, {"source": "t157", "target": "o52"}, {"source": "t70", "target": "o52"}, {"source": "t103", "target": "o52"}, {"target": "t158", "source": "o52"}, {"source": "t158", "target": "o53"}, {"source": "t155", "target": "o53"}, {"target": "t159", "source": "o53"}, {"source": "t159", "target": "o54"}, {"source": "t71", "target": "o54"}, {"source": "t32", "target": "o54"}, {"target": "t160", "source": "o54"}, {"source": "t160", "target": "o55"}, {"source": "t104", "target": "o55"}, {"source": "t33", "target": "o55"}, {"target": "t161", "source": "o55"}, {"source": "t161", "target": "o56"}, {"source": "t105", "target": "o56"}, {"source": "t34", "target": "o56"}, {"target": "t162", "source": "o56"}, {"source": "t162", "target": "o57"}, {"source": "t72", "target": "o57"}, {"source": "t84", "target": "o57"}, {"target": "t163", "source": "o57"}, {"source": "t163", "target": "o58"}, {"source": "t4", "target": "o58"}, {"target": "t164", "source": "o58"}, {"source": "t164", "target": "o59"}, {"source": "t40", "target": "o59"}, {"source": "t3", "target": "o59"}, {"target": "t165", "source": "o59"}, {"source": "t164", "target": "o60"}, {"source": "t39", "target": "o60"}, {"source": "t2", "target": "o60"}, {"target": "t166", "source": "o60"}, {"source": "t166", "target": "o61"}, {"target": "t167", "source": "o61"}, {"source": "t164", "target": "o62"}, {"source": "t38", "target": "o62"}, {"source": "t1", "target": "o62"}, {"target": "t168", "source": "o62"}, {"source": "t168", "target": "o63"}, {"target": "t169", "source": "o63"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>--</td>
+</tr>
+<tr>
+<td>2</td><td>4 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>4 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>252 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>96 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>96 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>12</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>13</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>14</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>15</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>16</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>17</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>18</td><td>960 bytes</td>
+</tr>
+<tr>
+<td>19</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>20</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>21</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>23</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>24</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>25</td><td>1344 bytes</td>
+</tr>
+<tr>
+<td>26</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>27</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>28</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>29</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>30</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>31</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>32</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>33</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>34</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>35</td><td>2304 bytes</td>
+</tr>
+<tr>
+<td>36</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>37</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>38</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>39</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>40</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>41</td><td>580608 bytes</td>
+</tr>
+<tr>
+<td>42</td><td>2592 bytes</td>
+</tr>
+<tr>
+<td>43</td><td>768 bytes</td>
+</tr>
+<tr>
+<td>44</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>45</td><td>2048 bytes</td>
+</tr>
+<tr>
+<td>46</td><td>6144 bytes</td>
+</tr>
+<tr>
+<td>47</td><td>6144 bytes</td>
+</tr>
+<tr>
+<td>48</td><td>6144 bytes</td>
+</tr>
+<tr>
+<td>49</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>50</td><td>13824 bytes</td>
+</tr>
+<tr>
+<td>51</td><td>13824 bytes</td>
+</tr>
+<tr>
+<td>52</td><td>13824 bytes</td>
+</tr>
+<tr>
+<td>53</td><td>23040 bytes</td>
+</tr>
+<tr>
+<td>54</td><td>38400 bytes</td>
+</tr>
+<tr>
+<td>55</td><td>38400 bytes</td>
+</tr>
+<tr>
+<td>56</td><td>38400 bytes</td>
+</tr>
+<tr>
+<td>57</td><td>38400 bytes</td>
+</tr>
+<tr>
+<td>58</td><td>38400 bytes</td>
+</tr>
+<tr>
+<td>59</td><td>53760 bytes</td>
+</tr>
+<tr>
+<td>60</td><td>75264 bytes</td>
+</tr>
+<tr>
+<td>61</td><td>75264 bytes</td>
+</tr>
+<tr>
+<td>62</td><td>75264 bytes</td>
+</tr>
+<tr>
+<td>63</td><td>75264 bytes</td>
+</tr>
+<tr>
+<td>64</td><td>75264 bytes</td>
+</tr>
+<tr>
+<td>65</td><td>129024 bytes</td>
+</tr>
+<tr>
+<td>66</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>67</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>68</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>69</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>70</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>71</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>72</td><td>221184 bytes</td>
+</tr>
+<tr>
+<td>73</td><td>331776 bytes</td>
+</tr>
+<tr>
+<td>74</td><td>864 bytes</td>
+</tr>
+<tr>
+<td>75</td><td>32 bytes</td>
+</tr>
+<tr>
+<td>76</td><td>1152 bytes</td>
+</tr>
+<tr>
+<td>77</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>78</td><td>3456 bytes</td>
+</tr>
+<tr>
+<td>79</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>80</td><td>9600 bytes</td>
+</tr>
+<tr>
+<td>81</td><td>96 bytes</td>
+</tr>
+<tr>
+<td>82</td><td>14400 bytes</td>
+</tr>
+<tr>
+<td>83</td><td>96 bytes</td>
+</tr>
+<tr>
+<td>84</td><td>5184 bytes</td>
+</tr>
+<tr>
+<td>85</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>86</td><td>160 bytes</td>
+</tr>
+<tr>
+<td>87</td><td>8640 bytes</td>
+</tr>
+<tr>
+<td>88</td><td>160 bytes</td>
+</tr>
+<tr>
+<td>89</td><td>8640 bytes</td>
+</tr>
+<tr>
+<td>90</td><td>160 bytes</td>
+</tr>
+<tr>
+<td>91</td><td>24000 bytes</td>
+</tr>
+<tr>
+<td>92</td><td>224 bytes</td>
+</tr>
+<tr>
+<td>93</td><td>33600 bytes</td>
+</tr>
+<tr>
+<td>94</td><td>224 bytes</td>
+</tr>
+<tr>
+<td>95</td><td>33600 bytes</td>
+</tr>
+<tr>
+<td>96</td><td>224 bytes</td>
+</tr>
+<tr>
+<td>97</td><td>33600 bytes</td>
+</tr>
+<tr>
+<td>98</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>99</td><td>57600 bytes</td>
+</tr>
+<tr>
+<td>100</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>101</td><td>57600 bytes</td>
+</tr>
+<tr>
+<td>102</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>103</td><td>57600 bytes</td>
+</tr>
+<tr>
+<td>104</td><td>384 bytes</td>
+</tr>
+<tr>
+<td>105</td><td>20736 bytes</td>
+</tr>
+<tr>
+<td>106</td><td>20736 bytes</td>
+</tr>
+<tr>
+<td>107</td><td>--</td>
+</tr>
+<tr>
+<td>108</td><td>--</td>
+</tr>
+<tr>
+<td>109</td><td>--</td>
+</tr>
+<tr>
+<td>110</td><td>--</td>
+</tr>
+<tr>
+<td>111</td><td>--</td>
+</tr>
+<tr>
+<td>112</td><td>--</td>
+</tr>
+<tr>
+<td>113</td><td>--</td>
+</tr>
+<tr>
+<td>114</td><td>--</td>
+</tr>
+<tr>
+<td>115</td><td>--</td>
+</tr>
+<tr>
+<td>116</td><td>--</td>
+</tr>
+<tr>
+<td>117</td><td>--</td>
+</tr>
+<tr>
+<td>118</td><td>--</td>
+</tr>
+<tr>
+<td>119</td><td>--</td>
+</tr>
+<tr>
+<td>120</td><td>--</td>
+</tr>
+<tr>
+<td>121</td><td>--</td>
+</tr>
+<tr>
+<td>122</td><td>--</td>
+</tr>
+<tr>
+<td>123</td><td>--</td>
+</tr>
+<tr>
+<td>124</td><td>--</td>
+</tr>
+<tr>
+<td>125</td><td>--</td>
+</tr>
+<tr>
+<td>126</td><td>--</td>
+</tr>
+<tr>
+<td>127</td><td>--</td>
+</tr>
+<tr>
+<td>128</td><td>--</td>
+</tr>
+<tr>
+<td>129</td><td>--</td>
+</tr>
+<tr>
+<td>130</td><td>--</td>
+</tr>
+<tr>
+<td>131</td><td>--</td>
+</tr>
+<tr>
+<td>132</td><td>--</td>
+</tr>
+<tr>
+<td>133</td><td>--</td>
+</tr>
+<tr>
+<td>134</td><td>--</td>
+</tr>
+<tr>
+<td>135</td><td>--</td>
+</tr>
+<tr>
+<td>136</td><td>--</td>
+</tr>
+<tr>
+<td>137</td><td>--</td>
+</tr>
+<tr>
+<td>138</td><td>--</td>
+</tr>
+<tr>
+<td>139</td><td>--</td>
+</tr>
+<tr>
+<td>140</td><td>--</td>
+</tr>
+<tr>
+<td>141</td><td>--</td>
+</tr>
+<tr>
+<td>142</td><td>--</td>
+</tr>
+<tr>
+<td>143</td><td>--</td>
+</tr>
+<tr>
+<td>144</td><td>--</td>
+</tr>
+<tr>
+<td>145</td><td>--</td>
+</tr>
+<tr>
+<td>146</td><td>--</td>
+</tr>
+<tr>
+<td>147</td><td>--</td>
+</tr>
+<tr>
+<td>148</td><td>--</td>
+</tr>
+<tr>
+<td>149</td><td>--</td>
+</tr>
+<tr>
+<td>150</td><td>--</td>
+</tr>
+<tr>
+<td>151</td><td>--</td>
+</tr>
+<tr>
+<td>152</td><td>--</td>
+</tr>
+<tr>
+<td>153</td><td>--</td>
+</tr>
+<tr>
+<td>154</td><td>--</td>
+</tr>
+<tr>
+<td>155</td><td>--</td>
+</tr>
+<tr>
+<td>156</td><td>--</td>
+</tr>
+<tr>
+<td>157</td><td>--</td>
+</tr>
+<tr>
+<td>158</td><td>--</td>
+</tr>
+<tr>
+<td>159</td><td>--</td>
+</tr>
+<tr>
+<td>160</td><td>--</td>
+</tr>
+<tr>
+<td>161</td><td>--</td>
+</tr>
+<tr>
+<td>162</td><td>--</td>
+</tr>
+<tr>
+<td>163</td><td>--</td>
+</tr>
+<tr>
+<td>164</td><td>--</td>
+</tr>
+<tr>
+<td>165</td><td>--</td>
+</tr>
+<tr>
+<td>166</td><td>--</td>
+</tr>
+<tr>
+<td>167</td><td>--</td>
+</tr>
+<tr>
+<td>168</td><td>--</td>
+</tr>
+<tr>
+<td>169</td><td>--</td>
+</tr>
+<tr>
+<td>170</td><td>--</td>
+</tr>
+<tr>
+<td>171</td><td>16 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>DEPTHWISE_CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td><td>ADD</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td><td>RESHAPE</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td><td>FULLY_CONNECTED</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td><td>LOGISTIC</td>
+<td></td>
+<td>1</td>
+</tr>
+</table>
+</body></html>

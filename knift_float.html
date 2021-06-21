@@ -1,0 +1,965 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>C:\Users\yyyyy\Documents\git\unclassified\mediapipe\mediapipe\models\knift_float.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[84, 79, 67, 79, 32, 67, 111, 110, 118, 101, 114, 116, 101, 100, 46]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 rgb_to_grayscale_1 FLOAT32 [200, 32, 32, 1]None<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>47 siamese_neural_congas_1/feature_compression/normalize_embeddings FLOAT32 [200, 40]None<br></span>[47]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>rgb_to_grayscale_1</td>
+<td>FLOAT32</td>
+<td>[200, 32, 32, 1]</td>
+<td>None</td>
+<td>44</td>
+<td>{'details': None, 'details_type': 0, 'max': [255.0], 'min': [0.0], 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>1</td><td>siamese_neural_congas/Mixed7a/Branch_0/Conv2d_0a_1x1/weights</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 64]</td>
+<td>None</td>
+<td>51</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>2</td><td>siamese_neural_congas/Mixed7a/Branch_0/Conv2d_0b_3x3/weights</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 32]</td>
+<td>None</td>
+<td>10</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>3</td><td>siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1a_1x1/weights</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 64]</td>
+<td>None</td>
+<td>8</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>4</td><td>siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1b_1x7/weights</td>
+<td>FLOAT32</td>
+<td>[32, 1, 7, 32]</td>
+<td>None</td>
+<td>7</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>5</td><td>siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1c_7x1/weights</td>
+<td>FLOAT32</td>
+<td>[32, 7, 1, 32]</td>
+<td>None</td>
+<td>5</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>6</td><td>siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1d_3x3/weights</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 32]</td>
+<td>None</td>
+<td>46</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>7</td><td>siamese_neural_congas/Mixed_6a/Branch_0/Conv2d_0a_1x1/weights</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 32]</td>
+<td>None</td>
+<td>19</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>8</td><td>siamese_neural_congas/Mixed_6a/Branch_0/Conv2d_0b_3x3/weights</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 16]</td>
+<td>None</td>
+<td>17</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>9</td><td>siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1a_1x1/weights</td>
+<td>FLOAT32</td>
+<td>[16, 1, 1, 32]</td>
+<td>None</td>
+<td>16</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>10</td><td>siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1b_3x3/weights</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 16]</td>
+<td>None</td>
+<td>14</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>11</td><td>siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1c_3x3/weights</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 16]</td>
+<td>None</td>
+<td>13</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>12</td><td>siamese_neural_congas/feature_compression/Conv2d_0a/weights</td>
+<td>FLOAT32</td>
+<td>[40, 1, 1, 128]</td>
+<td>None</td>
+<td>2</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>13</td><td>siamese_neural_congas/feature_extraction/Conv/weights</td>
+<td>FLOAT32</td>
+<td>[1, 3, 3, 16]</td>
+<td>None</td>
+<td>48</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>14</td><td>siamese_neural_congas/feature_extraction/Conv_1/weights</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 16]</td>
+<td>None</td>
+<td>52</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>15</td><td>siamese_neural_congas/feature_extraction/Conv_2/weights</td>
+<td>FLOAT32</td>
+<td>[32, 1, 1, 32]</td>
+<td>None</td>
+<td>21</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>16</td><td>siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0a_1x1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>11</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>17</td><td>siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0a_1x1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 32]</td>
+<td>None</td>
+<td>49</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>18</td><td>siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0b_3x3/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>9</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>19</td><td>siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0b_3x3/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 4, 4, 32]</td>
+<td>None</td>
+<td>34</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>20</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1a_1x1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>23</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>21</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1a_1x1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 32]</td>
+<td>None</td>
+<td>38</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>22</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1b_1x7/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>6</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>23</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1b_1x7/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 32]</td>
+<td>None</td>
+<td>32</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>24</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1c_7x1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>4</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>25</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1c_7x1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 32]</td>
+<td>None</td>
+<td>39</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>26</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1d_3x3/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>3</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>27</td><td>siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1d_3x3/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 4, 4, 32]</td>
+<td>None</td>
+<td>31</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>28</td><td>siamese_neural_congas_1/Mixed7a/Branch_2/MaxPool_2a_3x3/MaxPool</td>
+<td>FLOAT32</td>
+<td>[200, 4, 4, 64]</td>
+<td>None</td>
+<td>30</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>29</td><td>siamese_neural_congas_1/Mixed7a/concat</td>
+<td>FLOAT32</td>
+<td>[200, 4, 4, 128]</td>
+<td>None</td>
+<td>29</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>30</td><td>siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0a_1x1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>18</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>31</td><td>siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0a_1x1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 16, 16, 16]</td>
+<td>None</td>
+<td>40</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>32</td><td>siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0b_3x3/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>28</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>33</td><td>siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0b_3x3/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 16]</td>
+<td>None</td>
+<td>41</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>34</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1a_1x1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>15</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>35</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1a_1x1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 16, 16, 16]</td>
+<td>None</td>
+<td>37</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>36</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1b_3x3/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>53</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>37</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1b_3x3/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 16, 16, 16]</td>
+<td>None</td>
+<td>36</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>38</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1c_3x3/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>12</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>39</td><td>siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1c_3x3/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 16]</td>
+<td>None</td>
+<td>35</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>40</td><td>siamese_neural_congas_1/Mixed_6a/Branch_2/MaxPool_2a_3x3/MaxPool</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 32]</td>
+<td>None</td>
+<td>45</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>41</td><td>siamese_neural_congas_1/Mixed_6a/concat</td>
+<td>FLOAT32</td>
+<td>[200, 8, 8, 64]</td>
+<td>None</td>
+<td>50</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>42</td><td>siamese_neural_congas_1/feature_compression/AvgPool_1a_8x8/AvgPool</td>
+<td>FLOAT32</td>
+<td>[200, 1, 1, 128]</td>
+<td>None</td>
+<td>27</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>43</td><td>siamese_neural_congas_1/feature_compression/Conv2d_0a/BatchNorm/FusedBatchNormV3</td>
+<td>FLOAT32</td>
+<td>[200, 1, 1, 40]</td>
+<td>None</td>
+<td>43</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>44</td><td>siamese_neural_congas_1/feature_compression/Conv2d_0a/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[40]</td>
+<td>None</td>
+<td>1</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>45</td><td>siamese_neural_congas_1/feature_compression/flatten_embeddings</td>
+<td>FLOAT32</td>
+<td>[200, 40]</td>
+<td>None</td>
+<td>24</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>46</td><td>siamese_neural_congas_1/feature_compression/flatten_embeddings/shape</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>25</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>47</td><td>siamese_neural_congas_1/feature_compression/normalize_embeddings</td>
+<td>FLOAT32</td>
+<td>[200, 40]</td>
+<td>None</td>
+<td>26</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>48</td><td>siamese_neural_congas_1/feature_extraction/Conv/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>54</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>49</td><td>siamese_neural_congas_1/feature_extraction/Conv/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 32, 32, 16]</td>
+<td>None</td>
+<td>42</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>50</td><td>siamese_neural_congas_1/feature_extraction/Conv_1/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>22</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>51</td><td>siamese_neural_congas_1/feature_extraction/Conv_1/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 16, 16, 32]</td>
+<td>None</td>
+<td>33</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>52</td><td>siamese_neural_congas_1/feature_extraction/Conv_2/Conv2D_bias</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>20</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>53</td><td>siamese_neural_congas_1/feature_extraction/Conv_2/Relu6</td>
+<td>FLOAT32</td>
+<td>[200, 16, 16, 32]</td>
+<td>None</td>
+<td>47</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 rgb_to_grayscale_1 FLOAT32 [200, 32, 32, 1]None<br>13 siamese_neural_congas/feature_extraction/Conv/weights FLOAT32 [1, 3, 3, 16]None<br>48 siamese_neural_congas_1/feature_extraction/Conv/Conv2D_bias FLOAT32 [16]None<br></span>[0, 13, 48]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>49 siamese_neural_congas_1/feature_extraction/Conv/Relu6 FLOAT32 [200, 32, 32, 16]None<br></span>[49]</span></td>
+<td>{'depth_multiplier': 16, 'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>DEPTHWISE_CONV_2D (3)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>49 siamese_neural_congas_1/feature_extraction/Conv/Relu6 FLOAT32 [200, 32, 32, 16]None<br>14 siamese_neural_congas/feature_extraction/Conv_1/weights FLOAT32 [32, 3, 3, 16]None<br>50 siamese_neural_congas_1/feature_extraction/Conv_1/Conv2D_bias FLOAT32 [32]None<br></span>[49, 14, 50]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>51 siamese_neural_congas_1/feature_extraction/Conv_1/Relu6 FLOAT32 [200, 16, 16, 32]None<br></span>[51]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>51 siamese_neural_congas_1/feature_extraction/Conv_1/Relu6 FLOAT32 [200, 16, 16, 32]None<br>15 siamese_neural_congas/feature_extraction/Conv_2/weights FLOAT32 [32, 1, 1, 32]None<br>52 siamese_neural_congas_1/feature_extraction/Conv_2/Conv2D_bias FLOAT32 [32]None<br></span>[51, 15, 52]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>53 siamese_neural_congas_1/feature_extraction/Conv_2/Relu6 FLOAT32 [200, 16, 16, 32]None<br></span>[53]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>53 siamese_neural_congas_1/feature_extraction/Conv_2/Relu6 FLOAT32 [200, 16, 16, 32]None<br>7 siamese_neural_congas/Mixed_6a/Branch_0/Conv2d_0a_1x1/weights FLOAT32 [16, 1, 1, 32]None<br>30 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0a_1x1/Conv2D_bias FLOAT32 [16]None<br></span>[53, 7, 30]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>31 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0a_1x1/Relu6 FLOAT32 [200, 16, 16, 16]None<br></span>[31]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>31 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0a_1x1/Relu6 FLOAT32 [200, 16, 16, 16]None<br>8 siamese_neural_congas/Mixed_6a/Branch_0/Conv2d_0b_3x3/weights FLOAT32 [16, 3, 3, 16]None<br>32 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0b_3x3/Conv2D_bias FLOAT32 [16]None<br></span>[31, 8, 32]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>33 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0b_3x3/Relu6 FLOAT32 [200, 8, 8, 16]None<br></span>[33]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>53 siamese_neural_congas_1/feature_extraction/Conv_2/Relu6 FLOAT32 [200, 16, 16, 32]None<br>9 siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1a_1x1/weights FLOAT32 [16, 1, 1, 32]None<br>34 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1a_1x1/Conv2D_bias FLOAT32 [16]None<br></span>[53, 9, 34]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>35 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1a_1x1/Relu6 FLOAT32 [200, 16, 16, 16]None<br></span>[35]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>35 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1a_1x1/Relu6 FLOAT32 [200, 16, 16, 16]None<br>10 siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1b_3x3/weights FLOAT32 [16, 3, 3, 16]None<br>36 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1b_3x3/Conv2D_bias FLOAT32 [16]None<br></span>[35, 10, 36]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>37 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1b_3x3/Relu6 FLOAT32 [200, 16, 16, 16]None<br></span>[37]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>37 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1b_3x3/Relu6 FLOAT32 [200, 16, 16, 16]None<br>11 siamese_neural_congas/Mixed_6a/Branch_1/Conv2d_1c_3x3/weights FLOAT32 [16, 3, 3, 16]None<br>38 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1c_3x3/Conv2D_bias FLOAT32 [16]None<br></span>[37, 11, 38]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>39 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1c_3x3/Relu6 FLOAT32 [200, 8, 8, 16]None<br></span>[39]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>53 siamese_neural_congas_1/feature_extraction/Conv_2/Relu6 FLOAT32 [200, 16, 16, 32]None<br></span>[53]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>40 siamese_neural_congas_1/Mixed_6a/Branch_2/MaxPool_2a_3x3/MaxPool FLOAT32 [200, 8, 8, 32]None<br></span>[40]</span></td>
+<td>{'filter_height': 3, 'filter_width': 3, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (5)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>33 siamese_neural_congas_1/Mixed_6a/Branch_0/Conv2d_0b_3x3/Relu6 FLOAT32 [200, 8, 8, 16]None<br>39 siamese_neural_congas_1/Mixed_6a/Branch_1/Conv2d_1c_3x3/Relu6 FLOAT32 [200, 8, 8, 16]None<br>40 siamese_neural_congas_1/Mixed_6a/Branch_2/MaxPool_2a_3x3/MaxPool FLOAT32 [200, 8, 8, 32]None<br></span>[33, 39, 40]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>41 siamese_neural_congas_1/Mixed_6a/concat FLOAT32 [200, 8, 8, 64]None<br></span>[41]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (1)</td>
+</tr>
+<tr>
+<td>10</td><td><span class='tooltip'><span class='tooltipcontent'>41 siamese_neural_congas_1/Mixed_6a/concat FLOAT32 [200, 8, 8, 64]None<br>1 siamese_neural_congas/Mixed7a/Branch_0/Conv2d_0a_1x1/weights FLOAT32 [32, 1, 1, 64]None<br>16 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0a_1x1/Conv2D_bias FLOAT32 [32]None<br></span>[41, 1, 16]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>17 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0a_1x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br></span>[17]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>11</td><td><span class='tooltip'><span class='tooltipcontent'>17 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0a_1x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br>2 siamese_neural_congas/Mixed7a/Branch_0/Conv2d_0b_3x3/weights FLOAT32 [32, 3, 3, 32]None<br>18 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0b_3x3/Conv2D_bias FLOAT32 [32]None<br></span>[17, 2, 18]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>19 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0b_3x3/Relu6 FLOAT32 [200, 4, 4, 32]None<br></span>[19]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>12</td><td><span class='tooltip'><span class='tooltipcontent'>41 siamese_neural_congas_1/Mixed_6a/concat FLOAT32 [200, 8, 8, 64]None<br>3 siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1a_1x1/weights FLOAT32 [32, 1, 1, 64]None<br>20 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1a_1x1/Conv2D_bias FLOAT32 [32]None<br></span>[41, 3, 20]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>21 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1a_1x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br></span>[21]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>13</td><td><span class='tooltip'><span class='tooltipcontent'>21 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1a_1x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br>4 siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1b_1x7/weights FLOAT32 [32, 1, 7, 32]None<br>22 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1b_1x7/Conv2D_bias FLOAT32 [32]None<br></span>[21, 4, 22]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>23 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1b_1x7/Relu6 FLOAT32 [200, 8, 8, 32]None<br></span>[23]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>14</td><td><span class='tooltip'><span class='tooltipcontent'>23 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1b_1x7/Relu6 FLOAT32 [200, 8, 8, 32]None<br>5 siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1c_7x1/weights FLOAT32 [32, 7, 1, 32]None<br>24 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1c_7x1/Conv2D_bias FLOAT32 [32]None<br></span>[23, 5, 24]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>25 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1c_7x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br></span>[25]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>15</td><td><span class='tooltip'><span class='tooltipcontent'>25 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1c_7x1/Relu6 FLOAT32 [200, 8, 8, 32]None<br>6 siamese_neural_congas/Mixed7a/Branch_1/Conv2d_1d_3x3/weights FLOAT32 [32, 3, 3, 32]None<br>26 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1d_3x3/Conv2D_bias FLOAT32 [32]None<br></span>[25, 6, 26]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>27 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1d_3x3/Relu6 FLOAT32 [200, 4, 4, 32]None<br></span>[27]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 3, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>16</td><td><span class='tooltip'><span class='tooltipcontent'>41 siamese_neural_congas_1/Mixed_6a/concat FLOAT32 [200, 8, 8, 64]None<br></span>[41]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>28 siamese_neural_congas_1/Mixed7a/Branch_2/MaxPool_2a_3x3/MaxPool FLOAT32 [200, 4, 4, 64]None<br></span>[28]</span></td>
+<td>{'filter_height': 3, 'filter_width': 3, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (5)</td>
+</tr>
+<tr>
+<td>17</td><td><span class='tooltip'><span class='tooltipcontent'>19 siamese_neural_congas_1/Mixed7a/Branch_0/Conv2d_0b_3x3/Relu6 FLOAT32 [200, 4, 4, 32]None<br>27 siamese_neural_congas_1/Mixed7a/Branch_1/Conv2d_1d_3x3/Relu6 FLOAT32 [200, 4, 4, 32]None<br>28 siamese_neural_congas_1/Mixed7a/Branch_2/MaxPool_2a_3x3/MaxPool FLOAT32 [200, 4, 4, 64]None<br></span>[19, 27, 28]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>29 siamese_neural_congas_1/Mixed7a/concat FLOAT32 [200, 4, 4, 128]None<br></span>[29]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (1)</td>
+</tr>
+<tr>
+<td>18</td><td><span class='tooltip'><span class='tooltipcontent'>29 siamese_neural_congas_1/Mixed7a/concat FLOAT32 [200, 4, 4, 128]None<br></span>[29]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>42 siamese_neural_congas_1/feature_compression/AvgPool_1a_8x8/AvgPool FLOAT32 [200, 1, 1, 128]None<br></span>[42]</span></td>
+<td>{'filter_height': 4, 'filter_width': 4, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>AVERAGE_POOL_2D (0)</td>
+</tr>
+<tr>
+<td>19</td><td><span class='tooltip'><span class='tooltipcontent'>42 siamese_neural_congas_1/feature_compression/AvgPool_1a_8x8/AvgPool FLOAT32 [200, 1, 1, 128]None<br>12 siamese_neural_congas/feature_compression/Conv2d_0a/weights FLOAT32 [40, 1, 1, 128]None<br>44 siamese_neural_congas_1/feature_compression/Conv2d_0a/Conv2D_bias FLOAT32 [40]None<br></span>[42, 12, 44]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>43 siamese_neural_congas_1/feature_compression/Conv2d_0a/BatchNorm/FusedBatchNormV3 FLOAT32 [200, 1, 1, 40]None<br></span>[43]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (2)</td>
+</tr>
+<tr>
+<td>20</td><td><span class='tooltip'><span class='tooltipcontent'>43 siamese_neural_congas_1/feature_compression/Conv2d_0a/BatchNorm/FusedBatchNormV3 FLOAT32 [200, 1, 1, 40]None<br>46 siamese_neural_congas_1/feature_compression/flatten_embeddings/shape INT32 [2]None<br></span>[43, 46]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>45 siamese_neural_congas_1/feature_compression/flatten_embeddings FLOAT32 [200, 40]None<br></span>[45]</span></td>
+<td>{'new_shape': [200, -1]}</td>
+<td>RESHAPE (6)</td>
+</tr>
+<tr>
+<td>21</td><td><span class='tooltip'><span class='tooltipcontent'>45 siamese_neural_congas_1/feature_compression/flatten_embeddings FLOAT32 [200, 40]None<br></span>[45]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>47 siamese_neural_congas_1/feature_compression/normalize_embeddings FLOAT32 [200, 40]None<br></span>[47]</span></td>
+<td>{'fused_activation_function': 0}</td>
+<td>L2_NORMALIZATION (4)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "DEPTHWISE_CONV_2D (3)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "MAX_POOL_2D (5)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "CONCATENATION (1)", "group": 2, "x": 200, "y": 2000}, {"id": "o10", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 2200}, {"id": "o11", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 2400}, {"id": "o12", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 2600}, {"id": "o13", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 2800}, {"id": "o14", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 3000}, {"id": "o15", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 3200}, {"id": "o16", "name": "MAX_POOL_2D (5)", "group": 2, "x": 200, "y": 3400}, {"id": "o17", "name": "CONCATENATION (1)", "group": 2, "x": 200, "y": 3600}, {"id": "o18", "name": "AVERAGE_POOL_2D (0)", "group": 2, "x": 200, "y": 3800}, {"id": "o19", "name": "CONV_2D (2)", "group": 2, "x": 200, "y": 4000}, {"id": "o20", "name": "RESHAPE (6)", "group": 2, "x": 200, "y": 4200}, {"id": "o21", "name": "L2_NORMALIZATION (4)", "group": 2, "x": 200, "y": 4400}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 340, "y": 2100.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 340, "y": 2300.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 340, "y": 2500.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 340, "y": 2700.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 340, "y": 2900.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 340, "y": 3100.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 340, "y": 700.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 340, "y": 900.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 340, "y": 1100.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 340, "y": 1300.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 340, "y": 3900.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 340, "y": 100.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 340, "y": 300.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 340, "y": 500.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 510, "y": 2100.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 170, "y": 2300.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 510, "y": 2300.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 170, "y": 3500.0}, {"id": "t20", "name": "[] (20)", "group": 1, "x": 510, "y": 2500.0}, {"id": "t21", "name": "[] (21)", "group": 1, "x": 170, "y": 2700.0}, {"id": "t22", "name": "[] (22)", "group": 1, "x": 510, "y": 2700.0}, {"id": "t23", "name": "[] (23)", "group": 1, "x": 170, "y": 2900.0}, {"id": "t24", "name": "[] (24)", "group": 1, "x": 510, "y": 2900.0}, {"id": "t25", "name": "[] (25)", "group": 1, "x": 170, "y": 3100.0}, {"id": "t26", "name": "[] (26)", "group": 1, "x": 510, "y": 3100.0}, {"id": "t27", "name": "[] (27)", "group": 1, "x": 340, "y": 3500.0}, {"id": "t28", "name": "[] (28)", "group": 1, "x": 510, "y": 3500.0}, {"id": "t29", "name": "[] (29)", "group": 1, "x": 170, "y": 3700.0}, {"id": "t30", "name": "[] (30)", "group": 1, "x": 510, "y": 700.0}, {"id": "t31", "name": "[] (31)", "group": 1, "x": 170, "y": 900.0}, {"id": "t32", "name": "[] (32)", "group": 1, "x": 510, "y": 900.0}, {"id": "t33", "name": "[] (33)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t34", "name": "[] (34)", "group": 1, "x": 510, "y": 1100.0}, {"id": "t35", "name": "[] (35)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t36", "name": "[] (36)", "group": 1, "x": 510, "y": 1300.0}, {"id": "t37", "name": "[] (37)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t38", "name": "[] (38)", "group": 1, "x": 510, "y": 1500.0}, {"id": "t39", "name": "[] (39)", "group": 1, "x": 340, "y": 1900.0}, {"id": "t40", "name": "[] (40)", "group": 1, "x": 510, "y": 1900.0}, {"id": "t41", "name": "[] (41)", "group": 1, "x": 170, "y": 2100.0}, {"id": "t42", "name": "[] (42)", "group": 1, "x": 170, "y": 3900.0}, {"id": "t43", "name": "[] (43)", "group": 1, "x": 170, "y": 4100.0}, {"id": "t44", "name": "[] (44)", "group": 1, "x": 510, "y": 3900.0}, {"id": "t45", "name": "[] (45)", "group": 1, "x": 170, "y": 4300.0}, {"id": "t46", "name": "[] (46)", "group": 1, "x": 340, "y": 4100.0}, {"id": "t47", "name": "[] (47)", "group": 1, "x": 170, "y": 4500.0}, {"id": "t48", "name": "[] (48)", "group": 1, "x": 510, "y": 100.0}, {"id": "t49", "name": "[] (49)", "group": 1, "x": 170, "y": 300.0}, {"id": "t50", "name": "[] (50)", "group": 1, "x": 510, "y": 300.0}, {"id": "t51", "name": "[] (51)", "group": 1, "x": 170, "y": 500.0}, {"id": "t52", "name": "[] (52)", "group": 1, "x": 510, "y": 500.0}, {"id": "t53", "name": "[] (53)", "group": 1, "x": 170, "y": 700.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t13", "target": "o0"}, {"source": "t48", "target": "o0"}, {"target": "t49", "source": "o0"}, {"source": "t49", "target": "o1"}, {"source": "t14", "target": "o1"}, {"source": "t50", "target": "o1"}, {"target": "t51", "source": "o1"}, {"source": "t51", "target": "o2"}, {"source": "t15", "target": "o2"}, {"source": "t52", "target": "o2"}, {"target": "t53", "source": "o2"}, {"source": "t53", "target": "o3"}, {"source": "t7", "target": "o3"}, {"source": "t30", "target": "o3"}, {"target": "t31", "source": "o3"}, {"source": "t31", "target": "o4"}, {"source": "t8", "target": "o4"}, {"source": "t32", "target": "o4"}, {"target": "t33", "source": "o4"}, {"source": "t53", "target": "o5"}, {"source": "t9", "target": "o5"}, {"source": "t34", "target": "o5"}, {"target": "t35", "source": "o5"}, {"source": "t35", "target": "o6"}, {"source": "t10", "target": "o6"}, {"source": "t36", "target": "o6"}, {"target": "t37", "source": "o6"}, {"source": "t37", "target": "o7"}, {"source": "t11", "target": "o7"}, {"source": "t38", "target": "o7"}, {"target": "t39", "source": "o7"}, {"source": "t53", "target": "o8"}, {"target": "t40", "source": "o8"}, {"source": "t33", "target": "o9"}, {"source": "t39", "target": "o9"}, {"source": "t40", "target": "o9"}, {"target": "t41", "source": "o9"}, {"source": "t41", "target": "o10"}, {"source": "t1", "target": "o10"}, {"source": "t16", "target": "o10"}, {"target": "t17", "source": "o10"}, {"source": "t17", "target": "o11"}, {"source": "t2", "target": "o11"}, {"source": "t18", "target": "o11"}, {"target": "t19", "source": "o11"}, {"source": "t41", "target": "o12"}, {"source": "t3", "target": "o12"}, {"source": "t20", "target": "o12"}, {"target": "t21", "source": "o12"}, {"source": "t21", "target": "o13"}, {"source": "t4", "target": "o13"}, {"source": "t22", "target": "o13"}, {"target": "t23", "source": "o13"}, {"source": "t23", "target": "o14"}, {"source": "t5", "target": "o14"}, {"source": "t24", "target": "o14"}, {"target": "t25", "source": "o14"}, {"source": "t25", "target": "o15"}, {"source": "t6", "target": "o15"}, {"source": "t26", "target": "o15"}, {"target": "t27", "source": "o15"}, {"source": "t41", "target": "o16"}, {"target": "t28", "source": "o16"}, {"source": "t19", "target": "o17"}, {"source": "t27", "target": "o17"}, {"source": "t28", "target": "o17"}, {"target": "t29", "source": "o17"}, {"source": "t29", "target": "o18"}, {"target": "t42", "source": "o18"}, {"source": "t42", "target": "o19"}, {"source": "t12", "target": "o19"}, {"source": "t44", "target": "o19"}, {"target": "t43", "source": "o19"}, {"source": "t43", "target": "o20"}, {"source": "t46", "target": "o20"}, {"target": "t45", "source": "o20"}, {"source": "t45", "target": "o21"}, {"target": "t47", "source": "o21"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>160 bytes</td>
+</tr>
+<tr>
+<td>2</td><td>20480 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>28672 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>28672 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>36864 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>12</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>13</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>14</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>15</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>16</td><td>2048 bytes</td>
+</tr>
+<tr>
+<td>17</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>18</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>19</td><td>2048 bytes</td>
+</tr>
+<tr>
+<td>20</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>21</td><td>4096 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>23</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>24</td><td>--</td>
+</tr>
+<tr>
+<td>25</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>26</td><td>--</td>
+</tr>
+<tr>
+<td>27</td><td>--</td>
+</tr>
+<tr>
+<td>28</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>29</td><td>--</td>
+</tr>
+<tr>
+<td>30</td><td>--</td>
+</tr>
+<tr>
+<td>31</td><td>--</td>
+</tr>
+<tr>
+<td>32</td><td>--</td>
+</tr>
+<tr>
+<td>33</td><td>--</td>
+</tr>
+<tr>
+<td>34</td><td>--</td>
+</tr>
+<tr>
+<td>35</td><td>--</td>
+</tr>
+<tr>
+<td>36</td><td>--</td>
+</tr>
+<tr>
+<td>37</td><td>--</td>
+</tr>
+<tr>
+<td>38</td><td>--</td>
+</tr>
+<tr>
+<td>39</td><td>--</td>
+</tr>
+<tr>
+<td>40</td><td>--</td>
+</tr>
+<tr>
+<td>41</td><td>--</td>
+</tr>
+<tr>
+<td>42</td><td>--</td>
+</tr>
+<tr>
+<td>43</td><td>--</td>
+</tr>
+<tr>
+<td>44</td><td>--</td>
+</tr>
+<tr>
+<td>45</td><td>--</td>
+</tr>
+<tr>
+<td>46</td><td>36864 bytes</td>
+</tr>
+<tr>
+<td>47</td><td>--</td>
+</tr>
+<tr>
+<td>48</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>49</td><td>--</td>
+</tr>
+<tr>
+<td>50</td><td>--</td>
+</tr>
+<tr>
+<td>51</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>52</td><td>18432 bytes</td>
+</tr>
+<tr>
+<td>53</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>54</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>55</td><td>5 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>AVERAGE_POOL_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>CONCATENATION</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td><td>CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td><td>DEPTHWISE_CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td><td>L2_NORMALIZATION</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td><td>MAX_POOL_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td><td>RESHAPE</td>
+<td></td>
+<td>1</td>
+</tr>
+</table>
+</body></html>
