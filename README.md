@@ -1,5 +1,5 @@
 # mediapipe_arch_vis
-Collection of naive visualization of tflite models from MediaPipe
+Collection of naive visualization of tflite models from [MediaPipe](https://github.com/google/mediapipe)
 
 Though I could simply get those with [`visualize.py`](visualize.py),
 hosting them through GitHub Pages will benefit the developers and researchers who use MediaPipe.
@@ -23,6 +23,12 @@ These are (incomprehensive) list of visualization of `*.tflite` files that exist
 - [`pose_landmark_heavy.html`](pose_landmark_heavy.html)
 - [`pose_landmark_lite.html`](pose_landmark_lite.html)
 - [`ssdlite_object_dectection.html`](ssdlite_object_dectection.html)
+
+## Acknowledgments
+
+- [This answer from Stack Overflow](https://stackoverflow.com/a/56961776/14931669) helped myself to find `visualize.py` from the TensorFlow.
+- I'm always grateful to the developers of MediaPipe. Thanks a lot!
+
 
 ## License
 
